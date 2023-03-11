@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <!-- link a la hoja de estilos-->
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header class="encabezadoHeader">
+        <div>
+            <img class="encabezadoHeaderImg" src="../assets/img/logo.jpg" alt="Dos libros apilados">
+        </div>
+        <nav>   <!-- etiqueta semántica y de navegación -->
+                <!-- el atributo target="_blank" dentro de <a> lo utilizo cuando llamo a un link absoluto, es decir, a una 
+                página ajena a mi sitio aunque invocada desde mi sitio, ej. instagram, google, facebook, etc. -->
+            <ul class="encabezadoHeaderUl">
+                <li>
+                    <a class="encabezadoHeaderAncla" href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a class="encabezadoHeaderAncla" href="./catalogo.html">Catálogo</a>
+                </li>
+                <li>
+                    <a class="encabezadoHeaderAncla" href="#">Registro</a>
+                </li>
+                <li>
+                    <a class="encabezadoHeaderAncla" href="./pido.html">Pido</a>
+                </li>
+                <li>
+                    <a class="encabezadoHeaderAncla" href="./contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="imagenFondoRegistro">
+        <section>
+            <p>Biblioteca Nacional de Austria, República de Austria</p>
+            <br>
+            <p><h1 class="hUno">Ingresa los siguientes datos para tener el alta en el sistema</h1></p>
+            <br>
+            <form action="procesar_form.php" enctype="text/plain" method="post">
+                <!-- fieldset y legend permiten crear agrupaciones lógicas de entradas de datos-->
+                <fieldset class="conjuntoDeCampos">
+                    <legend>Ingresa los datos</legend>
+                    <br>
+                    <div> <!-- etiqueta comodín -->
+                        <label for="nombre">Nombre/s</label>
+                        <!-- con el atributo required dentro de la etiqueta input indico que se debe realizar una validación y que el usuario ingrese el dato que se le solicita-->
+                        <input type="text" name="nombre" placeholder="Tal cual aparece en su DNI" required>
+                    </div>
+                    <div>
+                        <label for="apellido">Apellido/s</label>
+                        <input type="text" name="apellido" placeholder="Tal cual aparece en su DNI" required>
+                    </div>
+                    <div>
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" minlength="10" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" name="telefono" placeholder="Sin el 0 ni el 15" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div>
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpiar formulario">
+                    </div>
+                    <br>
+                </fieldset>
+            </form>
+            <!--<section class="contenedorEmbebido">
+            <!--<div class="contenedorEmbebido">-->
+        </section>
+        <section class="iframeCentrado">
+            <div> 
+                <h2 class="hDosParrafo"><p>Cómo cuidar un libro</p></h2>
+                <!-- antes de copiar el iframe desde youtube, selecciono la opción Iniciar en: 0:50 segundos de iniciado el video original-->
+                <br>
+                <iframe width="500" height="255" src="https://www.youtube.com/embed/4TlB7zgZaoI?start=50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>   
+        <br><br>
+    </main>
+    <footer class="pieDePagina">    <!-- etiqueta OBLIGATORIA - pie de página--->
+        <br>
+        <p>Copyright 2023 Labiblioteca.com | Todos los derechos reservados.</p>
+        <br>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <!-- link a la hoja de estilos-->
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+    <header class="encabezadoHeader"> <!-- etiqueta semántica de estructura -->
+        <div>  
+            <!-- el navegador lee a la persona no vidente lo que indica el atributo alt de la etiqueta img
+            Siempre el alt debe llevar una descripción-->
+
+            <img class="encabezadoHeaderImg" src="../assets/img/logo.jpg" alt="Dos libros apilados">
+        </div>
+        <nav> <!-- etiqueta semántica y de navegación -->
+            <!-- atajo li*5 tab-->
+            <!-- entre la etiqueta li que abre y cierra hago shitf+alt y con el cursor bajo hasta el último li, esto me 
+            permite escribir simultáneamente la ancla <a href=""></a>-->
+        
+            <!-- esto es una lista desordenada de navegación-->
+            <!--padre-->
+            <ul class="encabezadoHeaderUl">
+                <!--hijo lista item-->
+                <li>
+                    <!--ancla-->
+                    <a class="encabezadoHeaderAncla" href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <!--ancla-->
+                    <a class="encabezadoHeaderAncla" href="./catalogo.html">Catálogo</a>
+                </li>
+                <!--hijo lista item-->
+                <li>
+                    <a class="encabezadoHeaderAncla" href="./registro.html">Registro</a>
+                </li>
+                <li>
+                    <a class="encabezadoHeaderAncla" href="./pido.html">Pido</a>
+                </li>
+                <li>
+                    <a class="encabezadoHeaderAncla" href="#">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="imagenFondoContacto"> <!-- etiqueta semántica de estructura -->
+        <p>Biblioteca del Palacio de Mafra, Portugal</p>
+        <h1 class="hUno">Si quieres, puedes prestar un libro mediante labiblioteca.com</h1>
+        <h2 class="hDosParrafo"><p>Te pido que tomes una foto de la ficha bibliográfica del libro que puedes prestar y la subas a la página, luego ingresa tu dirección de email, con la cual debieras haberte registrado oportunamente.</p>
+        <br>
+        <p>En el transcurso de las próximas 24 hs. hábiles de recibida la ficha, se cargará el libro al Catálogo y así quedará disponible para quien desee pedirlo.</p></h2> 
+        <!-- fieldset y legend permiten crear agrupaciones lógicas de entradas de datos-->
+            <form action="">
+                <br>
+                <fieldset class="conjuntoDeCampos">
+                    <br>
+                    <legend>Subí la ficha bibliográfica.</legend>
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="file" name="fichaBibliográfica"
+                        <br>
+                        <label for="email">Email</label>
+                        <input type="email" name="email">
+                        <input type="submit">
+                    </div>
+                    <br> 
+                </fieldset>
+            </form>
+        <section class="iframeCentrado">
+            <div> 
+                <h2 class="hDosParrafo"><p>Domicilio de Labiblioteca.com</p></h2>
+                <!-- antes de copiar el iframe desde youtube, selecciono la opción Iniciar en: 0:50 segundos de iniciado el video original-->
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3349.515687590606!2d-68.8033806848849!3d-32.91097098093178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzLCsDU0JzM5LjUiUyA2OMKwNDgnMDQuMyJX!5e0!3m2!1ses-419!2sar!4v1676376312966!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
+            </div>
+        </section> 
+    </main>
+    <footer class="pieDePagina"> <!-- etiqueta semántica de estructura -->
+        <br>
+        <p>Copyright 2023 Labiblioteca.com | Todos los derechos reservados.</p>
+        <br>
+    </footer>
+</body>
+</html>

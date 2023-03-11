@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <!-- link a la hoja de estilos-->
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header class="encabezadoHeader"> <!-- etiqueta semántica de estructura -->
+        <div>
+            <img class="encabezadoHeaderImg" src="../assets/img/logo.jpg" alt="Dos libros apilados">
+        </div>
+        <nav>
+            <!-- atajo li*5 tab-->
+            <!-- entre la etiqueta li que abre y cierra hago shitf+alt y con el cursor bajo hasta el último li, esto me 
+            permite escribir simultáneamente la ancla <a href=""></a>-->
+        
+            <!-- esto es una lista desordenada de navegación-->
+            <!--padre-->
+            <ul class="encabezadoHeaderUl">
+                <!--hijo lista item-->
+                <li>
+                    <!--ancla-->
+                    <a class="encabezadoHeaderAncla" href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <!--ancla-->
+                    <a class="encabezadoHeaderAncla" href="#">Catálogo</a>
+                </li>
+                <!--hijo lista item-->
+                <li>
+                    <a class="encabezadoHeaderAncla" href="./registro.html">Registro</a>
+                </li>
+                <li>
+                    <a class="encabezadoHeaderAncla"href="./pido.html">Pido</a>
+                </li>
+                <li>
+                    <a class="encabezadoHeaderAncla" href="./contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="imagenFondoCatalogo"> <!-- etiqueta semántica de estructura -->
+        <p>Biblioteca Tianjin Binhai, República Popular China</p>
+        <section>
+            <!--<p> AQUI COLOCAR EL NOMBRE DEL MUSEO QUE SE OBSERVA EN LA FOTO</p>-->
+            <br><br><br>
+            <h1 class="hUno">Observa el Catálogo actualizado de labiblioteca.com.</h1>
+            <section>
+                <br><br>
+                <table class="tabla" border="5">
+                    <!--TITULO DE LA TABLA-->
+                    <caption>Catálogo</caption>
+                    <!--seleccionar columnas-->
+                    <colgroup>
+                        <!--aca vamos a decir que la columna ocupe las 6 columnas-->
+                        <col span="13" > 
+                    </colgroup>
+                    <!--CABECERA DE LA TABLA-->
+                    <thead>
+                    <!--EL NUMERO DE CELDAS DENTRO DE UN TR ESTABLECE LAS COLUMNAS-->
+                        <tr>
+                            <th>
+                                Nombres Autor
+                            </th>
+                            <th>
+                                Apellidos Autor
+                            </th>
+                            <th>
+                                Título
+                            </th>
+                            <th>
+                                Edición
+                            </th>
+                            <th>
+                                Editorial
+                            </th>
+                            <th>
+                                Fecha de Impresión
+                            </th>
+                            <th>
+                                Páginas
+                            </th>
+                            <th>
+                                Ancho
+                            </th>
+                            <th>
+                                Alto
+                            </th>
+                            <th>
+                                ISBN
+                            </th>
+                            <th>
+                                Descripción
+                            </th>
+                            <th>
+                                Ubicación
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Daniel</td>
+                            <td>Balmaceda</td>
+                            <td>Historias insólitas de la historia Argentina</td>
+                            <td>1</td>
+                            <td>Sudamericana</td>
+                            <td>2021</td>    
+                            <td>376</td>
+                            <td>14</td>
+                            <td>22</td>
+                            <td>9789500765213</td>
+                            <td>Investigación histórica</td>
+                            <td>mesa de luz</td>
+                        </tr>
+                        <tr><td>Daniel</td>
+                            <td>Balmaceda</td>
+                            <td>Historias insólitas de la historia Argentina</td>
+                            <td>1</td>
+                            <td>Sudamericana</td>
+                            <td>2021</td>    
+                            <td>376</td>
+                            <td>14</td>
+                            <td>22</td>
+                            <td>9789500765213</td>
+                            <td>Investigación histórica</td>
+                            <td>mesa de luz</td>
+                        </tr>
+                        <tr><td>Daniel</td>
+                            <td>Balmaceda</td>
+                            <td>Historias insólitas de la historia Argentina</td>
+                            <td>1</td>
+                            <td>Sudamericana</td>
+                            <td>2021</td>    
+                            <td>376</td>
+                            <td>14</td>
+                            <td>22</td>
+                            <td>9789500765213</td>
+                            <td>Investigación histórica</td>
+                            <td>mesa de luz</td>
+                        </tr>
+                        <tr><td>Daniel</td>
+                            <td>Balmaceda</td>
+                            <td>Historias insólitas de la historia Argentina</td>
+                            <td>1</td>
+                            <td>Sudamericana</td>
+                            <td>2021</td>    
+                            <td>376</td>
+                            <td>14</td>
+                            <td>22</td>
+                            <td>9789500765213</td>
+                            <td>Investigación histórica</td>
+                            <td>mesa de luz</td>
+                        </tr>
+                        <tr><td>Daniel</td>
+                            <td>Balmaceda</td>
+                            <td>Historias insólitas de la historia Argentina</td>
+                            <td>1</td>
+                            <td>Sudamericana</td>
+                            <td>2021</td>    
+                            <td>376</td>
+                            <td>14</td>
+                            <td>22</td>
+                            <td>9789500765213</td>
+                            <td>Investigación histórica</td>
+                            <td>mesa de luz</td>
+                        </tr>
+                        <tr><td>Daniel</td>
+                            <td>Balmaceda</td>
+                            <td>Historias insólitas de la historia Argentina</td>
+                            <td>1</td>
+                            <td>Sudamericana</td>
+                            <td>2021</td>    
+                            <td>376</td>
+                            <td>14</td>
+                            <td>22</td>
+                            <td>9789500765213</td>
+                            <td>Investigación histórica</td>
+                            <td>mesa de luz</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+    <footer class="pieDePagina"> <!-- etiqueta semántica de estructura -->
+        <br>
+        <p>Copyright 2023 Labiblioteca.com | Todos los derechos reservados.</p>
+        <br>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">        <!-- etiqueta de apertura, donde también se selecciona el idoma español, de acuerdo al idioma en
+                        el cual estará el contenido de la página -->
+    <head>              <!-- dentro del head va la configuración del sitio-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>La Biblioteca</title>
+        <!--favicon, se Guarda imágen desde la web con extensión .png y se debe renombrar como favicon con extensión
+        .ico 
+        .png es una imagen sin fondo es por eso que luego de buscarlo en herramientas seleccionamos la opción transparente
+        para luego guardar la imagen  -->
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+        <!-- link a la hoja de estilos-->
+        <link rel="stylesheet" href="./css/estilos.css">
+    </head>
+    <body>
+        <header class="encabezadoHeader">    <!--etiqueta semántica de estructura-->
+            <div>
+                <!-- completar con texto descriptivo de la imagen el atributo alt de la etiqueta img es una buena práctica-->
+                <img class="encabezadoHeaderImg" src="./assets/img/logo.jpg" alt="Dos libros apilados">
+            </div>        
+            <nav>   <!--esta es una etiqueta de navegación-->
+                <ul class="encabezadoHeaderUl">    <!-- hay dos tipos de enlaces_rutas: absolutas (https://www.google.com.ar) se utilizan
+                    para los íconos de las redes sociales en el footer: twiter, instagram, etc. y 
+                    relativas (las propias del sitio)-->
+                    <!-- el atributo target="_blank" dentro de <a> lo utilizo cuando llamo a un link absoluto, es decir, a una 
+                    página ajena a mi sitio aunque invocada desde mi sitio, ej. instagram, google, facebook, etc. -->
+                    <li>
+                                            <!-- colocando # en href de a estoy haciendo referencia a la página donde estoy actualmente-->
+                        <a class="encabezadoHeaderAncla" href="#">Inicio</a>        
+                    </li>
+                    <li>
+                        <a class="encabezadoHeaderAncla" href="./pages/catalogo.html">Catálogo</a>        
+                    </li>    
+                    <li>
+                        <a class="encabezadoHeaderAncla" href="./pages/registro.html">Registro</a>
+                    </li>
+                    <li>
+                        <a class="encabezadoHeaderAncla" href="./pages/pido.html">Pido</a>
+                    </li>
+                    <li>
+                        <a class="encabezadoHeaderAncla" href="./pages/contacto.html">Contacto</a>        
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="imagenFondoIndice">  <!-- etiqueta semántica de estructura-->
+            <section>
+                <div>
+                    <p>Biblioteca George Peabody, Estados Unidos</p>
+                    <br><br><br><br>
+                </div>
+                <div>
+                    <h1 class="hUno">Bienvenido a Labiblioteca.com</h1>
+                    <br><br><br><br><br>
+                </div>
+                <div>
+                    <h2 class="hDosParrafo"><p>Labiblioteca.com surge a partir de la necesidad de ordenar físicamente la pequeña biblioteca familiar compuesta por libros de varias temáticas. Luego, por sugerencia de nuestra hija, aparece la idea de poder compartir labiblioteca.com con el resto de la familia, amigos cercanos.</p> 
+                    <br>
+                    <p>El préstamo que se hace del libro no tiene costo asociado, es decir, se hace sin fines de lucro, tan solo con el compromiso por parte de quien lo recibe de conservarlo en óptimas condiciones sin rayarlo, mojarlo, etc. El libro se retira del domicilio en hora y fecha consensuada y se devuelve en el mismo lugar bajos los mismos términos.</p>
+                    <br>
+                    <p>Otra etapa del proyecto contempla la posibilidad de armar foros de discusión presencial o bien a través de alguna de las plataformas para realizar video llamadas. Si bien aún no tiene una fecha de inicio concreta, se estima que tales encuentros podrían darse a partir del próximo año.</p>
+                    <br>
+                    <p>Asimismo, nuestra intención es que quien así lo quiera su sume al proyecto, armando una red colaborativa donde quien guste preste su libro mediante labiblioteca.com. Para poder sumarse al proyecto hay información pertinente en la página de Contacto, la cual te invito a que visites y cualquier duda o inquietud puedes llamarme.</p></h2>
+                    <br><br>
+                </div>
+            </section>
+        
+        </main>
+        <!--<section>
+            <div>
+                <h1><h1>    dentro de una sección puede colocar h1
+                       
+            <article>               <!-- La etiqueta article permite tener internamente header, main y footer
+                <header></header>   <!-- independientes de los de la pàgina principal
+                <main></main>
+                <footer></footer>
+            </article>
+        </section>-->
+
+        <footer class="pieDePagina">    <!-- etiqueta semántica de estructura -->
+            <br>
+            <p>Copyright 2023 Labiblioteca.com | Todos los derechos reservados.</p>
+            <br>
+        </footer>
+    </body>
+</html>
+
+

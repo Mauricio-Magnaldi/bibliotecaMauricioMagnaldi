@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pido</title>
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <!-- link a la hoja de estilos-->
+        <link rel="stylesheet" href="../css/estilos.css">
+    </head>
+    <body>
+        <header class="encabezadoHeader"> <!-- etiqueta semántica de estructura -->
+            <div>
+                <img class="encabezadoHeaderImg" src="../assets/img/logo.jpg" alt="Dos libros apilados">
+            </div>
+            <nav>
+                <!-- atajo li*5 tab-->
+                <!-- entre la etiqueta li que abre y cierra hago shitf+alt y con el cursor bajo hasta el último li, esto me 
+                permite escribir simultáneamente la ancla <a href=""></a>-->
+                <!-- esto es una lista desordenada de navegación-->
+                <!--padre-->
+                <ul class="encabezadoHeaderUl">
+                    <!--hijo lista item-->
+                    <li>
+                        <!--ancla-->
+                        <a class="encabezadoHeaderAncla" href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <!--ancla-->
+                        <a class="encabezadoHeaderAncla" href="./catalogo.html">Catálogo</a>
+                    </li>
+                    <!--hijo lista item-->
+                    <li>
+                        <a class="encabezadoHeaderAncla" href="./registro.html">Registro</a>
+                    </li>
+                    <li>
+                        <a class="encabezadoHeaderAncla" href="#">Pido</a>
+                    </li>
+                    <li>
+                        <a class="encabezadoHeaderAncla" href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="imagenFondoPido"> <!-- etiqueta semántica de estructura -->
+            <p>Biblioteca Estatal de Nueva Gales del Sur, Australia</p>
+            <br><br>
+            <section>
+                <p></p>
+                <h1 class="hUno">Busca y pedí el libro que quieras seleccionandolo y colocando tu email</h1>
+                <br><br><br><br><br><br>
+                <form>
+                    <fieldset class="conjuntoDeCampos">
+                        <legend>Elije el libro</legend>
+                        <table class="tabla" border="5">    <!-- desde aquí se centra la tabla-->
+                        <!--TITULO DE LA TABLA-->
+                            <caption></caption>
+                            <!--seleccionar columnas-->
+                            <br>
+                            <colgroup>
+                            <!--aca vamos a decir que la columna ocupe las 6 columnas-->
+                                <col span="5"> 
+                            </colgroup>
+                            <!--CABECERA DE LA TABLA-->
+                            <thead>
+                            <!--EL NUMERO DE CELDAS DENTRO DE UN TR ESTABLECE LAS COLUMNAS-->
+                                <tr>
+                                    <th>
+                                        Nombres Autor
+                                    </th>
+                                    <th>
+                                        Apellidos Autor
+                                    </th>
+                                    <th>
+                                        Título
+                                    </th>
+                                    <th>
+                                        Propietario
+                                    </th>
+                                    <th>
+                                        Pedir
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Balmaceda</td>
+                                    <td>Historias insólitas de la historia Argentina</td>
+                                    <td>Ana</td>
+                                    <td align="center"><input type="radio" name="isbn" id="9789500765213"></td>
+                                </tr>
+                                <tr>
+                                    <td>Beatriz</td>
+                                    <td>Bragoni</td>
+                                    <td>San Martín</td>
+                                    <td>Mauricio</td>
+                                    <td align="center"><input type="radio" name="isbn" id="9789876284967"></td>
+                                </tr>
+                                <tr>
+                                    <td>Alonso</td>
+                                    <td>Álvarez García</td>
+                                    <td>HTML 5</td>
+                                    <td>Mauricio</td>
+                                    <td align="center"><input type="radio" name="isbn" id="9788441527461"</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Balmaceda</td>
+                                    <td>Historias insólitas de la historia Argentina</td>
+                                    <td>Ana</td>
+                                    <td align="center"><input type="radio" name="isbn" id="9789500765213"></td>
+                                </tr>
+                                <tr>
+                                    <td>Beatriz</td>
+                                    <td>Bragoni</td>
+                                    <td>San Martín</td>
+                                    <td>Mauricio</td>
+                                    <td align="center"><input type="radio" name="isbn" id="9789876284967"></td>
+                                </tr>
+                                <tr>
+                                    <td>Alonso</td>
+                                    <td>Álvarez García</td>
+                                    <td>HTML 5</td>
+                                    <td>Mauricio</td>
+                                    <td align="center"><input type="radio" name="isbn" id="9788441527461"</td>
+                                </tr>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Balmaceda</td>
+                                    <td>Historias insólitas de la historia Argentina</td>
+                                    <td>Ana</td>
+                                    <td align="center"><input type="radio" name="isbn" id="9789500765213"></td>
+                                </tr>
+                                <tr>
+                                    <td>Beatriz</td>
+                                    <td>Bragoni</td>
+                                    <td>San Martín</td>
+                                    <td>Mauricio</td>
+                                    <td align="center"><input type="radio" name="isbn" id="9789876284967"></td>
+                                </tr>
+                                <tr>
+                                    <td>Alonso</td>
+                                    <td>Álvarez García</td>
+                                    <td>HTML 5</td>
+                                    <td>Mauricio</td>
+                                    <td align="center"><input type="radio" name="isbn" id="9788441527461"</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="submit" value="Enviar">
+                        </div>
+                        <br>
+                    </fieldset>
+                </form>    
+            </section>
+            <br>
+        </main>
+       <!--- <div class="imagenContenedor">
+            <img class="imagenMain" src="../assets/img/foto 5.jpg" alt="Real Gabinete Portugués de Lectura, Brasil"><p>Real Gabinete Portugués de Lectura, Brasil</p>
+        </div>-->
+        <footer class="pieDePagina"> <!-- etiqueta semántica de estructura -->
+            <br>
+            <p>Copyright 2023 Labiblioteca.com | Todos los derechos reservados.</p>
+            <br>
+        </footer>   
+    </body>
+</html>
