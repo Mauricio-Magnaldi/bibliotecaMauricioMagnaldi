@@ -1,93 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <!-- link a la hoja de estilos-->
-    <link rel="stylesheet" href="../css/estilos.css">
-</head>
-<body>
-    <header class="encabezadoHeader">
-        <div>
-            <img class="encabezadoHeaderImg" src="../assets/img/logo.jpg" alt="Dos libros apilados">
-        </div>
-        <nav>   <!-- etiqueta semántica y de navegación -->
-                <!-- el atributo target="_blank" dentro de <a> lo utilizo cuando llamo a un link absoluto, es decir, a una 
-                página ajena a mi sitio aunque invocada desde mi sitio, ej. instagram, google, facebook, etc. -->
-            <ul class="encabezadoHeaderUl">
-                <li>
-                    <a class="encabezadoHeaderAncla" href="../index.html">Inicio</a>
-                </li>
-                <li>
-                    <a class="encabezadoHeaderAncla" href="./catalogo.html">Catálogo</a>
-                </li>
-                <li>
-                    <a class="encabezadoHeaderAncla" href="#">Registro</a>
-                </li>
-                <li>
-                    <a class="encabezadoHeaderAncla" href="./pido.html">Pido</a>
-                </li>
-                <li>
-                    <a class="encabezadoHeaderAncla" href="./contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main class="imagenFondoRegistro">
-        <section>
-            <p>Biblioteca Nacional de Austria, República de Austria</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro</title>
+        <!-- CSS de Bootstrap -->
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/acaf011dda.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <!-- link a la hoja de estilos-->
+        <link rel="stylesheet" href="../css/estilos.css">
+    </head>
+    <body class="registro__body__img__fondo body">
+        <header class="header">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="container-fluid">
+                    <!-- el navegador lee a la persona no vidente lo que indica el atributo alt de la etiqueta img
+                    Siempre el alt debe llevar una descripción.
+                    El logo de la página siembre debe estar linkeado al index -->
+                    <a href="../index.html"><img class="header__div__img header__div__img__mover" src="../assets/img/logo.jpg" alt="Dos libros apilados"></a>
+                    <button class="navbar-toggler vertical" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav w-100">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-between w-100 ubicar__link__navegacion__celular">
+                                <li class="nav-item li__ancla__contacto">
+                                    <a class="nav-link active header__nav__ul__li__a texto__blanco"  href="./contacto.html">Contacto</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./catalogo.html">Catálogo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="#">Registro</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./pido.html">Pido</a>
+                                </li>
+                                <li class="nav-item li__ancla__inicio">
+                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="../index.html">Inicio</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- Utilizo span para poder darle color de fondo exclusivamente al texto -->
+            <span class="nombre__biblioteca texto__negro fuente__tamaño">Biblioteca Nacional de Austria, República de Austria</span>
             <br>
-            <p><h1 class="hUno">Ingresa los siguientes datos para tener el alta en el sistema</h1></p>
+            <p><h1 class="h__uno texto__blanco">Regístrate en el sistema</h1></p>
             <br>
-            <form action="procesar_form.php" enctype="text/plain" method="post">
-                <!-- fieldset y legend permiten crear agrupaciones lógicas de entradas de datos-->
-                <fieldset class="conjuntoDeCampos">
-                    <legend>Ingresa los datos</legend>
-                    <br>
-                    <div> <!-- etiqueta comodín -->
-                        <label for="nombre">Nombre/s</label>
-                        <!-- con el atributo required dentro de la etiqueta input indico que se debe realizar una validación y que el usuario ingrese el dato que se le solicita-->
-                        <input type="text" name="nombre" placeholder="Tal cual aparece en su DNI" required>
+            <div class="container">
+                <div class="row justify-content-between">
+                    <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
+                    <div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center centrar">
+                        <!-- Convierto al formulario en columna-->
+                        <div class="col">
+                            <!-- Convierto al formulario en fila -->
+                            <form class="row" autocomplete="off">
+                                <!-- Indico que el contenido del div utilice 8 filas, especificamente aplica al input-->
+                                <div class="mb-2 col-8">
+                                    <label for="nombre" class="form-label texto__blanco">Nombre</label>
+                                    <input type="text" class="form__control" id="nombre" placeholder="Tal cual aparece en tu DNI" required>
+                                </div>
+                                <div class="mb-2 col-8">
+                                    <label for="apellido" class="form-label texto__blanco">Apellido</label>
+                                    <input type="text" class="form__control" id="apellido"  placeholder="Tal cual aparece en tu DNI" required>
+                                </div>
+                                <div class="mb-2 col-8">
+                                    <label for="email" class="form-label texto__blanco">Email</label>
+                                    <input type="email" class="form__control" id="email" required>
+                                </div>
+                                <div class="mb-2 col-8">
+                                    <label for="telefono" class="form-label texto__blanco">Teléfono</label>
+                                    <input type="tel" class="form__control" minlength="10" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" name="telefono" placeholder="Sin el 0 ni el 15" required>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                    <button type="reset" class="btn btn-primary">Limpiar</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div>
-                        <label for="apellido">Apellido/s</label>
-                        <input type="text" name="apellido" placeholder="Tal cual aparece en su DNI" required>
+                    <div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center centrar">
+                        <section class="iframe">
+                            <div> 
+                                <h2 class="h__dos texto__blanco"><p>Cómo cuidar un libro</p></h2>
+                            <!-- antes de copiar el iframe desde youtube, selecciono la opción Iniciar en: 0:50 segundos de iniciado el video original-->
+                                <br>
+                                <iframe width="500" height="300" src="https://www.youtube.com/embed/Cq6saLsNzug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </section> 
                     </div>
-                    <div>
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" minlength="10" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" name="telefono" placeholder="Sin el 0 ni el 15" required>
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" required>
-                    </div>
-                    <div>
-                        <input type="submit" value="Enviar">
-                        <input type="reset" value="Limpiar formulario">
-                    </div>
-                    <br>
-                </fieldset>
-            </form>
-            <!--<section class="contenedorEmbebido">
-            <!--<div class="contenedorEmbebido">-->
-        </section>
-        <section class="iframeCentrado">
-            <div> 
-                <h2 class="hDosParrafo"><p>Cómo cuidar un libro</p></h2>
-                <!-- antes de copiar el iframe desde youtube, selecciono la opción Iniciar en: 0:50 segundos de iniciado el video original-->
-                <br>
-                <iframe width="500" height="255" src="https://www.youtube.com/embed/4TlB7zgZaoI?start=50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>  
             </div>
-        </section>   
-        <br><br>
-    </main>
-    <footer class="pieDePagina">    <!-- etiqueta OBLIGATORIA - pie de página--->
-        <br>
-        <p>Copyright 2023 Labiblioteca.com | Todos los derechos reservados.</p>
-        <br>
-    </footer>
-</body>
+                <br><br>
+        </main>
+
+
+        <footer class="footer fuente__tamaño"> <!-- etiqueta semántica de estructura -->
+            <!--            <br>
+            <p>Copyright 2023 Labiblioteca.com | Todos los derechos reservados.</p>
+            <br>
+            -->
+            <div class="redes">
+            <!-- Fontawesome iconos instagram, twitter, facebook -->
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fa-heart fa-beat fa-brands fa-square-instagram"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <i class="fa-heart fab fa-fade fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fa-heart fab fa-bounce fa-facebook"></i>
+                </a>
+                <a href="https://www.snapchat.com" target="_blank">
+                    <i class="fa-heart fa-flip fa-brands fa-square-snapchat"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <i class="fa-heart fa-shake fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://mendotran.mendoza.gov.ar/site/troncal" target="_blank">
+                    <i class="fa-heart fa-spin fa-fade fa-solid fa-bus"></i>
+                </a>
+            </div>
+            <div>
+                <p class="fuente__negrita">Copyright 2023 Biblioteca.com | Todos los derechos reservados.</p>
+            </div>
+        </footer>
+        <!-- JavaScript de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
 </html>

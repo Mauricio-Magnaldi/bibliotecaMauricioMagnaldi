@@ -1,166 +1,464 @@
-/* hoja de estilo en cascada
-
-Selector de clase         Este tipo de selector es más específico que el selector de etiqueta, es decir, Selector Specificity: (0,1,0)
-.colorDeFondo                 aquí llamo el selector de clase con el punto y el nombre de la etiqueta que defini en HTML. 
-    {                           Siendo que en Html si escribí class="colorDeFondo propiedad propiedad" 
-    propiedad: valor;           como un atributo dentro de la etiqueta respectiva. Formato class="propiedad propiedad propiedad"
-    propiedad: valor;
-    }
-    Especificidad (0,0,0) mata cascada, es decir, la clase es más importante que la etiqueta
-
-/*Utilizaremos solo selector de clase*/
-/*<style>*/
-
 @font-face 
-    { 
-        font-family: "PT Sans Narrow"; 
-        src: url("./assets/fonts/PTSansNarrow-Regular.ttf"); 
+    {
+        font-family: 'Mohave', sans-serif;
+        src: url("../assets/fonts/Mohave-VariableFont_wght.ttf")
     }
-
-/*@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
-/*</style>*/
-
-/* Ya que la mayoría de los navegadores establece un margen por defecto entre el contenido de la página web y su propia ventana, cuyo valor varía de un navegador a otro.
-Para subsanar esa diferencia, los diseñadores suelen declarar la siguiente línea al comienzo de sus hojas de estilo*/
-
 
 *
     {
         margin: 0px;
         padding: 0px;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        box-sizing: border-box; /* indico que todos los elementos respeten su tamaño indistintamente si agrego borde o
-                                padding a los elementos de las cajas */
+        font-family: 'Mohave', sans-serif;
+        box-sizing: border-box; /* indico que todos los elementos respeten su tamaño indistintamente si agrego  
+                                borde o padding a los elementos de las cajas */
+    }
+
+/* Tratamiento de la tabla de contacto */
+/*
+table
+    {
+        display: block;
+  
+    }
+*/
+
+/* Al colocar display flex desordena la tabla.
+Con display block permite ordenarla aunque corre hacia la izquierda los nombres
+de columna*/
+/*
+thead, tbody 
+    {
+        display: block;
+    }
+
+tbody 
+    {
+        height: 30vh;
+        overflow-y: auto;
+    }
+*/
+
+/* Esta clase la defino para que si hay más registros - renglones, libros - en el cátalago
+y disponibles para pedir, cuya capacidad exceda la tabla respectiva, aparezca sobre la vertical
+lado izquierdo la barra de desplazamiento respectiva.
+He intentado colocar la barra en otra parte que abarque solo al tbody aunque no tuve éxito,
+por ello el div que contiene esta clase abarca toda la tabla*/
+.desbordamiento__tabla 
+    {
+        height: 30vh;
+        overflow-y: auto;
+    }
+.tabla
+    	{ 
+            border-collapse: collapse;
+            height: 30vh;
+            overflow-y: auto;
+        }
+
+.encabezado
+        {
+            text-align: center;
+        }
+
+.color__fondo__tabla
+        {
+            background-color: lightblue;
+        }
+
+.index__main__flexible
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+/* body */
+
+.body
+    {
+        width: 100%;    /* especifico que ocupe el ancho del contenedor body */
+        height: 100vh;  /* especifico que ocupe el alto del contenedor body */
     }
 
 /* header */
 
-.encabezadoHeaderUl
+.header                           
     {
-        list-style-type: none;
-    }
-    
-.encabezadoHeader                           
-    {
-        background-color:thistle;
-        top: 0px;    /* este atributo indica donde posiciono el elemento, en este caso a 0px desde arriba de la página*/
-        position: sticky;   /* mientras que este lo deja fijo en la posición indicada por top y si se activa el scroll vertical, seguiré viendo el objeto */
+        background-color: #32385e5f;
+        margin-bottom: 0px;
+        /*padding: 5px;*/
+        position: sticky ;
+        top: 5px;
         z-index: 10;
     }
 
-.encabezadoHeaderImg
-    {                          
-        width: 30px;
+.carrousel
+    {                   
+        width: 18vw;
     }
 
-.encabezadoHeaderAncla
+.carousel-item
     {
-        display: inline-block;  /* permite establecer un ancho y alto en el elemento*/ 
-        text-decoration: none;    /* quita el subrayado de cada una de las opciones del menù de navegaciòn */    
-        color: black;
-        font-size: 15px;
-        margin-top: 5px;    /* distancia superior externa a la caja */
-        margin-left: 5px;   /* distancia a la izquierda externa a la caja */ 
-        padding: 5px 5px 5px 5px; /* distancias internas superior, derecha, inferior e izquierda a la caja */
-        font-family:  'PT Sans Narrow', sans-serif;
-        /*width: 400px;
-        height: 200px;*/
-        /*padding: 1px;*/
-        border: 2px solid rgb(93, 75, 18);  /* aplico borde y color a cada uno de los links - caja -*/
-        background-color: rgb(241, 189, 130);   /* aplico color de fondo a cada uno de los links*/
-        width: 70px;
-        height: 30px;
-        box-shadow: 10px 8px 10px 0px rgba(0,0,0,0.58);             /* las tres */
-        -webkit-box-shadow: 10px 8px 10px 0px rgba(0,0,0,0.58);     /* líneas actuan */
-        -moz-box-shadow: 10px 8px 10px 0px rgba(0,0,0,0.58);        /* sobre el efecto de sombra del botón*/
+        height: 60vh;
     }
 
-/* main */
-
-.sangria                    /* las clases se llaman con el punto */
+.carousel-item img
     {
-        text-indent: 30px; /*debiera ser vh, vw o % la unidad de medida a expresar*/
+        height: 100%;
+        object-fit: cover;
     }
 
-.hUno
+/* le indico que ocupe el 65% del ancho de su contenedor y que el texto lo deje justificado, es decir,
+los párrafos tienen sangría aunque todos alcanzan el final de renglón en el mismo nivel */
+.centrar 
     {
-        text-align: center;
-        font-family:  'PT Sans Narrow', sans-serif;
+        text-align:justify;
     }
 
-.hDosParrafo
+.div__header__flexible
     {
-        text-indent: 40px;
-        font-size: 20px;
-        font-family:  'PT Sans Narrow', sans-serif;
-    }   
-
-.conjuntoDeCampos
-    {
-        text-align: center;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
-.iframeCentrado
-    {
-        text-align: center; /* centrado de texto u objeto*/
-        font-family:  'PT Sans Narrow', sans-serif;
-    }
+/* Cargo una imagen de fondo en el contenedor body de la página index.html.
+En la primer pre entrega tal página estaba cargada en el main */
 
-.tabla
+.index__body__img__fondo
     {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-.imagenFondoIndice
-    {
-        background-image: url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos.jpg) ;
+        background-image: linear-gradient(to bottom,rgba(82, 85, 64, 0.452),rgba(73, 61, 69, 0.447)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        background-attachment: fixed; /* dejo fija la imágen y solo se mueve el contenido con el scroll vertical*/      -webkit-text-fill-color:white;
+        background-attachment: fixed;   /* Esto indica que la imagen de fondo estará fija en 
+                                        la pantalla y no se moverá con el contenedor.*/ 
     }
 
-.imagenFondoCatalogo
+.catalogo__body__img__fondo
     {
-        height: 75vh; /* mediante este atributo le indico que ocupe el 75% de la pagina donde esta parado*/
         background-image: url(../assets/img/Biblioteca\ Tianjin\ Binhai\,\ República\ Popular\ China.jpg);
         background-repeat:no-repeat;
         background-size: cover; 
         background-position: center;
-        -webkit-text-fill-color: black       
+        background-attachment: fixed;         
     }
 
-.imagenFondoRegistro
+.registro__body__img__fondo
     {
         background-image: url(../assets/img/Biblioteca\ Nacional\ de\ Austria\,\ Republica\ de\ Austria.jpg) ;
         background-repeat:no-repeat;
         background-size: cover; 
         background-position: center;
+        background-attachment: fixed;
     }
 
-.imagenFondoPido
+.pido__body__img__fondo
     {
         background-image: url(../assets/img/Biblioteca\ Estatal\ de\ Nueva\ Gales\ del\ Sur\,\ Australia.jpg) ;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        -webkit-text-fill-color:black;
+        background-attachment: fixed;
     }
 
-.imagenFondoContacto
+.contacto__body__img__fondo
     {
-        background-image: url(../assets/img/Biblioteca\ del\ Palacio\ de\ Mafra\,\ Portugal.jpg) ;
+        background-image: linear-gradient(to right,rgba(79, 29, 14, 0.63),rgba(22, 68, 22, 0.63)), url("../assets/img/Biblioteca\ del\ Palacio\ de\ Mafra\,\ Portugal.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        background-attachment: fixed;
     }
 
-/* footer */
+    /* Estilado header, icono y barra de navegación */    
 
-.pieDePagina
+
+.header__div__img
     {
-        background-color:thistle;
-        font-size: smaller;
+        width: 30px;
+    }
+
+.header__div__img__mover
+    {
+        margin-left: 1px;
+        margin-right: 10px;
+    }
+
+/* Aplico color de fondo blanco al nombre de la biblioteca de la imagen del body */
+.nombre__biblioteca
+    {
+        background-color: white;
+    }
+
+.texto__blanco
+    {
+        -webkit-text-fill-color:white;
+    }
+
+.header__nav__ul__li__a
+    { 
+        color: white;
+        text-decoration: none;    /* quita el subrayado de cada una de las opciones del menù de navegaciòn */    
+        font-size: 1rem;
+        display: inline-block;  /* de esta forma le indico que siga siendo un elemento en línea y además que también sea
+        un elemento en bloque respecto al resto de las propiedas que ahora si puedo definirle tales 
+        como margin top y bottom, padding top y bottom */
+        /*margin: 10px;    /* distancia superior externa a la caja */
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding-right: 0px;
+        padding-left: 0px;
+        background-color: rgba(96, 66, 66, 0.363);
+    }
+
+/* la propiedad order permite alterar la ubicación de los elementos dentro de un flex, en este caso dentro del ul
+se altero el orden de los lista item inicio y contacto, situación que se ordena a partir de la propiedad 
+en cuestión */
+ 
+.li__ancla__inicio
+    {   
+        order: -1;
+    }
+
+.li__ancla__contacto
+    {
+        order: 4;
+    }
+
+/* main */
+
+.parrafo__sangria                    /* las clases se llaman con el punto */
+    {
+        text-indent: 50px; /*debiera ser vh, vw o % la unidad de medida a expresar*/
+    }
+
+.h__uno
+    {
         text-align: center;
+        font-size: 3rem;
+    }
+
+.h__dos
+    {
+        text-align: center;
+        font-size: 2rem;
+    }   
+
+.fuente__negrita
+    {
+        font-weight: bold;
+    }
+
+.fuente__tamaño
+    {
+        font-size: 1rem;
+    }
+
+    /*
+.conjuntoDeCampos       /* texto__centrado es una clase libre */
+  /*  {
+        text-align: center;
+    }
+*/
+/* Centrado horizontal de las secciones iframe, ya sea el texto que describe o el mismo componente ifrmaeo */
+
+.iframe
+    {
+        text-align: center; /* centrado de texto u objeto*/
+    }
+
+.centrar
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;    
+        align-items: center;
+    }
+
+/*    
+.catalogo__body
+    {   
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+*/
+
+.fondo
+    {
+        background:linear-gradient(to right,rgba(0, 0, 0, 0.642),rgba(0, 0, 0, 0.642)),  url("../assets/img/fondo.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+.catalogo      /* div padre clase galeria */
+    
+    {
+        display: flex;
+        height: 50vh;
+        width: 30%;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content:space-evenly;
+    }
+ 
+.catalogo__div__img  /* imagenes */
+    {
+        width: 120px;
+        height: 170px;
+        object-fit: cover;
+    }
+  
+.form__control
+    {
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 100;
+        line-height: 1.5;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        -webkit-text-fill-color:rgb(17, 19, 18);
+        opacity: 0.7;
+    }
+    /* footer */
+
+.footer
+    {
+        width: 100vw;
+        height: 40px;
+        background-color: #32385e5f;
+        color: black;
+        text-align: center;
+        position: fixed;
+        padding-bottom: 5px;
+        bottom: 0px;
+        font-size: 0.7rem;
+    }
+
+/* Esta clase permite modificar el color del icono de fontawesome*/
+.fa-heart
+    {
+        color: rgba(7, 151, 241, 0.79);
+    }
+
+.redes
+    {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+.redes a
+    {
+        font-size: 1rem;
+        text-decoration: none;  
+    }
+
+/* Sitúo las opciones del menú desplegable hacia la derecha de la pantalla */
+
+.ubicar__link__navegacion__celular
+        {   
+            align-items: flex-end;
+        }
+
+.form-control
+        {
+            width: 30vh;
+        }
+
+/* Media query para cuando el medio sea una pantalla - celular -
+y el ancho máximo sea de 768px */
+
+@media screen and (max-width: 768px)
+    {
+        .h__uno
+            {
+                font-size: 1.6rem;
+            }
+
+        .h__dos
+            {
+                font-size: 1.2rem;
+            }   
+        
+        .fuente__tamaño
+            {
+                font-size: 0.8rem;
+            }
+     
+        .redes a
+            {
+                font-size: 1rem;
+            }
+    
+        .catalogo      /* div padre clase galeria */
+            {
+                height: 10px;
+                width: 5px;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+        .catalogo__div__img  /* imagenes */
+            {
+                width: 60px;
+                height: 80px;
+            }
+
+        .footer
+            {
+                width: 100vw;
+                               background-color: #32385e5f;
+                color: black;
+                text-align: center;
+                position: fixed;
+                padding-bottom: 5px;
+                bottom: 0px;
+                font-size: 0.7rem;
+            }
+        
+
+
+            /*        
+        .catalogo__body
+            {
+                background-color: blueviolet;
+            }
+  */
+/*
+  thead, tbody 
+    {
+        display: block;
+    }
+/*
+tbody 
+    {
+       
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+        .footer
+            {
+                height: 50px;
+            }
+
+*/
     }

@@ -1,195 +1,258 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo</title>
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <!-- link a la hoja de estilos-->
-    <link rel="stylesheet" href="../css/estilos.css">
-</head>
-<body>
-    <header class="encabezadoHeader"> <!-- etiqueta semántica de estructura -->
-        <div>
-            <img class="encabezadoHeaderImg" src="../assets/img/logo.jpg" alt="Dos libros apilados">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catálogo</title>
+        <!-- CSS de Bootstrap -->
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/acaf011dda.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <!-- link a la hoja de estilos-->
+        <link rel="stylesheet" href="../css/estilos.css">
+    </head>
+    <body class="catalogo__body__img__fondo body">
+        <header class="header">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="container-fluid div__header__flexible">
+                    <!-- el navegador lee a la persona no vidente lo que indica el atributo alt de la etiqueta img
+                    Siempre el alt debe llevar una descripción.
+                    El logo de la página siembre debe estar linkeado al index -->
+                    <a href="../index.html"><img class="header__div__img header__div__img__mover" src="../assets/img/logo.jpg" alt="Dos libros apilados"></a>
+                    <button class="navbar-toggler vertical" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- navbar-collapse especifica el tamaño inicial de un elemento    flexible, -->
+                    <!--
+                        navbar-collapse {
+                        flex-basis: 100%;
+                        flex-grow: 1;
+                        align-items: center;
+                      }-->
+                    <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav w-100">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0  justify-content-between w-100 ubicar__link__navegacion__celular">
+                                <li class="nav-item li__ancla__contacto">
+                                    <a class="nav-link active header__nav__ul__li__a texto__blanco"  href="./contacto.html">Contacto</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="#">Catálogo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./registro.html">Registro</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./pido.html">Pido</a>
+                                </li>
+                                <li class="nav-item li__ancla__inicio">
+                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="../index.html">Inicio</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main> <!-- etiqueta semántica de estructura     -->
+            <!-- Utilizo span para poder darle color de fondo exclusivamente al texto -->
+            <span class="nombre__biblioteca texto__negro fuente__tamaño">Biblioteca Tianjin Binhai, República Popular China</span>
+            <h1 class="h__uno">Observa el Catálogo actualizado de labiblioteca.com</h1>
+            <br><br>
+            <!--
+            <div class="container">
+            -->        
+                    <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
+                  <!--<div class="col-md-12 col-sm-12">-->
+                    <div class="desbordamiento__tabla">
+                        <table class="table table-success table-striped tabla" border="5">
+                        <!-- <table class="tabla table table-success encabezado fuente__tamaño" border="5">
+                        -->
+                        <!--seleccionar columnas-->
+                            <colgroup span="12"></colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Nombres Autor</th>
+                                    <th>Apellidos Autor</th>
+                                    <th>Título</th>
+                                    <th>Edición</th>
+                                    <th>Editorial</th>
+                                    <th>Fecha de Impresión</th>
+                                    <th>Páginas</th>
+                                    <th>Ancho (cm)</th>
+                                    <th>Alto (cm)</th>
+                                    <th>ISBN</th>
+                                    <th>Descripción</th>
+                                    <th>Ubicación</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Daniel</td>
+                                    <td>Balmaceda</td>
+                                     <td>Historias insólitas de la historia Argentina</td>
+                                     <td>1</td>
+                                     <td>Sudamericana</td>
+                                     <td>2021</td>    
+                                     <td>376</td>
+                                     <td>14</td>
+                                     <td>22</td>
+                                     <td>9789500765213</td>
+                                     <td>Investigación histórica</td>
+                                     <td>mesa de luz</td>
+                                </tr>
+                                <tr>
+                                    <td>Beatriz</td>
+                                    <td>Bragoni</td>
+                                    <td>San Martín</td>
+                                    <td>1</td>
+                                    <td>Edhasa</td>
+                                    <td>2019</td>
+                                    <td>335</td>
+                                    <td>15,5</td>
+                                    <td>22,5</td>
+                                    <td>9789876284967</td>
+                                    <td>Historia Argentina</td>
+                                    <td>estatería superior</td>
+                                </tr>
+                                <tr>
+                                    <td>Alonso</td>
+                                    <td>Álvarez García</td>
+                                    <td>HTML 5</td>
+                                    <td>1</td>
+                                    <td>Anaya Multimedia</td>
+                                    <td>2010</td>
+                                    <td>303</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>9788441527461</td>
+                                    <td>Programación</td>
+                                    <td>estantería superior</td>
+                                </tr>
+                                <tr>
+                                    <td>Sergio</td>
+                                    <td>Rubín</td>
+                                    <td>Secreto de Confesión</td>
+                                    <td>1</td>
+                                    <td>Ediciones B</td>
+                                    <td>2022</td>
+                                    <td>208</td>
+                                    <td>15</td>
+                                    <td>23</td>
+                                    <td>9789877803488</tdlass=>
+                                    <td>Historia Argentina</td=>
+                                    <td>estantería superior</tds=>
+                                </tr>
+                                <tr>
+                                    <td>Dan</td>
+                                    <td>Brown</td>
+                                    <td>Ángeles y Demonios</td>
+                                    <td>1</td>
+                                    <td>Umbriel</td>
+                                    <td>2005</td>
+                                    <td>508</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>9788495618771</td>
+                                    <td></td>
+                                    <td>estantería superior izquierda</td>
+                                </tr>
+                                <tr>
+                                    <td>Fabián</td>
+                                    <td>Sevilla</td>
+                                    <td>Vampíricas vacaciones y otros cuentos de risa</td>
+                                    <td>3</td>
+                                    <td>Quipu</td>
+                                    <td>2012</td>
+                                    <td>96</td>                                        <td>14</td>
+                                    <td>21</td>
+                                    <td>9789875040366</td>
+                                    <td>Literatura infantil y juvenil Argentina</td>
+                                    <td>estantería inferior izquierda</td>
+                                </tr>
+                                <tr>
+                                    <td>Millán</td>
+                                    <td>César</td>
+                                    <td>Guía para un perro feliz: 98 consejos y técnicas esenciales</td>
+                                    <td>1</td>                                    <td>Aguilar</td>
+                                    <td>2013</td>
+                                    <td>232</td>
+                                    <td>13</td>
+                                    <td>21</td>
+                                    <td>9789870431824</td>
+                                    <td>Mascotas</td>
+                                    <td>estantería inferior izquierda</td>
+                                </tr>
+                                <tr>
+                                    <td>Sergio</td>
+                                    <td>Rubín</td>
+                                    <td>El Jesuita</td>
+                                    <td>1</td>
+                                    <td>Vergara</td>
+                                    <td>2010</td>
+                                    <td>192</td>
+                                    <td>15</td>
+                                    <td>23</td>
+                                    <td>9789501524505</td>
+                                    <td>Bergoglio, Jorge Mario</td>
+                                    <td>estantería superior derecha</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+    
+                       
+       
+               <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
+                    
+                   
+                        <h2 class="h__dos">Algunos de nuestros títulos</h2>        
+                        <br><br>   
+                        <!--
+                        <div class="col-md-12 col-sm-12"></div>
+                        -->           
+                        <div class="catalogo">
+                                <div class="catalogo__div"><img class="catalogo__div__img" src="../assets/img/titulo/Inferno.jpg" alt=""></div>
+                                <div class="catalogo__div"><img class="catalogo__div__img" src="../assets/img/titulo/Sinceramente.jpg" alt=""></div>
+                                <div class="catalogo__div"><img class="catalogo__div__img" src="../assets/img/titulo/Mejor muertos.jpg" alt=""></div>
+                                <div class="catalogo__div"><img class="catalogo__div__img" src="../assets/img/titulo/Primer tiempo.jpg" alt=""></div>
+                                <div class="catalogo__div"><img class="catalogo__div__img" src="../assets/img/titulo/Secreto de confesion.webp" alt=""></div>
+                            </div>
+                   
+
+        </main>
+        <footer class="footer fuente__tamaño"> <!-- etiqueta semántica de estructura -->
+   
+             <div class="redes">
+                <!-- Fontawesome iconos instagram, twitter, facebook -->
+
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fa-heart fa-beat fa-brands fa-square-instagram"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <i class="fa-heart fab fa-fade fa-twitter"></i>
+                </a>
+                <a  href="https://www.facebook.com" target="_blank">
+                    <i class="fa-heart fab fa-bounce fa-facebook"></i>
+                </a>
+                <a  href="https://www.snapchat.com" target="_blank">
+                    <i class="fa-heart fa-flip fa-brands fa-square-snapchat"></i>
+                </a>
+                <a  href="https://www.youtube.com" target="_blank">
+                    <i class="fa-heart fa-shake fa-brands fa-youtube"></i>
+                </a>
+                <a  href="https://mendotran.mendoza.gov.ar/site/troncal" target="_blank">
+                    <i class="fa-heart fa-spin fa-fade fa-solid fa-bus"></i>
+                </a>
+            </div>
         </div>
-        <nav>
-            <!-- atajo li*5 tab-->
-            <!-- entre la etiqueta li que abre y cierra hago shitf+alt y con el cursor bajo hasta el último li, esto me 
-            permite escribir simultáneamente la ancla <a href=""></a>-->
-        
-            <!-- esto es una lista desordenada de navegación-->
-            <!--padre-->
-            <ul class="encabezadoHeaderUl">
-                <!--hijo lista item-->
-                <li>
-                    <!--ancla-->
-                    <a class="encabezadoHeaderAncla" href="../index.html">Inicio</a>
-                </li>
-                <li>
-                    <!--ancla-->
-                    <a class="encabezadoHeaderAncla" href="#">Catálogo</a>
-                </li>
-                <!--hijo lista item-->
-                <li>
-                    <a class="encabezadoHeaderAncla" href="./registro.html">Registro</a>
-                </li>
-                <li>
-                    <a class="encabezadoHeaderAncla"href="./pido.html">Pido</a>
-                </li>
-                <li>
-                    <a class="encabezadoHeaderAncla" href="./contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main class="imagenFondoCatalogo"> <!-- etiqueta semántica de estructura -->
-        <p>Biblioteca Tianjin Binhai, República Popular China</p>
-        <section>
-            <!--<p> AQUI COLOCAR EL NOMBRE DEL MUSEO QUE SE OBSERVA EN LA FOTO</p>-->
-            <br><br><br>
-            <h1 class="hUno">Observa el Catálogo actualizado de labiblioteca.com.</h1>
-            <section>
-                <br><br>
-                <table class="tabla" border="5">
-                    <!--TITULO DE LA TABLA-->
-                    <caption>Catálogo</caption>
-                    <!--seleccionar columnas-->
-                    <colgroup>
-                        <!--aca vamos a decir que la columna ocupe las 6 columnas-->
-                        <col span="13" > 
-                    </colgroup>
-                    <!--CABECERA DE LA TABLA-->
-                    <thead>
-                    <!--EL NUMERO DE CELDAS DENTRO DE UN TR ESTABLECE LAS COLUMNAS-->
-                        <tr>
-                            <th>
-                                Nombres Autor
-                            </th>
-                            <th>
-                                Apellidos Autor
-                            </th>
-                            <th>
-                                Título
-                            </th>
-                            <th>
-                                Edición
-                            </th>
-                            <th>
-                                Editorial
-                            </th>
-                            <th>
-                                Fecha de Impresión
-                            </th>
-                            <th>
-                                Páginas
-                            </th>
-                            <th>
-                                Ancho
-                            </th>
-                            <th>
-                                Alto
-                            </th>
-                            <th>
-                                ISBN
-                            </th>
-                            <th>
-                                Descripción
-                            </th>
-                            <th>
-                                Ubicación
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Daniel</td>
-                            <td>Balmaceda</td>
-                            <td>Historias insólitas de la historia Argentina</td>
-                            <td>1</td>
-                            <td>Sudamericana</td>
-                            <td>2021</td>    
-                            <td>376</td>
-                            <td>14</td>
-                            <td>22</td>
-                            <td>9789500765213</td>
-                            <td>Investigación histórica</td>
-                            <td>mesa de luz</td>
-                        </tr>
-                        <tr><td>Daniel</td>
-                            <td>Balmaceda</td>
-                            <td>Historias insólitas de la historia Argentina</td>
-                            <td>1</td>
-                            <td>Sudamericana</td>
-                            <td>2021</td>    
-                            <td>376</td>
-                            <td>14</td>
-                            <td>22</td>
-                            <td>9789500765213</td>
-                            <td>Investigación histórica</td>
-                            <td>mesa de luz</td>
-                        </tr>
-                        <tr><td>Daniel</td>
-                            <td>Balmaceda</td>
-                            <td>Historias insólitas de la historia Argentina</td>
-                            <td>1</td>
-                            <td>Sudamericana</td>
-                            <td>2021</td>    
-                            <td>376</td>
-                            <td>14</td>
-                            <td>22</td>
-                            <td>9789500765213</td>
-                            <td>Investigación histórica</td>
-                            <td>mesa de luz</td>
-                        </tr>
-                        <tr><td>Daniel</td>
-                            <td>Balmaceda</td>
-                            <td>Historias insólitas de la historia Argentina</td>
-                            <td>1</td>
-                            <td>Sudamericana</td>
-                            <td>2021</td>    
-                            <td>376</td>
-                            <td>14</td>
-                            <td>22</td>
-                            <td>9789500765213</td>
-                            <td>Investigación histórica</td>
-                            <td>mesa de luz</td>
-                        </tr>
-                        <tr><td>Daniel</td>
-                            <td>Balmaceda</td>
-                            <td>Historias insólitas de la historia Argentina</td>
-                            <td>1</td>
-                            <td>Sudamericana</td>
-                            <td>2021</td>    
-                            <td>376</td>
-                            <td>14</td>
-                            <td>22</td>
-                            <td>9789500765213</td>
-                            <td>Investigación histórica</td>
-                            <td>mesa de luz</td>
-                        </tr>
-                        <tr><td>Daniel</td>
-                            <td>Balmaceda</td>
-                            <td>Historias insólitas de la historia Argentina</td>
-                            <td>1</td>
-                            <td>Sudamericana</td>
-                            <td>2021</td>    
-                            <td>376</td>
-                            <td>14</td>
-                            <td>22</td>
-                            <td>9789500765213</td>
-                            <td>Investigación histórica</td>
-                            <td>mesa de luz</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </section>
-    </main>
-    <footer class="pieDePagina"> <!-- etiqueta semántica de estructura -->
-        <br>
-        <p>Copyright 2023 Labiblioteca.com | Todos los derechos reservados.</p>
-        <br>
-    </footer>
-</body>
+    </div>
+
+</div>            <div>
+                <p class="fuente__negrita">Copyright 2023 Biblioteca.com | Todos los derechos reservados.</p>
+            </div>
+        </footer>
+        <!-- JavaScript de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
 </html>

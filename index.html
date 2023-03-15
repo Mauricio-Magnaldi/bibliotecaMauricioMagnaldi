@@ -5,85 +5,135 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>La Biblioteca</title>
+        <title>Biblioteca</title>
         <!--favicon, se Guarda imágen desde la web con extensión .png y se debe renombrar como favicon con extensión
         .ico 
         .png es una imagen sin fondo es por eso que luego de buscarlo en herramientas seleccionamos la opción transparente
         para luego guardar la imagen  -->
+        <!-- CSS de Bootstrap -->
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/acaf011dda.js" crossorigin="anonymous"></script>
         <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
         <!-- link a la hoja de estilos-->
         <link rel="stylesheet" href="./css/estilos.css">
     </head>
-    <body>
-        <header class="encabezadoHeader">    <!--etiqueta semántica de estructura-->
-            <div>
-                <!-- completar con texto descriptivo de la imagen el atributo alt de la etiqueta img es una buena práctica-->
-                <img class="encabezadoHeaderImg" src="./assets/img/logo.jpg" alt="Dos libros apilados">
-            </div>        
-            <nav>   <!--esta es una etiqueta de navegación-->
-                <ul class="encabezadoHeaderUl">    <!-- hay dos tipos de enlaces_rutas: absolutas (https://www.google.com.ar) se utilizan
-                    para los íconos de las redes sociales en el footer: twiter, instagram, etc. y 
-                    relativas (las propias del sitio)-->
-                    <!-- el atributo target="_blank" dentro de <a> lo utilizo cuando llamo a un link absoluto, es decir, a una 
-                    página ajena a mi sitio aunque invocada desde mi sitio, ej. instagram, google, facebook, etc. -->
-                    <li>
-                                            <!-- colocando # en href de a estoy haciendo referencia a la página donde estoy actualmente-->
-                        <a class="encabezadoHeaderAncla" href="#">Inicio</a>        
-                    </li>
-                    <li>
-                        <a class="encabezadoHeaderAncla" href="./pages/catalogo.html">Catálogo</a>        
-                    </li>    
-                    <li>
-                        <a class="encabezadoHeaderAncla" href="./pages/registro.html">Registro</a>
-                    </li>
-                    <li>
-                        <a class="encabezadoHeaderAncla" href="./pages/pido.html">Pido</a>
-                    </li>
-                    <li>
-                        <a class="encabezadoHeaderAncla" href="./pages/contacto.html">Contacto</a>        
-                    </li>
-                </ul>
+    <body class="index__body__img__fondo body">
+        <header class="header">
+            <nav class="navbar navbar-expand-md navbar-light nav__alto">
+                <div class="container-fluid">
+                    <!-- el navegador lee a la persona no vidente lo que indica el atributo alt de la etiqueta img
+                    Siempre el alt debe llevar una descripción.
+                    El logo de la página siembre debe estar linkeado al index -->
+                    <a href="#"><img class="header__div__img header__div__img__mover" src="./assets/img/logo.jpg" alt="Dos libros apilados"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav w-100">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-between w-100 ubicar__link__navegacion__celular">
+                                <li class="nav-item li__ancla__contacto">
+                                    <a class="nav-link active header__nav__ul__li__a texto__blanco"  href="./pages/contacto.html">Contacto</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./pages/catalogo.html">Catálogo</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./pages/registro.html">Registro</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./pages/pido.html">Pido</a>
+                                </li>
+                                <li class="nav-item li__ancla__inicio">
+                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="#">Inicio</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </nav>
         </header>
-        <main class="imagenFondoIndice">  <!-- etiqueta semántica de estructura-->
-            <section>
-                <div>
-                    <p>Biblioteca George Peabody, Estados Unidos</p>
-                    <br><br><br><br>
-                </div>
-                <div>
-                    <h1 class="hUno">Bienvenido a Labiblioteca.com</h1>
-                    <br><br><br><br><br>
-                </div>
-                <div>
-                    <h2 class="hDosParrafo"><p>Labiblioteca.com surge a partir de la necesidad de ordenar físicamente la pequeña biblioteca familiar compuesta por libros de varias temáticas. Luego, por sugerencia de nuestra hija, aparece la idea de poder compartir labiblioteca.com con el resto de la familia, amigos cercanos.</p> 
-                    <br>
-                    <p>El préstamo que se hace del libro no tiene costo asociado, es decir, se hace sin fines de lucro, tan solo con el compromiso por parte de quien lo recibe de conservarlo en óptimas condiciones sin rayarlo, mojarlo, etc. El libro se retira del domicilio en hora y fecha consensuada y se devuelve en el mismo lugar bajos los mismos términos.</p>
-                    <br>
-                    <p>Otra etapa del proyecto contempla la posibilidad de armar foros de discusión presencial o bien a través de alguna de las plataformas para realizar video llamadas. Si bien aún no tiene una fecha de inicio concreta, se estima que tales encuentros podrían darse a partir del próximo año.</p>
-                    <br>
-                    <p>Asimismo, nuestra intención es que quien así lo quiera su sume al proyecto, armando una red colaborativa donde quien guste preste su libro mediante labiblioteca.com. Para poder sumarse al proyecto hay información pertinente en la página de Contacto, la cual te invito a que visites y cualquier duda o inquietud puedes llamarme.</p></h2>
-                    <br><br>
-                </div>
-            </section>
-        
-        </main>
-        <!--<section>
+        <!-- utilizar rem para las fuentes de forma tal de respetar aquello que el usuario configuro como fuente
+        en su navegador, mientras que utilizar px y % para las propiedades margin y padding -->
+        <!-- TENER PRESENTE QUE EL TAMAÑO DE LA MÌNIMA FUENTE SERÀN 16 PX ya que es la fuente definida por el usuario-->
+        <main class="index__main__img">  <!-- etiqueta semántica de estructura-->
+            <!-- Utilizo span para poder darle color de fondo exclusivamente al texto -->
+            <span class="nombre__biblioteca texto__negro fuente__tamaño">Biblioteca George Peabody, Estados Unidos</span>
             <div>
-                <h1><h1>    dentro de una sección puede colocar h1
-                       
-            <article>               <!-- La etiqueta article permite tener internamente header, main y footer
-                <header></header>   <!-- independientes de los de la pàgina principal
-                <main></main>
-                <footer></footer>
-            </article>
-        </section>-->
-
-        <footer class="pieDePagina">    <!-- etiqueta semántica de estructura -->
-            <br>
+                <h1 class="h__uno texto__blanco">Bienvenido a Biblioteca.com</h1>
+                <br>
+            </div>
+            <div>
+                <h2 class="h__dos texto__blanco">Un poco de Historia reciente</h2>
+            </div>
+            <!-- Utilizo el elemento contenedor definido en bootstrap, la clase container estable el ancho, padding y margin tanto r/l -->
+            <div class="container">
+                <div class="row justify-content-between">
+                    <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
+                    <div class="col-md-8 col-sm-12 d-flex flex-column justify-content-center centrar">
+                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Surge a partir de la necesidad de ordenar físicamente la pequeña biblioteca familiar compuesta por libros de varias temáticas. Luego, por iniciativa de nuestra hija, aparece la idea de poder compartir labiblioteca.com con el resto de la familia, amigos cercanos.</p> 
+                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">El préstamo que se hace del libro no tiene costo asociado, es decir, se hace sin fines de lucro, tan solo con el compromiso por parte de quien lo recibe de conservarlo en óptimas condiciones sin rayarlo, mojarlo, etc. El libro se retira del punto de encuentro acordado en hora y fecha consensuada y se devuelve en el mismo lugar bajos los mismos términos.</p>
+                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Otra etapa del proyecto contempla la posibilidad de a partir de la lectura, armar foros de discusión presencial o bien a través de alguna de las plataformas disponibles a tal fin (Google Meet, Zoom). Si bien aún no tiene una fecha de inicio concreta, se estima que tales encuentros podrían darse a partir del próximo año.</p>
+                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Asimismo, nuestra intención es que quien así lo quiera su sume al proyecto, prestando algún libro mediante labiblioteca.com. Para poder sumarse al proyecto hay información pertinente en la página de Contacto, la cual te invito a que visites y cualquier duda o inquietud me contactes.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-12 d-flex flex-column justify-content-center centrar">
+                        <div class="carrousel">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item carrousel__alto active" data-bs-interval="3000">
+                                        <img src="./assets/img/Rafaela.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item carrousel__alto" data-bs-interval="3000">
+                                        <img src="./assets/img/Narnia.webp" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item carrousel__alto" data-bs-interval="3000">
+                                    <img src="./assets/img/Vampiricas vacaciones.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"     
+                            data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                    </div>
+                </div> 
+            </div>   
+        </main>
+        <footer class="footer fuente__tamaño"> <!-- etiqueta semántica de estructura -->
+            <!--            <br>
             <p>Copyright 2023 Labiblioteca.com | Todos los derechos reservados.</p>
             <br>
+            -->
+            <div class="redes">
+            <!-- Fontawesome iconos instagram, twitter, facebook -->
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fa-heart fa-beat fa-brands fa-square-instagram"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <i class="fa-heart fab fa-fade fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fa-heart fab fa-bounce fa-facebook"></i>
+                </a>
+                <a href="https://www.snapchat.com" target="_blank">
+                    <i class="fa-heart fa-flip fa-brands fa-square-snapchat"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <i class="fa-heart fa-shake fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://mendotran.mendoza.gov.ar/site/troncal" target="_blank">
+                    <i class="fa-heart fa-spin fa-fade fa-solid fa-bus"></i>
+                </a>
+            </div>
+            <div>
+                <p class="fuente__negrita">Copyright 2023 Biblioteca.com | Todos los derechos reservados.</p>
+            </div>
         </footer>
+        <!-- JavaScript de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>
 
