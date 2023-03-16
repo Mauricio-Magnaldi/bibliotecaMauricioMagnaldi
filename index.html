@@ -65,17 +65,21 @@
             <div>
                 <h2 class="h__dos texto__blanco">Un poco de Historia reciente</h2>
             </div>
-            <!-- Utilizo el elemento contenedor definido en bootstrap, la clase container estable el ancho, padding y margin tanto r/l -->
+            <!-- Utilizo el elemento contenedor definido en bootstrap, la clase container establece el ancho, padding y margin tanto r/l -->
             <div class="container">
                 <div class="row justify-content-between">
-                    <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
-                    <div class="col-md-8 col-sm-12 d-flex flex-column justify-content-center centrar">
+                    <!-- Alineamiento horizontal mediante bootstrap de los div principales.
+                    En uno de los div está el texto mientras que en el otro está el carrousel. 
+                    El div del texto utiliza más columnas que el div del carrousel, excepto
+                    cuando la pantalla es mayor o igual a 576 px -->
+                    <div class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column justify-content-center centrar">
+                        <!-- Clases propias como parrafo__sangria texto__blanco fuente__negrita y fuente__tamaño -->
                         <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Surge a partir de la necesidad de ordenar físicamente la pequeña biblioteca familiar compuesta por libros de varias temáticas. Luego, por iniciativa de nuestra hija, aparece la idea de poder compartir labiblioteca.com con el resto de la familia, amigos cercanos.</p> 
                         <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">El préstamo que se hace del libro no tiene costo asociado, es decir, se hace sin fines de lucro, tan solo con el compromiso por parte de quien lo recibe de conservarlo en óptimas condiciones sin rayarlo, mojarlo, etc. El libro se retira del punto de encuentro acordado en hora y fecha consensuada y se devuelve en el mismo lugar bajos los mismos términos.</p>
                         <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Otra etapa del proyecto contempla la posibilidad de a partir de la lectura, armar foros de discusión presencial o bien a través de alguna de las plataformas disponibles a tal fin (Google Meet, Zoom). Si bien aún no tiene una fecha de inicio concreta, se estima que tales encuentros podrían darse a partir del próximo año.</p>
                         <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Asimismo, nuestra intención es que quien así lo quiera su sume al proyecto, prestando algún libro mediante labiblioteca.com. Para poder sumarse al proyecto hay información pertinente en la página de Contacto, la cual te invito a que visites y cualquier duda o inquietud me contactes.</p>
                     </div>
-                    <div class="col-md-4 col-sm-12 d-flex flex-column justify-content-center centrar">
+                    <div class="col-lg-4 col-md-8 col-sm-12 d-flex flex-row justify-content-center">
                         <div class="carrousel">
                             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
@@ -102,7 +106,7 @@
                 </div> 
             </div>   
         </main>
-        <footer class="footer fuente__tamaño"> <!-- etiqueta semántica de estructura -->
+        <footer class="footer"> <!-- etiqueta semántica de estructura -->
             <!--            <br>
             <p>Copyright 2023 Labiblioteca.com | Todos los derechos reservados.</p>
             <br>
@@ -131,7 +135,7 @@
             <div>
                 <p class="fuente__negrita">Copyright 2023 Biblioteca.com | Todos los derechos reservados.</p>
             </div>
-        </footer>
+       </footer>
         <!-- JavaScript de Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>

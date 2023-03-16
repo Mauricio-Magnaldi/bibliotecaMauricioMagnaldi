@@ -53,49 +53,19 @@
             <span class="nombre__biblioteca texto__negro fuente__tamaño">Biblioteca Estatal de Nueva Gales del Sur, Australia</span>
             <br>
             <section>
-                <p></p>
                 <h1 class="h__uno">Busca y pedí el libro que quieras seleccionandolo y colocando tu email</h1>
                 <br><br>
-                <div class="col">
-                    <!-- Convierto al formulario en fila -->
-                    <form class="row" autocomplete="off">
-                        <!-- Indico que el contenido del div utilice 8 filas, especificamente aplica al input-->
-                        <div class="mb-2 col-8">
-                            <label for="email" class="form-label texto__blanco">Email</label>
-                            <input type="email" class="form__control" id="email" required>
-                        </div>
-                        <div>
-                            <button type="submit" class="btn btn-primary">Enviar</button>
-                        </div>
-                    </form>
-            </div>
-                
+                <div class="table-responsive-sm table-responsive-md">    
                     <div class="desbordamiento__tabla">
                         <table class="table table-success table-striped tabla" border="5">    
-                        
-                            <colgroup>
-                            <!--aca vamos a decir que la columna ocupe las 6 columnas-->
-                                <col span="5"> 
-                            </colgroup>
-                           
+                            <colgroup><col span="5"></colgroup>
                             <thead>
-                           
                                 <tr class="table-light">
-                                    <th scope="col">
-                                        Nombres Autor
-                                    </th>
-                                    <th scope="col">
-                                        Apellidos Autor
-                                    </th>
-                                    <th scope="col">
-                                        Título
-                                    </th>
-                                    <th scope="col">
-                                        Propietario
-                                    </th>
-                                    <th scope="col">
-                                        Pedir
-                                    </th>
+                                    <th scope="col">Nombres Autor</th>
+                                    <th scope="col">Apellidos Autor</th>
+                                    <th scope="col">Título</th>
+                                    <th scope="col">Propietario</th>
+                                    <th scope="col">Pedir</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -123,14 +93,36 @@
                             </tbody>
                         </table>
                     </div>
-
+                    <br>
+                    <div class="container">
+                        <div class="row justify-content-between">
+                            <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
+                            <div class="col-md-12 col-sm-12 d-flex flex-column justify-content-center centrar">
+                                <div class="col">
+                                    <form class="row" autocomplete="off">
+                                        <div class="mb-2 col-12">
+                                            <label for="email" class="form-label texto__blanco">Email</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        <div class="mb-3 col-12">
+                                            <label for="formFileSm" class="form-label texto__blanco">Subí la foto de la ficha</label>
+                                            <input class="form-control form-control-md" id="formFileSm" type="file">
+                                        </div>
+                                        <div>
+                                            <button type="submit" class="btn btn-primary col-12">Enviar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </section>
             <br>
         </main>
        <!--- <div class="imagenContenedor">
             <img class="imagenMain" src="../assets/img/foto 5.jpg" alt="Real Gabinete Portugués de Lectura, Brasil"><p>Real Gabinete Portugués de Lectura, Brasil</p>
         </div>-->
-        <footer class="footer fuente__tamaño"> <!-- etiqueta semántica de estructura -->
+        <footer class="footer"> <!-- etiqueta semántica de estructura -->
             <!--            <br>
             <p>Copyright 2023 Labiblioteca.com | Todos los derechos reservados.</p>
             <br>

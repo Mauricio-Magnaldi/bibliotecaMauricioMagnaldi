@@ -64,11 +64,9 @@
             -->        
                     <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
                   <!--<div class="col-md-12 col-sm-12">-->
+                <div class="table-responsive-sm table-responsive-md">
                     <div class="desbordamiento__tabla">
                         <table class="table table-success table-striped tabla" border="5">
-                        <!-- <table class="tabla table table-success encabezado fuente__tamaño" border="5">
-                        -->
-                        <!--seleccionar columnas-->
                             <colgroup span="12"></colgroup>
                             <thead>
                                 <tr>
@@ -90,16 +88,16 @@
                                 <tr>
                                     <td>Daniel</td>
                                     <td>Balmaceda</td>
-                                     <td>Historias insólitas de la historia Argentina</td>
-                                     <td>1</td>
-                                     <td>Sudamericana</td>
-                                     <td>2021</td>    
-                                     <td>376</td>
-                                     <td>14</td>
-                                     <td>22</td>
-                                     <td>9789500765213</td>
-                                     <td>Investigación histórica</td>
-                                     <td>mesa de luz</td>
+                                    <td>Historias insólitas de la historia Argentina</td>
+                                    <td>1</td>
+                                    <td>Sudamericana</td>
+                                    <td>2021</td>    
+                                    <td>376</td>
+                                    <td>14</td>
+                                    <td>22</td>
+                                    <td>9789500765213</td>
+                                    <td>Investigación histórica</td>
+                                    <td>mesa de luz</td>
                                 </tr>
                                 <tr>
                                     <td>Beatriz</td>
@@ -200,28 +198,30 @@
                                 </tbody>
                             </table>
                         </div>
-    
-                       
-       
-               <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
-                    
-                   
-                        <h2 class="h__dos">Algunos de nuestros títulos</h2>        
-                        <br><br>   
-                        <!--
-                        <div class="col-md-12 col-sm-12"></div>
-                        -->           
-                        <div class="catalogo">
-                                <div class="catalogo__div"><img class="catalogo__div__img" src="../assets/img/titulo/Inferno.jpg" alt=""></div>
-                                <div class="catalogo__div"><img class="catalogo__div__img" src="../assets/img/titulo/Sinceramente.jpg" alt=""></div>
-                                <div class="catalogo__div"><img class="catalogo__div__img" src="../assets/img/titulo/Mejor muertos.jpg" alt=""></div>
-                                <div class="catalogo__div"><img class="catalogo__div__img" src="../assets/img/titulo/Primer tiempo.jpg" alt=""></div>
-                                <div class="catalogo__div"><img class="catalogo__div__img" src="../assets/img/titulo/Secreto de confesion.webp" alt=""></div>
+                    </div>
+                    <div class="contenedor__titulo__catalogo"></div>
+                        <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
+                        <h2 class="h__dos espaciado">Algunos de nuestros títulos</h2>        
+                        <div class="container">
+                            <!--
+                            Utilizo la clase container vía columna y final para utilizar la clase catalogo que yo
+                            mismo declaro    
+                            -->
+                            <div class="col">
+                                <div class="row">         
+                                <div class="catalogo">
+                                    <div><img class="catalogo__div__img" src="../assets/img/titulo/Inferno.jpg" alt=""></div>
+                                    <div><img class="catalogo__div__img" src="../assets/img/titulo/Sinceramente.jpg" alt=""></div>
+                                    <div><img class="catalogo__div__img" src="../assets/img/titulo/Mejor muertos.jpg" alt=""></div>
+                                    <div><img class="catalogo__div__img" src="../assets/img/titulo/Primer tiempo.jpg" alt=""></div>
+                                    <div><img class="catalogo__div__img" src="../assets/img/titulo/Secreto de confesion.webp" alt=""></div>
+                                </div>
                             </div>
-                   
-
+                        </div>
+                    </div>
+                    </div>
         </main>
-        <footer class="footer fuente__tamaño"> <!-- etiqueta semántica de estructura -->
+        <footer class="footer"> <!-- etiqueta semántica de estructura -->
    
              <div class="redes">
                 <!-- Fontawesome iconos instagram, twitter, facebook -->
@@ -232,23 +232,20 @@
                 <a href="https://www.twitter.com" target="_blank">
                     <i class="fa-heart fab fa-fade fa-twitter"></i>
                 </a>
-                <a  href="https://www.facebook.com" target="_blank">
+                <a href="https://www.facebook.com" target="_blank">
                     <i class="fa-heart fab fa-bounce fa-facebook"></i>
                 </a>
-                <a  href="https://www.snapchat.com" target="_blank">
+                <a href="https://www.snapchat.com" target="_blank">
                     <i class="fa-heart fa-flip fa-brands fa-square-snapchat"></i>
                 </a>
-                <a  href="https://www.youtube.com" target="_blank">
+                <a href="https://www.youtube.com" target="_blank">
                     <i class="fa-heart fa-shake fa-brands fa-youtube"></i>
                 </a>
-                <a  href="https://mendotran.mendoza.gov.ar/site/troncal" target="_blank">
+                <a href="https://mendotran.mendoza.gov.ar/site/troncal" target="_blank">
                     <i class="fa-heart fa-spin fa-fade fa-solid fa-bus"></i>
                 </a>
             </div>
-        </div>
-    </div>
-
-</div>            <div>
+            <div>
                 <p class="fuente__negrita">Copyright 2023 Biblioteca.com | Todos los derechos reservados.</p>
             </div>
         </footer>
