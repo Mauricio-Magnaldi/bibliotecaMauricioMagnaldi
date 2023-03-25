@@ -1,0 +1,51 @@
+.footer
+    {
+        width: 100vw;
+        height: 60px;
+        background-color: #32385e5f;
+        color: black;
+        text-align: center;
+        position: fixed;
+        padding-bottom: 5px;
+        bottom: $margin-o-padding-0px;
+        font-size: 0.7rem;
+    }
+
+/* 
+Esta clase permite modificar el color del icono de fontawesome
+y además le doy el tamaño
+*/
+.fa-heart
+    {
+        color: rgba(7, 151, 241, 0.79);
+        font-size: $un-rem + $un-rem;
+    }
+
+.redes
+    {
+        display: $flex;
+        justify-content: space-evenly;
+        align-items: $center;
+    }
+
+/*
+Mediante esta clase defino el tamaño y la decoración
+de los links del footer
+*/    
+.redes a
+    {
+        font-size: $un-rem;
+        text-decoration: none;  
+    }
+
+    
+@media screen and (max-width: 768px)
+    {
+    .footer
+        {
+            padding-bottom: 0px;
+            bottom: 0px;
+            font-size: 0.7rem;
+        }
+    }
+    

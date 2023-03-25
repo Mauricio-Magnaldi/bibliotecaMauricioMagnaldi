@@ -1,0 +1,12 @@
+
+*
+    {
+        margin: $margin-o-padding-0px;
+        padding: $margin-o-padding-0px;
+        font-family: $font-family-Mohave;
+        /* 
+        indico que todos los elementos respeten su tamaño indistintamente si agrego  
+        borde o padding a los elementos de las cajas 
+        */
+        box-sizing: border-box;
+    }

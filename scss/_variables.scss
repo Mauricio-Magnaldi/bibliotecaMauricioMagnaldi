@@ -1,0 +1,23 @@
+/* Creación de variables*/
+$font-family-Mohave: 'Mohave', sans-serif;
+$margin-o-padding-0px: 0px;
+$flex: flex;
+$column: column;
+$center: center;
+$row: row;
+$un-rem: 1rem;
+/* 
+En el .scss creación de variables
+coloco 200%/2, me da como resultado
+100%, almaceno la operación de división, no el 
+resultado aunque cuando asigno la variable 
+- $cien-x-ciento - a una propiedad, 
+en .css aparece directamente 100%
+*/
+$fixed: fixed;
+$cien-x-ciento: 200%/2; 
+$height-100vh: 100vh;
+$sticky: sticky;
+$auto: auto;
+$cover: cover;
+$justify: justify;

@@ -1,0 +1,421 @@
+@charset "UTF-8";
+/*
+Particiono el código
+Vinculo las distintas páginas .scss con estilos.scss
+
+*/
+/* Creación de variables*/
+/* 
+En el .scss creación de variables
+coloco 200%/2, me da como resultado
+100%, almaceno la operación de división, no el 
+resultado aunque cuando asigno la variable 
+- $cien-x-ciento - a una propiedad, 
+en .css aparece directamente 100%
+*/
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Mohave", sans-serif;
+  /* 
+  indico que todos los elementos respeten su tamaño indistintamente si agrego  
+  borde o padding a los elementos de las cajas 
+  */
+  box-sizing: border-box;
+}
+
+/*
+Especifico que ocupe el 100% del ancho y del alto del contenedor body
+*/
+.body {
+  width: 100%;
+  height: 100vh;
+}
+
+/* header */
+/*
+Estilo el header de las cinco páginas
+Mediante position sticky le dijo al header, compuesto por logo y menú, que a pesar de que el scroll
+vertical se active, el menú quede fijo en la parte superior de la página.
+*/
+.header {
+  background-color: rgba(50, 56, 94, 0.3725490196);
+  margin-bottom: 0px;
+  position: sticky;
+  top: 5px;
+  z-index: 10;
+}
+
+.header__div__img {
+  width: 30px;
+}
+
+/* la propiedad order permite alterar la ubicación de los elementos dentro de un flex, en este caso dentro del ul
+se altero el orden de los lista item inicio y contacto, situación que se ordena a partir de la propiedad 
+en cuestión */
+.header__nav__ul__li__a {
+  color: white;
+  text-decoration: none; /* quita el subrayado de cada una de las opciones del menù de navegaciòn */
+  font-size: 1rem;
+  display: inline-block; /* de esta forma le indico que siga siendo un elemento en línea y además que también sea
+un elemento en bloque respecto al resto de las propiedas que ahora si puedo definirle tales 
+como margin top y bottom, padding top y bottom */
+  /*margin: 10px;    /* distancia superior externa a la caja */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-right: 0px;
+  padding-left: 0px;
+  background-color: rgba(96, 66, 66, 0.363);
+}
+
+/*
+Ubicación del icono
+*/
+.header__div__img__mover {
+  margin-left: 1px;
+  margin-right: 10px;
+}
+
+/* la propiedad order permite alterar la ubicación de los elementos dentro de un flex, en este caso dentro del ul
+se altero el orden de los lista item inicio y contacto, situación que se ordena a partir de la propiedad 
+en cuestión */
+.li__ancla__inicio {
+  order: -1;
+}
+
+.li__ancla__contacto {
+  order: 4;
+}
+
+.footer {
+  width: 100vw;
+  height: 60px;
+  background-color: rgba(50, 56, 94, 0.3725490196);
+  color: black;
+  text-align: center;
+  position: fixed;
+  padding-bottom: 5px;
+  bottom: 0px;
+  font-size: 0.7rem;
+}
+
+/* 
+Esta clase permite modificar el color del icono de fontawesome
+y además le doy el tamaño
+*/
+.fa-heart {
+  color: rgba(7, 151, 241, 0.79);
+  font-size: 2rem;
+}
+
+.redes {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/*
+Mediante esta clase defino el tamaño y la decoración
+de los links del footer
+*/
+.redes a {
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-bottom: 0px;
+    bottom: 0px;
+    font-size: 0.7rem;
+  }
+}
+/*
+Esta clase contiene las 5 imágenes del Catálogo, en la misma defino el alto y ancho del espacio para cada una
+de las 5 imágenes, además declaro al display de tipo flexible lo que me permitirá darles a las imágenes
+la disposición space around sobre el eje vertical, ya que la dirección del componente flex es horizontal.
+*/
+.catalogo {
+  width: 30%;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*
+Declaro el espacio que utiliza cada imágen en el cátalogo, definiéndole ancho y alto.
+*/
+.catalogo__div__img {
+  width: 120px;
+  height: 170px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*  */
+/* 
+Utilizo la font family (ff) Mohave.
+Descargo la ff localmente
+*/
+@font-face {
+  font-family: "Mohave", sans-serif;
+  src: url("../assets/fonts/Mohave-VariableFont_wght.ttf");
+}
+/*
+Mediante esta clase declaro las características quiero que tome la sección main de la página index
+*/
+.index__main__flexible {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* body */
+/* 
+Al colocar display flex desordena la tabla.
+Con display block permite ordenarla aunque corre hacia la izquierda los nombres
+de columna
+*/
+/*
+thead, tbody 
+    {
+        display: block;
+    }
+
+tbody 
+    {
+        height: 30vh;
+        overflow-y: auto;
+    }
+*/
+/* 
+Esta clase la defino para que si hay más registros - renglones, libros - en el cátalago
+y disponibles para pedir, cuya capacidad exceda la tabla respectiva, aparezca sobre la vertical
+lado izquierdo la barra de desplazamiento respectiva.
+He intentado colocar la barra en otra parte que abarque solo al tbody aunque no tuve éxito,
+por ello el div que contiene esta clase abarca toda la tabla
+*/
+.tabla {
+  border-collapse: collapse;
+  height: 30vh;
+  overflow-y: auto;
+}
+
+/*
+Se declara que la altura de las tablas Catalogo y Pedi será de 30 vh
+Cuando las mismas (tablas) se desbordan por la cantidad de filas que poseen, debe activarse
+el scroll vertical
+*/
+.desbordamiento__tabla {
+  height: 30vh;
+  overflow-y: auto;
+}
+
+.carrousel {
+  width: 20vw;
+}
+
+/*
+La clase carousel-item de bootstrap no tiene declara un height, en este caso a tal propieadad le doy el
+valor de 60vh 
+*/
+.carousel-item {
+  height: 60vh;
+}
+
+/*
+Cada una de las imágenes que contiene carrousel tendrán una altura de 100% y cubrirá todo el espacio 
+declarado para tal fin
+object-fit: cover El objeto se adecuará al espacio asignado
+*/
+.carousel-item img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* 
+Utilizo esta clase para justificar el texto 
+*/
+.centrar {
+  text-align: justify;
+}
+
+/*
+Clase que se ocupa de estilar el logo y las anclas del header de cada una de las 5 páginas
+Le especifico el ancho y lo defino como display flex
+*/
+.div__header__flexible {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* 
+Cargo una imagen de fondo en el contenedor body de la página index.html
+En la primer pre entrega tal página estaba cargada en el main 
+*/
+.index__body__img__fondo {
+  background-image: linear-gradient(to bottom, rgba(82, 85, 64, 0.452), rgba(73, 61, 69, 0.447)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Esto indica que la imagen de fondo estará fija en 
+la pantalla y no se moverá con el contenedor.*/
+}
+
+/* 
+Cargo una imagen de fondo en el contenedor body de la página catalogo.html
+En la primer pre entrega tal página estaba cargada en el main 
+*/
+.catalogo__body__img__fondo {
+  background-image: url(../assets/img/Biblioteca\ Tianjin\ Binhai\,\ República\ Popular\ China.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* 
+Cargo una imagen de fondo en el contenedor body de la página registro.html
+En la primer pre entrega tal página estaba cargada en el main 
+*/
+.registro__body__img__fondo {
+  background-image: url(../assets/img/Biblioteca\ Nacional\ de\ Austria\,\ Republica\ de\ Austria.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* 
+Cargo una imagen de fondo en el contenedor body de la página pido.html
+En la primer pre entrega tal página estaba cargada en el main 
+*/
+.pido__body__img__fondo {
+  background-image: url(../assets/img/Biblioteca\ Estatal\ de\ Nueva\ Gales\ del\ Sur\,\ Australia.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* 
+Cargo una imagen de fondo en el contenedor body de la página contacto.html
+En la primer pre entrega tal página estaba cargada en el main 
+*/
+.contacto__body__img__fondo {
+  background-image: linear-gradient(to right, rgba(79, 29, 14, 0.63), rgba(22, 68, 22, 0.63)), url("../assets/img/Biblioteca del Palacio de Mafra, Portugal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* 
+Estilado icono 
+*/
+/* 
+Aplico color de fondo blanco al nombre de la biblioteca de la imagen del body 
+*/
+.nombre__biblioteca {
+  background-color: white;
+}
+
+.texto__blanco {
+  -webkit-text-fill-color: white;
+}
+
+/* main */
+.parrafo__sangria {
+  text-indent: 50px; /*debiera ser vh, vw o % la unidad de medida a expresar*/
+}
+
+.h__uno {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.h__dos {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.fuente__negrita {
+  font-weight: bold;
+}
+
+.fuente__tamaño {
+  font-size: 1rem;
+}
+
+/* 
+Centrado horizontal de las secciones iframe, ya sea el texto que describe o el mismo componente ifrmaeo 
+*/
+.iframe {
+  text-align: center; /* centrado de texto u objeto*/
+}
+
+.centrar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.fondo {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.642), rgba(0, 0, 0, 0.642)), url("../assets/img/fondo.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Sitúo las opciones del menú desplegable hacia la derecha de la pantalla */
+.ubicar__link__navegacion__celular {
+  align-items: flex-end;
+}
+
+/*
+Clase definida en bootstrap utilizada para el estilado de un
+formulario, modifico la propiedad width donde le disminuyo el 
+ancho
+*/
+.form-control {
+  width: 30vh;
+}
+
+/* Media query para cuando el medio sea una pantalla - celular -
+y el ancho máximo sea de 768px */
+@media screen and (max-width: 768px) {
+  .h__uno {
+    font-size: 1.6rem;
+  }
+  .h__dos {
+    font-size: 1.2rem;
+  }
+  .fuente__tamaño {
+    font-size: 0.8rem;
+  }
+  /* 
+  Modifico el tamaño de los títulos de columna y contenido de celdas de las tablas de catálogo
+  y de pedí
+  */
+  th, td {
+    font-size: 0.5rem;
+  }
+  .redes a {
+    font-size: 0.5rem;
+  }
+  .carrousel {
+    width: 30vw;
+    height: 50vh;
+    margin-bottom: 100px;
+  }
+}/*# sourceMappingURL=estilos.css.map */
