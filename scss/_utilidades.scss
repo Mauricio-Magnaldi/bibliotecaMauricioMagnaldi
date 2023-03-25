@@ -1,0 +1,93 @@
+/* 
+Aplico color de fondo blanco al nombre de la biblioteca de la imagen del body 
+*/
+.nombre__biblioteca
+    {
+        background-color: $color-blanco;
+    }
+
+.texto__blanco
+    {
+        -webkit-text-fill-color:$color-blanco;
+    }
+
+.fuente__negrita
+    {
+        font-weight: bold;
+    }
+
+/* main */
+
+.parrafo__sangria                    /* las clases se llaman con el punto */
+    {
+        text-indent: 50px; /*debiera ser vh, vw o % la unidad de medida a expresar*/
+    }
+
+/* 
+Centrado horizontal de las secciones iframe, ya sea el texto que describe o el mismo componente ifrmaeo 
+*/
+
+.iframe
+    {
+        text-align: $center; /* centrado de texto u objeto*/
+    }
+
+    /* 
+Utilizo esta clase para justificar el texto 
+*/
+.centrar__texto 
+    {
+        text-align: $justify;
+    }
+
+.centrar
+    {
+        align-items: $center;
+    }
+
+/* 
+Separo main del footer para que en la vista desktop, se vea bien el componente más abajo del main
+*/
+
+.main__separo
+    {
+        margin-bottom: 60px;
+    }
+
+.h__uno
+    {
+        text-align: center;
+        font-size: $un-rem * 4;
+    }
+
+.h__dos
+    {
+        text-align: center;
+        font-size: $un-rem + $un-rem;
+    }   
+
+.fuente__tamaño
+    {
+        font-size: $un-rem;
+    }
+
+@media screen and (max-width: 768px)
+{
+    .h__uno
+        {
+            font-size: 1.6rem;
+        }
+
+    .h__dos
+        {
+            font-size: 1.2rem;
+        }   
+    
+    .fuente__tamaño
+        {
+            font-size: 0.8rem;
+        }
+     
+    
+    }
+    

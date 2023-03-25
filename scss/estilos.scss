@@ -8,7 +8,8 @@ Vinculo las distintas páginas .scss con estilos.scss
 @import "body.scss";
 @import "header.scss";
 @import "footer.scss";
-@import "catalogo.scss"; /*  */
+@import "catalogo.scss";
+@import "utilidades.scss";
 /* 
 Utilizo la font family (ff) Mohave.
 Descargo la ff localmente
@@ -101,14 +102,6 @@ object-fit: cover El objeto se adecuará al espacio asignado
         object-fit: $cover;
     }
 
-/* 
-Utilizo esta clase para justificar el texto 
-*/
-.centrar 
-    {
-        text-align: $justify;
-    }
-
 /*
 Clase que se ocupa de estilar el logo y las anclas del header de cada una de las 5 páginas
 Le especifico el ancho y lo defino como display flex
@@ -187,69 +180,6 @@ En la primer pre entrega tal página estaba cargada en el main
         background-attachment: $fixed;
     }
 
-/* 
-Estilado icono 
-*/
-
-/* 
-Aplico color de fondo blanco al nombre de la biblioteca de la imagen del body 
-*/
-.nombre__biblioteca
-    {
-        background-color: white;
-    }
-
-.texto__blanco
-    {
-        -webkit-text-fill-color:white;
-    }
-
-/* main */
-
-.parrafo__sangria                    /* las clases se llaman con el punto */
-    {
-        text-indent: 50px; /*debiera ser vh, vw o % la unidad de medida a expresar*/
-    }
-
-.h__uno
-    {
-        text-align: center;
-        font-size: $un-rem * 4;
-    }
-
-.h__dos
-    {
-        text-align: center;
-        font-size: $un-rem + $un-rem;
-    }   
-
-.fuente__negrita
-    {
-        font-weight: bold;
-    }
-
-.fuente__tamaño
-    {
-        font-size: $un-rem;
-    }
-
-/* 
-Centrado horizontal de las secciones iframe, ya sea el texto que describe o el mismo componente ifrmaeo 
-*/
-
-.iframe
-    {
-        text-align: $center; /* centrado de texto u objeto*/
-    }
-
-.centrar
-    {
-        display: $flex;
-        flex-direction: $row;
-        justify-content: $center;    
-        align-items: $center;
-    }
-
 .fondo
     {
         background:linear-gradient(to right,rgba(0, 0, 0, 0.642),rgba(0, 0, 0, 0.642)),  url("../assets/img/fondo.jpg");
@@ -260,12 +190,6 @@ Centrado horizontal de las secciones iframe, ya sea el texto que describe o el m
     }
 
 
-/* Sitúo las opciones del menú desplegable hacia la derecha de la pantalla */
-
-.ubicar__link__navegacion__celular
-        {   
-            align-items: flex-end;
-        }
 /*
 Clase definida en bootstrap utilizada para el estilado de un
 formulario, modifico la propiedad width donde le disminuyo el 
@@ -281,32 +205,13 @@ y el ancho máximo sea de 768px */
 
 @media screen and (max-width: 768px)
     {
-        .h__uno
-            {
-                font-size: 1.6rem;
-            }
-
-        .h__dos
-            {
-                font-size: 1.2rem;
-            }   
-        
-        .fuente__tamaño
-            {
-                font-size: 0.8rem;
-            }
-            
+           
         /* 
         Modifico el tamaño de los títulos de columna y contenido de celdas de las tablas de catálogo
         y de pedí
         */
 
         th, td
-            {
-                font-size: 0.5rem;
-            }
-
-       .redes a
             {
                 font-size: 0.5rem;
             }

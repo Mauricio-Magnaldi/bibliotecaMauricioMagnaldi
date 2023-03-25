@@ -11,42 +11,42 @@ vertical se active, el menú quede fijo en la parte superior de la página.
         position: $sticky;
         top: 5px;
         z-index: 10;
+        .header__div__img
+            {
+                width: 30px;
+            }
+        /*
+        Ubicación del icono
+        */
+        .header__div__img__mover
+            {
+                margin-left: 1px;
+                margin-right: 10px;
+            }
+
+        /*
+        text-decoration: none; quita el subrayado de cada una de las opciones del menù de navegaciòn 
+        display: inline-block;         /* de esta forma le indico que siga siendo un elemento en línea y además que también sea un elemento en bloque respecto al resto de las propiedas que ahora si puedo definirle tales 
+        como margin top y bottom, padding top y bottom */
+        .header__nav__ul__li__a
+            { 
+                color: white;
+                text-decoration: none;        
+                font-size: $un-rem;
+                display: inline-block; 
+                margin-top: 5px;
+                margin-bottom: 5px;
+                padding-right: 0px;
+                padding-left: 0px;
+                background-color: rgba(96, 66, 66, 0.363);
+            }
+               
     }
-
-.header__div__img
-    {
-        width: 30px;
-    }
-
-
 /* la propiedad order permite alterar la ubicación de los elementos dentro de un flex, en este caso dentro del ul
 se altero el orden de los lista item inicio y contacto, situación que se ordena a partir de la propiedad 
 en cuestión */
 
-.header__nav__ul__li__a
-    { 
-        color: white;
-        text-decoration: none;    /* quita el subrayado de cada una de las opciones del menù de navegaciòn */    
-        font-size: $un-rem;
-        display: inline-block;  /* de esta forma le indico que siga siendo un elemento en línea y además que también sea
-        un elemento en bloque respecto al resto de las propiedas que ahora si puedo definirle tales 
-        como margin top y bottom, padding top y bottom */
-        /*margin: 10px;    /* distancia superior externa a la caja */
-        margin-top: 5px;
-        margin-bottom: 5px;
-        padding-right: 0px;
-        padding-left: 0px;
-        background-color: rgba(96, 66, 66, 0.363);
-    }
 
-/*
-Ubicación del icono
-*/
-.header__div__img__mover
-    {
-        margin-left: 1px;
-        margin-right: 10px;
-    }
 
 
 /* la propiedad order permite alterar la ubicación de los elementos dentro de un flex, en este caso dentro del ul
@@ -62,3 +62,12 @@ en cuestión */
     {
         order: 4;
     }
+
+/* 
+Sitúo las opciones del menú desplegable hacia la derecha de la pantalla 
+*/
+
+.ubicar__link__navegacion__celular
+        {   
+            align-items: flex-end;
+        }

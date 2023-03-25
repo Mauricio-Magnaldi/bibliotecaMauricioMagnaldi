@@ -55,7 +55,7 @@
         <!-- utilizar rem para las fuentes de forma tal de respetar aquello que el usuario configuro como fuente
         en su navegador, mientras que utilizar px y % para las propiedades margin y padding -->
         <!-- TENER PRESENTE QUE EL TAMAÑO DE LA MÌNIMA FUENTE SERÀN 16 PX ya que es la fuente definida por el usuario-->
-        <main class="index__main__img">  <!-- etiqueta semántica de estructura-->
+        <main>  <!-- etiqueta semántica de estructura-->
             <!-- Utilizo span para poder darle color de fondo exclusivamente al texto -->
             <span class="nombre__biblioteca texto__negro fuente__tamaño">Biblioteca George Peabody, Estados Unidos</span>
             <div>
@@ -72,7 +72,7 @@
                     En uno de los div está el texto mientras que en el otro está el carrousel. 
                     El div del texto utiliza más columnas que el div del carrousel, excepto
                     cuando la pantalla es mayor o igual a 576 px -->
-                    <div class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column justify-content-center centrar">
+                    <div class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column justify-content-center centrar__texto">
                         <!-- Clases propias como parrafo__sangria texto__blanco fuente__negrita y fuente__tamaño -->
                         <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Surge a partir de la necesidad de ordenar físicamente la pequeña biblioteca familiar compuesta por libros de varias temáticas. Luego, por iniciativa de nuestra hija, aparece la idea de poder compartir labiblioteca.com con el resto de la familia, amigos cercanos.</p> 
                         <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">El préstamo que se hace del libro no tiene costo asociado, es decir, se hace sin fines de lucro, tan solo con el compromiso por parte de quien lo recibe de conservarlo en óptimas condiciones sin rayarlo, mojarlo, etc. El libro se retira del punto de encuentro acordado en hora y fecha consensuada y se devuelve en el mismo lugar bajos los mismos términos.</p>
@@ -80,7 +80,7 @@
                         <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Asimismo, nuestra intención es que quien así lo quiera su sume al proyecto, prestando algún libro mediante labiblioteca.com. Para poder sumarse al proyecto hay información pertinente en la página de Contacto, la cual te invito a que visites y cualquier duda o inquietud me contactes.</p>
                     </div>
                     <div class="col-lg-4 col-md-8 col-sm-12 d-flex flex-row justify-content-center">
-                        <div class="carrousel">
+                        <div class="carrousel main__separo">
                             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item carrousel__alto active" data-bs-interval="3000">

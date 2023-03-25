@@ -44,23 +44,26 @@ vertical se active, el menú quede fijo en la parte superior de la página.
   position: sticky;
   top: 5px;
   z-index: 10;
+  /*
+  Ubicación del icono
+  */
+  /*
+  text-decoration: none; quita el subrayado de cada una de las opciones del menù de navegaciòn 
+  display: inline-block;         /* de esta forma le indico que siga siendo un elemento en línea y además que también sea un elemento en bloque respecto al resto de las propiedas que ahora si puedo definirle tales 
+  como margin top y bottom, padding top y bottom */
 }
-
-.header__div__img {
+.header .header__div__img {
   width: 30px;
 }
-
-/* la propiedad order permite alterar la ubicación de los elementos dentro de un flex, en este caso dentro del ul
-se altero el orden de los lista item inicio y contacto, situación que se ordena a partir de la propiedad 
-en cuestión */
-.header__nav__ul__li__a {
+.header .header__div__img__mover {
+  margin-left: 1px;
+  margin-right: 10px;
+}
+.header .header__nav__ul__li__a {
   color: white;
-  text-decoration: none; /* quita el subrayado de cada una de las opciones del menù de navegaciòn */
+  text-decoration: none;
   font-size: 1rem;
-  display: inline-block; /* de esta forma le indico que siga siendo un elemento en línea y además que también sea
-un elemento en bloque respecto al resto de las propiedas que ahora si puedo definirle tales 
-como margin top y bottom, padding top y bottom */
-  /*margin: 10px;    /* distancia superior externa a la caja */
+  display: inline-block;
   margin-top: 5px;
   margin-bottom: 5px;
   padding-right: 0px;
@@ -68,14 +71,9 @@ como margin top y bottom, padding top y bottom */
   background-color: rgba(96, 66, 66, 0.363);
 }
 
-/*
-Ubicación del icono
-*/
-.header__div__img__mover {
-  margin-left: 1px;
-  margin-right: 10px;
-}
-
+/* la propiedad order permite alterar la ubicación de los elementos dentro de un flex, en este caso dentro del ul
+se altero el orden de los lista item inicio y contacto, situación que se ordena a partir de la propiedad 
+en cuestión */
 /* la propiedad order permite alterar la ubicación de los elementos dentro de un flex, en este caso dentro del ul
 se altero el orden de los lista item inicio y contacto, situación que se ordena a partir de la propiedad 
 en cuestión */
@@ -87,9 +85,16 @@ en cuestión */
   order: 4;
 }
 
+/* 
+Sitúo las opciones del menú desplegable hacia la derecha de la pantalla 
+*/
+.ubicar__link__navegacion__celular {
+  align-items: flex-end;
+}
+
 .footer {
   width: 100vw;
-  height: 60px;
+  height: 60px; /* Aquí modifico el alto del footer, llevarlo a 60px*/
   background-color: rgba(50, 56, 94, 0.3725490196);
   color: black;
   text-align: center;
@@ -129,6 +134,12 @@ de los links del footer
     bottom: 0px;
     font-size: 0.7rem;
   }
+  .redes a {
+    font-size: 0.5rem;
+  }
+  .fa-heart {
+    font-size: 1rem;
+  }
 }
 /*
 Esta clase contiene las 5 imágenes del Catálogo, en la misma defino el alto y ancho del espacio para cada una
@@ -156,7 +167,76 @@ Declaro el espacio que utiliza cada imágen en el cátalogo, definiéndole ancho
      object-fit: cover;
 }
 
-/*  */
+/* 
+Aplico color de fondo blanco al nombre de la biblioteca de la imagen del body 
+*/
+.nombre__biblioteca {
+  background-color: white;
+}
+
+.texto__blanco {
+  -webkit-text-fill-color: white;
+}
+
+.fuente__negrita {
+  font-weight: bold;
+}
+
+/* main */
+.parrafo__sangria {
+  text-indent: 50px; /*debiera ser vh, vw o % la unidad de medida a expresar*/
+}
+
+/* 
+Centrado horizontal de las secciones iframe, ya sea el texto que describe o el mismo componente ifrmaeo 
+*/
+.iframe {
+  text-align: center; /* centrado de texto u objeto*/
+}
+
+/* 
+Utilizo esta clase para justificar el texto 
+*/
+.centrar__texto {
+  text-align: justify;
+}
+
+.centrar {
+  align-items: center;
+}
+
+/* 
+Separo main del footer para que en la vista desktop, se vea bien el componente más abajo del main
+*/
+.main__separo {
+  margin-bottom: 60px;
+}
+
+.h__uno {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.h__dos {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.fuente__tamaño {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .h__uno {
+    font-size: 1.6rem;
+  }
+  .h__dos {
+    font-size: 1.2rem;
+  }
+  .fuente__tamaño {
+    font-size: 0.8rem;
+  }
+}
 /* 
 Utilizo la font family (ff) Mohave.
 Descargo la ff localmente
@@ -239,13 +319,6 @@ object-fit: cover El objeto se adecuará al espacio asignado
      object-fit: cover;
 }
 
-/* 
-Utilizo esta clase para justificar el texto 
-*/
-.centrar {
-  text-align: justify;
-}
-
 /*
 Clase que se ocupa de estilar el logo y las anclas del header de cada una de las 5 páginas
 Le especifico el ancho y lo defino como display flex
@@ -318,68 +391,12 @@ En la primer pre entrega tal página estaba cargada en el main
   background-attachment: fixed;
 }
 
-/* 
-Estilado icono 
-*/
-/* 
-Aplico color de fondo blanco al nombre de la biblioteca de la imagen del body 
-*/
-.nombre__biblioteca {
-  background-color: white;
-}
-
-.texto__blanco {
-  -webkit-text-fill-color: white;
-}
-
-/* main */
-.parrafo__sangria {
-  text-indent: 50px; /*debiera ser vh, vw o % la unidad de medida a expresar*/
-}
-
-.h__uno {
-  text-align: center;
-  font-size: 4rem;
-}
-
-.h__dos {
-  text-align: center;
-  font-size: 2rem;
-}
-
-.fuente__negrita {
-  font-weight: bold;
-}
-
-.fuente__tamaño {
-  font-size: 1rem;
-}
-
-/* 
-Centrado horizontal de las secciones iframe, ya sea el texto que describe o el mismo componente ifrmaeo 
-*/
-.iframe {
-  text-align: center; /* centrado de texto u objeto*/
-}
-
-.centrar {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
 .fondo {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.642), rgba(0, 0, 0, 0.642)), url("../assets/img/fondo.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-/* Sitúo las opciones del menú desplegable hacia la derecha de la pantalla */
-.ubicar__link__navegacion__celular {
-  align-items: flex-end;
 }
 
 /*
@@ -394,23 +411,11 @@ ancho
 /* Media query para cuando el medio sea una pantalla - celular -
 y el ancho máximo sea de 768px */
 @media screen and (max-width: 768px) {
-  .h__uno {
-    font-size: 1.6rem;
-  }
-  .h__dos {
-    font-size: 1.2rem;
-  }
-  .fuente__tamaño {
-    font-size: 0.8rem;
-  }
   /* 
   Modifico el tamaño de los títulos de columna y contenido de celdas de las tablas de catálogo
   y de pedí
   */
   th, td {
-    font-size: 0.5rem;
-  }
-  .redes a {
     font-size: 0.5rem;
   }
   .carrousel {

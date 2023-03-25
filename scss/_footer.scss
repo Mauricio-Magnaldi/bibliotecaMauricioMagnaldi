@@ -1,7 +1,7 @@
 .footer
     {
         width: 100vw;
-        height: 60px;
+        height: 60px;   /* Aquí modifico el alto del footer, llevarlo a 60px*/
         background-color: #32385e5f;
         color: black;
         text-align: center;
@@ -47,5 +47,17 @@ de los links del footer
             bottom: 0px;
             font-size: 0.7rem;
         }
+
+    .redes a
+        {
+            font-size: 0.5rem;
+        }
+
+    
+    .fa-heart
+        {
+            font-size: $un-rem;
+        }
+    
     }
     
