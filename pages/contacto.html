@@ -4,7 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contacto</title>
+        <meta name="description" content="Aquí puedes contactarme, saber donde está la Biblioteca. Si cuentas
+        con al menos una recomendación de una persona ya registrada en la Biblioteca, podras registrate y así 
+        acceder a la misma para pedir prestado algún libro del Catálogo.">
+        <meta name="keywords" content="HTML, CSS, SCSS, IMG, MAIN, META, BODY, FOOTER, REDES, LIBRO">
+        <title>Contacto - Biblioteca</title>
         <!-- CSS de Bootstrap -->
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <script src="https://kit.fontawesome.com/acaf011dda.js" crossorigin="anonymous"></script>
@@ -12,7 +16,7 @@
         <!-- link a la hoja de estilos-->
         <link rel="stylesheet" href="../scss/estilos.css">
     </head>
-    <body class="contacto__body__img__fondo body">
+    <body class="contacto__body__img__fondo body__sin__img body">
         <header class="header">
             <nav class="navbar navbar-expand-md navbar-light">
                 <div class="container-fluid">
@@ -49,70 +53,95 @@
         </header>
         <main> <!-- etiqueta semántica de estructura -->
             <!-- Utilizo span para poder darle color de fondo exclusivamente al texto -->
-            <span class="nombre__biblioteca texto__negro fuente__tamaño">Biblioteca del Palacio de Mafra, Portugal</span>
-            <h1 class="h__uno texto__blanco">Si quieres, puedes prestar un libro mediante Biblioteca.com</h1>
+            <h4 class="parrafo nombre__biblioteca__ocultar texto__blanco fuente__tamaño">Biblioteca del Palacio de Mafra, Portugal</h4>
+            <h1 class="h__uno texto__blanco">Escribime, yo quiero leerte</h1>
             <div class="container">
                 <div class="row justify-content-between">
                     <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
-                    <div class="col-md-12 col-sm-12 d-flex flex-column justify-content-center centrar">
-                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Te pido que tomes una foto de la ficha bibliográfica del libro que puedes prestar y la subas a la página, luego ingresa tu dirección de email, con la cual debieras haberte registrado oportunamente.</p>
-                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">En el transcurso de las próximas 24 hs. hábiles de recibida la ficha, se cargará el libro al Catálogo y así quedará disponible para quien desee pedirlo.</p> 
+                    <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Si alguien que ya esté registrado en la Biblioteca, te recomienda, es posible darte de alta y así acceder a los libros que tenemos. Inquietud, sugerencia, recomendación, dejame tus datos de Contacto y te informaré respecto de las novedades que surjan.</p>                    
+                    <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Te cuento que precisamente a partir de una sugerencia es que estamos planificando armar foros de discusión presencial sobre algún libro en particular o autor. Si bien aún no tiene una fecha de inicio concreta, se estima que tales encuentros podrían darse a partir del próximo año.</p>
+                    <div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center centrar">
                         <div class="col">
-                            <form class="row" autocomplete="off">
+                            <form autocomplete="off">
+                                <div class="mb-2 col-12">
+                                    <label for="nombre" class="form-label texto__blanco">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" required>
+                                </div>
                                 <div class="mb-2 col-12">
                                     <label for="email" class="form-label texto__blanco">Email</label>
                                     <input type="email" class="form-control" id="email" required>
                                 </div>
-                                <div class="mb-3 col-12">
-                                    <label for="formFileSm" class="form-label texto__blanco">Subí la foto de la ficha</label>
-                                    <input class="form-control form-control-md" id="formFileSm" type="file">
+                                <div class="mb-2 col-12">
+                                    <label for="comentario" class="form-label texto__blanco">Comentario</label>
+                                </div>
+                                <div class="mb-2 col-12">
+                                    <textarea name="textarea" rows="5" cols="40" class="form-control" id="comentario" placeholder="Ingresa aquí los comentarios. . ." required></textarea>
                                 </div>
                                 <div>
-                                    <button type="submit" class="btn btn-primary col-12">Enviar</button>
+                                    <input type="submit" class="btn boton col-5"></input>
                                 </div>
                             </form>
                         </div>
                         <br>
+                    </div>
+                    <div class="col-md-6 col-sm-12 d-flex flex-column justify-content-center centrar">
                         <section class="iframe main__separo">
                             <div> 
                                 <h2 class="h__dos texto__blanco">Podés retirar el libro desde nuestra casa</h2>
+                                <div class="d-flex flex-row justify-content-start">
+                                    <div>
+                                        <img src="../assets/img/direccion.png" class="contacto__div__img__icono" alt="Icono de direccion">
+                                    </div>
+                                    <div>
+                                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Avda. Gral. San Martín 1843, Ciudad de Mendoza</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row justify-content-start">
+                                    <div>
+                                        <img src="../assets/img/telefono.png" class="contacto__div__img__icono" alt="Icono de direccion">
+                                    </div>
+                                    <div>
+                                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">2614542233</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row justify-content-start">
+                                    <div>
+                                        <a href="https://accounts.google.com/v3/signin/identifier?dsh=S-167360224%3A1679869102090361&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=AQMjQ7QqPQtsvh_xLOL0AuwmTLWRGOvaQFmvUg1Y97cmNOfVjPe8snB7BSMTCpbqQoOgBtIsimfw&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank">
+                                        <img src="../assets/img/email.png" class="contacto__div__img__icono" alt="Icono de direccion">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">info@biblioteca.com</p>
+                                    </div>
+                                </div>
+                            </div>
                                 <!-- antes de copiar el iframe desde youtube, selecciono la opción Iniciar en: 0:50 segundos de iniciado el video original-->
-                                <br>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001.6028957859926!2d-68.83884908481538!3d-32.881600580940486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e091fc34509f5%3A0x2242dce2dbd43e02!2sBiblioteca%20General%20San%20Mart%C3%ADn!5e1!3m2!1ses-419!2sar!4v1678279743112!5m2!1ses-419!2sar" width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001.6028957859926!2d-68.83884908481538!3d-32.881600580940486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e091fc34509f5%3A0x2242dce2dbd43e02!2sBiblioteca%20General%20San%20Mart%C3%ADn!5e1!3m2!1ses-419!2sar!4v1678279743112!5m2!1ses-419!2sar" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
                             </div>     
                         </section>
                     </div>
                 </div>
+                </div>
             </div>
         </main>
         <footer class="footer"> <!-- etiqueta semántica de estructura -->
-            <!--            <br>
-            <p>Copyright 2023 Labiblioteca.com | Todos los derechos reservados.</p>
-            <br>
-            -->
             <div class="redes">
             <!-- Fontawesome iconos instagram, twitter, facebook -->
-                <a href="https://www.instagram.com" target="_blank">
-                    <i class="fa-heart fa-beat fa-brands fa-square-instagram"></i>
-                </a>
-                <a href="https://www.twitter.com" target="_blank">
-                    <i class="fa-heart fab fa-fade fa-twitter"></i>
-                </a>
-                <a href="https://www.facebook.com" target="_blank">
-                    <i class="fa-heart fab fa-bounce fa-facebook"></i>
-                </a>
-                <a href="https://www.snapchat.com" target="_blank">
-                    <i class="fa-heart fa-flip fa-brands fa-square-snapchat"></i>
-                </a>
-                <a href="https://www.youtube.com" target="_blank">
-                    <i class="fa-heart fa-shake fa-brands fa-youtube"></i>
-                </a>
-                <a href="https://mendotran.mendoza.gov.ar/site/troncal" target="_blank">
-                    <i class="fa-heart fa-spin fa-fade fa-solid fa-bus"></i>
-                </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fa-heart fa-beat fa-brands fa-square-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <i class="fa-heart fab fa-fade fa-twitter"></i>
+            </a>
+            <a href="https://www.snapchat.com" target="_blank">
+                <i class="fa-heart fa-flip fa-brands fa-square-snapchat"></i>
+            </a>
+            <a href="https://mendotran.mendoza.gov.ar/site/troncal" target="_blank">
+                <i class="fa-heart fa-spin fa-fade fa-solid fa-bus"></i>
+            </a>
             </div>
             <div>
-                <p class="fuente__negrita">Copyright 2023 Labiblioteca.com | Todos los derechos reservados.</p>
+                <p class="fuente__negrita">Copyright 2023 Biblioteca.com | Todos los derechos reservados.</p>
             </div>
         </footer>
         <!-- JavaScript de Bootstrap -->

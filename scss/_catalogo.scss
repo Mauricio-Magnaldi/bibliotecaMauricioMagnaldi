@@ -8,20 +8,25 @@ la disposición space around sobre el eje vertical, ya que la dirección del com
     {
         width: 30%;
         height: 50vh;
-        display: $flex;
+        display:map-get($flexible,display-flexible);
         flex-direction: row;
         flex-wrap: wrap;
         margin: 0 auto;
         justify-content:space-around;
-        align-items: $center;
-    }
-
-/*
-Declaro el espacio que utiliza cada imágen en el cátalogo, definiéndole ancho y alto.
-*/
-.catalogo__div__img  /* imagenes */
-    {
-        width: 120px;
-        height: 170px;
-        object-fit: $cover;
+        align-items:map-get($texto-alineacion,centrado);
+        /*
+        Declaro el espacio que utiliza cada imágen en el cátalogo, definiéndole ancho y alto.
+        */
+        .catalogo__img  /* imagenes */
+            {
+                width: 120px;
+                height: 170px;
+                object-fit: $cover;
+            }
+        .catalogo__zoom:hover    
+            {
+                transform:scale(2);    
+            }
+        
+        
     }

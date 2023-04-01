@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Aquí podes ver y luego pedir un libro de aquellos disponibles en este momento.">
+        <meta name="keywords" content="HTML, CSS, SCSS, IMG, MAIN, META, BODY, FOOTER, REDES, LIBRO">
         <title>Pido</title>
         <!-- CSS de Bootstrap -->
         <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -12,7 +14,7 @@
         <!-- link a la hoja de estilos-->
         <link rel="stylesheet" href="../scss/estilos.css">
     </head>
-    <body class="pido__body__img__fondo body">
+    <body class="pido__body__img__fondo body__sin__img body">
         <header class="header">
             <nav class="navbar navbar-expand-md navbar-light">
                 <div class="container-fluid">
@@ -50,7 +52,7 @@
         </header>
         <main> <!-- etiqueta semántica de estructura -->
             <!-- Utilizo span para poder darle color de fondo exclusivamente al texto -->
-            <span class="nombre__biblioteca texto__negro fuente__tamaño">Biblioteca Estatal de Nueva Gales del Sur, Australia</span>
+            <h4 class="h__cuatro nombre__biblioteca__ocultar texto__negro fuente__tamaño">Biblioteca Estatal de Nueva Gales del Sur, Australia</h4>
             <br>
             <section>
                 <h1 class="h__uno">Busca y pedí el libro que quieras seleccionandolo y colocando tu email</h1>
@@ -109,7 +111,7 @@
                                             <input class="form-control form-control-md" id="formFileSm" type="file">
                                         </div>
                                         <div>
-                                            <button type="submit" class="btn btn-primary col-12">Enviar</button>
+                                            <input type="submit" class="btn boton col-5"></input>
                                         </div>
                                     </form>
                                 </div>
@@ -129,24 +131,18 @@
             -->
             <div class="redes">
             <!-- Fontawesome iconos instagram, twitter, facebook -->
-                <a href="https://www.instagram.com" target="_blank">
-                    <i class="fa-heart fa-beat fa-brands fa-square-instagram"></i>
-                </a>
-                <a href="https://www.twitter.com" target="_blank">
-                    <i class="fa-heart fab fa-fade fa-twitter"></i>
-                </a>
-                <a href="https://www.facebook.com" target="_blank">
-                    <i class="fa-heart fab fa-bounce fa-facebook"></i>
-                </a>
-                <a href="https://www.snapchat.com" target="_blank">
-                    <i class="fa-heart fa-flip fa-brands fa-square-snapchat"></i>
-                </a>
-                <a href="https://www.youtube.com" target="_blank">
-                    <i class="fa-heart fa-shake fa-brands fa-youtube"></i>
-                </a>
-                <a href="https://mendotran.mendoza.gov.ar/site/troncal" target="_blank">
-                    <i class="fa-heart fa-spin fa-fade fa-solid fa-bus"></i>
-                </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fa-heart fa-beat fa-brands fa-square-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <i class="fa-heart fab fa-fade fa-twitter"></i>
+            </a>
+            <a href="https://www.snapchat.com" target="_blank">
+                <i class="fa-heart fa-flip fa-brands fa-square-snapchat"></i>
+            </a>
+            <a href="https://mendotran.mendoza.gov.ar/site/troncal" target="_blank">
+                <i class="fa-heart fa-spin fa-fade fa-solid fa-bus"></i>
+            </a>
             </div>
             <div>
                 <p class="fuente__negrita">Copyright 2023 Biblioteca.com | Todos los derechos reservados.</p>

@@ -1,0 +1,73 @@
+
+/*
+Mediante esta clase declaro las características quiero que tome la sección main de la página index
+*/ 
+.index__main__flexible
+        {
+            display:map-get($flexible,display-flexible);
+            flex-direction:map-get($flexible,direccion-columna);
+            justify-content:map-get($texto-alineacion,centrado);
+            align-items:map-get($texto-alineacion,centrado);
+        }
+
+.carrousel
+    {                   
+        width: 20vw;
+    }
+
+/*
+La clase carousel-item de bootstrap no tiene declarado un height, en este caso a tal propieadad le doy el
+valor de 60vh 
+*/
+.carousel-item
+    {
+        height: 60vh;
+    }
+
+/*
+Cada una de las imágenes que contiene carrousel tendrán una altura de 100% y cubrirá todo el espacio 
+declarado para tal fin
+object-fit: cover El objeto se adecuará al espacio asignado
+*/
+.carousel-item img
+    {
+        height: $cien-x-ciento;
+        object-fit: $cover;
+    }
+
+.contacto__div__img__icono
+    {
+        width: 35px;
+    }
+
+@media screen and (max-width: 768px)
+    {      
+        .carrousel
+            {                   
+                width: 30vw;
+                height: 50vh;
+                margin-bottom: 100px;
+            }
+    }
+
+/*
+Clase definida en bootstrap utilizada para el estilado de un
+formulario, modifico la propiedad width donde le disminuyo el 
+ancho
+*/
+.form-control
+        {
+            width: 30vh;
+        }
+    
+
+/*
+Se declara que la altura de las tablas Catalogo y Pedi será de 30 vh
+Cuando las mismas (tablas) se desbordan por la cantidad de filas que poseen, debe activarse
+el scroll vertical
+*/
+.desbordamiento__tabla 
+    {
+        height: 30vh;
+        overflow-y: $auto;
+    }

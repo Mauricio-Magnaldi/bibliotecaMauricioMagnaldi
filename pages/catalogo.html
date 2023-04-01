@@ -4,7 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Catálogo</title>
+        <meta name="description" content="Esta página web muestra el Catálogo del que se compone Biblioteca, 
+        como también así cuenta con las posibilidad de conocer que libro está disponible en cada momento, a quien
+        le pertenece y con todos esos datos puedes pedirlo prestado.">
+        <meta name="keywords" content="HTML, CSS, SCSS, IMG, MAIN, META, BODY, FOOTER, REDES, LIBRO">
+        <title>Catálogo y Pido - Biblioteca</title>
         <!-- CSS de Bootstrap -->
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <script src="https://kit.fontawesome.com/acaf011dda.js" crossorigin="anonymous"></script>
@@ -12,7 +16,7 @@
         <!-- link a la hoja de estilos-->
         <link rel="stylesheet" href="../scss/estilos.css">
     </head>
-    <body class="catalogo__body__img__fondo body">
+    <body class="catalogo__body__img__fondo body__sin__img body">
         <header class="header">
             <nav class="navbar navbar-expand-md navbar-light">
                 <div class="container-fluid div__header__flexible">
@@ -56,8 +60,8 @@
         </header>
         <main> <!-- etiqueta semántica de estructura     -->
             <!-- Utilizo span para poder darle color de fondo exclusivamente al texto -->
-            <span class="nombre__biblioteca texto__negro fuente__tamaño">Biblioteca Tianjin Binhai, República Popular China</span>
-            <h1 class="h__uno">Observa el Catálogo actualizado de labiblioteca.com</h1>
+            <h4 class="parrafo nombre__biblioteca__ocultar texto__negro fuente__tamaño">Biblioteca Tianjin Binhai, República Popular China</h4>
+            <h1 class="h__uno">Observa nuestro Catálogo</h1>
             <br><br>
             <!--
             <div class="container">
@@ -201,7 +205,8 @@
                     </div>
                     <div class="contenedor__titulo__catalogo"></div>
                         <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
-                        <h2 class="h__dos espaciado">Algunos de nuestros títulos</h2>        
+                        <h2 class="h__dos espaciado">Algunos de nuestros títulos</h2>
+                        <h3 class="centrar__texto">Los títulos que se observan aquí son aquellos que han registrado más movimiento durante los últimos meses, son tendencia de acuerdo al ranking propio.</h3>        
                         <div class="container">
                             <!--
                             Utilizo la clase container vía columna y final para utilizar la clase catalogo que yo
@@ -209,17 +214,18 @@
                             -->
                             <div class="col">
                                 <div class="row">         
-                                <div class="catalogo main__separo">
-                                    <div><img class="catalogo__div__img" src="../assets/img/titulo/Inferno.jpg" alt=""></div>
-                                    <div><img class="catalogo__div__img" src="../assets/img/titulo/Sinceramente.jpg" alt=""></div>
-                                    <div><img class="catalogo__div__img" src="../assets/img/titulo/Mejor muertos.jpg" alt=""></div>
-                                    <div><img class="catalogo__div__img" src="../assets/img/titulo/Primer tiempo.jpg" alt=""></div>
-                                    <div><img class="catalogo__div__img" src="../assets/img/titulo/Secreto de confesion.webp" alt=""></div>
+                                    <div class="catalogo main__separo">
+                                        <div><img class="img__1 catalogo__img catalogo__zoom" src="../assets/img/titulo/Inferno.jpg" alt="Libro Inferno de Dan Brown"></div>
+                                        <div><img class="catalogo__img catalogo__zoom" src="../assets/img/titulo/Sinceramente.jpg" alt="Libro Sinceramente de Cristina Fernandez"></div>
+                                        <div><img class="catalogo__img catalogo__zoom" src="../assets/img/titulo/Mejor muertos.jpg" alt="Libro Mejor Muertos de Gisela Marzziota"></div>
+                                        <div><img class="catalogo__img catalogo__zoom" src="../assets/img/titulo/Primer tiempo.jpg" alt="Libro Primer Tiempo de Mauricio Macri"></div>
+                                        <div><img class="catalogo__img catalogo__zoom" src="../assets/img/titulo/Secreto de confesion.webp" alt="Libro Secreto de Confesión"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    </div>
+                    </div>    
+                </div>
         </main>
         <footer class="footer"> <!-- etiqueta semántica de estructura -->
    
@@ -232,14 +238,8 @@
                 <a href="https://www.twitter.com" target="_blank">
                     <i class="fa-heart fab fa-fade fa-twitter"></i>
                 </a>
-                <a href="https://www.facebook.com" target="_blank">
-                    <i class="fa-heart fab fa-bounce fa-facebook"></i>
-                </a>
                 <a href="https://www.snapchat.com" target="_blank">
                     <i class="fa-heart fa-flip fa-brands fa-square-snapchat"></i>
-                </a>
-                <a href="https://www.youtube.com" target="_blank">
-                    <i class="fa-heart fa-shake fa-brands fa-youtube"></i>
                 </a>
                 <a href="https://mendotran.mendoza.gov.ar/site/troncal" target="_blank">
                     <i class="fa-heart fa-spin fa-fade fa-solid fa-bus"></i>

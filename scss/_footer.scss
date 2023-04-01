@@ -1,14 +1,20 @@
 .footer
     {
         width: 100vw;
-        height: 60px;   /* Aquí modifico el alto del footer, llevarlo a 60px*/
+        height: 50px;
         background-color: #32385e5f;
         color: black;
-        text-align: center;
+        text-align:map-get($texto-alineacion, centrado);
         position: fixed;
-        padding-bottom: 5px;
+        padding-bottom: 10px;
         bottom: $margin-o-padding-0px;
-        font-size: 0.7rem;
+        font-size: map-get($fuente-medida, fuente-footer);
+        .redes
+            {
+                display:map-get($flexible, display-flexible);
+                justify-content:map-get($flexible, contenido-justificado-espacio-igual);
+                align-items:map-get($texto-alineacion, centrado);
+            }
     }
 
 /* 
@@ -18,16 +24,16 @@ y además le doy el tamaño
 .fa-heart
     {
         color: rgba(7, 151, 241, 0.79);
-        font-size: $un-rem + $un-rem;
+        font-size: 1.5rem;
     }
-
+/*
 .redes
     {
         display: $flex;
         justify-content: space-evenly;
         align-items: $center;
     }
-
+*/
 /*
 Mediante esta clase defino el tamaño y la decoración
 de los links del footer
@@ -41,23 +47,15 @@ de los links del footer
     
 @media screen and (max-width: 768px)
     {
-    .footer
-        {
-            padding-bottom: 0px;
-            bottom: 0px;
-            font-size: 0.7rem;
-        }
-
-    .redes a
-        {
-            font-size: 0.5rem;
-        }
-
-    
-    .fa-heart
-        {
-            font-size: $un-rem;
-        }
+        .redes a
+            {
+                font-size: 0.5rem;
+            }
+   
+        .fa-heart
+            {
+                font-size: $un-rem;
+            }
     
     }
     

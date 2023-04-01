@@ -29,7 +29,9 @@ Centrado horizontal de las secciones iframe, ya sea el texto que describe o el m
 
 .iframe
     {
-        text-align: $center; /* centrado de texto u objeto*/
+        text-align:map-get($texto-alineacion,centrado);
+        width: auto;
+        height: auto;
     }
 
     /* 
@@ -42,7 +44,7 @@ Utilizo esta clase para justificar el texto
 
 .centrar
     {
-        align-items: $center;
+        align-items:map-get($texto-alineacion,centrado);
     }
 
 /* 
@@ -54,40 +56,21 @@ Separo main del footer para que en la vista desktop, se vea bien el componente m
         margin-bottom: 60px;
     }
 
-.h__uno
-    {
-        text-align: center;
-        font-size: $un-rem * 4;
-    }
-
-.h__dos
-    {
-        text-align: center;
-        font-size: $un-rem + $un-rem;
-    }   
-
 .fuente__tamaño
     {
-        font-size: $un-rem;
+        font-size: $un-rem + 0.2;
     }
 
-@media screen and (max-width: 768px)
-{
-    .h__uno
-        {
-            font-size: 1.6rem;
-        }
 
-    .h__dos
-        {
-            font-size: 1.2rem;
-        }   
-    
-    .fuente__tamaño
-        {
-            font-size: 0.8rem;
-        }
-     
-    
+/*
+Input enviar y restablecer de los formularios
+*/
+.boton
+    {
+        color:$color-blanco;
+        border-radius: 45px 45px 45px 45px;
+        -webkit-border-radius: 45px 45px 45px 45px;
+        -moz-border-radius: 45px 45px 45px 45px;
+        background-color: #785F2F;
+        border-color:#785F2F;
     }
-    

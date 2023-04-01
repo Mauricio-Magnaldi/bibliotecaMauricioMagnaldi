@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Este sitio web me permitirá administrar los libros físicos de la biblioteca familiar. Tal biblioteca esta abierta a familiares y amigos, donde podamos compartir libros de las más variadas temáticas.">
+        <meta name="keywords" content="HTML, CSS, SCSS, IMG, MAIN, META, BODY, FOOTER, REDES, LIBRO">
         <title>Biblioteca</title>
         <!--favicon, se Guarda imágen desde la web con extensión .png y se debe renombrar como favicon con extensión
         .ico 
@@ -17,9 +19,9 @@
         <!-- link a la hoja de estilos-->
         <link rel="stylesheet" href="./scss/estilos.css">
     </head>
-    <body class="index__body__img__fondo body">
+    <body class="index__body__img__fondo body__sin__img body">
         <header class="header">
-            <nav class="navbar navbar-expand-md navbar-light nav__alto">
+            <nav class="navbar navbar-expand-md navbar-light">
                 <div class="container-fluid">
                     <!-- el navegador lee a la persona no vidente lo que indica el atributo alt de la etiqueta img
                     Siempre el alt debe llevar una descripción.
@@ -57,9 +59,9 @@
         <!-- TENER PRESENTE QUE EL TAMAÑO DE LA MÌNIMA FUENTE SERÀN 16 PX ya que es la fuente definida por el usuario-->
         <main>  <!-- etiqueta semántica de estructura-->
             <!-- Utilizo span para poder darle color de fondo exclusivamente al texto -->
-            <span class="nombre__biblioteca texto__negro fuente__tamaño">Biblioteca George Peabody, Estados Unidos</span>
+            <h4 class="parrafo nombre__biblioteca__ocultar texto__blanco fuente__tamaño">Biblioteca George Peabody, Estados Unidos</h4>
             <div>
-                <h1 class="h__uno texto__blanco">Bienvenido a Biblioteca.com</h1>
+                <h1 class="h__uno texto__blanco">Bienvenido al maravilloso mundo de una Biblioteca</h1>
                 <br>
             </div>
             <div>
@@ -72,27 +74,25 @@
                     En uno de los div está el texto mientras que en el otro está el carrousel. 
                     El div del texto utiliza más columnas que el div del carrousel, excepto
                     cuando la pantalla es mayor o igual a 576 px -->
-                    <div class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column justify-content-center centrar__texto">
+                    <div class="col-lg-8 col-md-12 col-sm-12 d-flex flex-column justify-content-center centrar__texto">
                         <!-- Clases propias como parrafo__sangria texto__blanco fuente__negrita y fuente__tamaño -->
-                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Surge a partir de la necesidad de ordenar físicamente la pequeña biblioteca familiar compuesta por libros de varias temáticas. Luego, por iniciativa de nuestra hija, aparece la idea de poder compartir labiblioteca.com con el resto de la familia, amigos cercanos.</p> 
-                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">El préstamo que se hace del libro no tiene costo asociado, es decir, se hace sin fines de lucro, tan solo con el compromiso por parte de quien lo recibe de conservarlo en óptimas condiciones sin rayarlo, mojarlo, etc. El libro se retira del punto de encuentro acordado en hora y fecha consensuada y se devuelve en el mismo lugar bajos los mismos términos.</p>
-                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Otra etapa del proyecto contempla la posibilidad de a partir de la lectura, armar foros de discusión presencial o bien a través de alguna de las plataformas disponibles a tal fin (Google Meet, Zoom). Si bien aún no tiene una fecha de inicio concreta, se estima que tales encuentros podrían darse a partir del próximo año.</p>
-                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Asimismo, nuestra intención es que quien así lo quiera su sume al proyecto, prestando algún libro mediante labiblioteca.com. Para poder sumarse al proyecto hay información pertinente en la página de Contacto, la cual te invito a que visites y cualquier duda o inquietud me contactes.</p>
+                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">La Biblioteca surge a partir de la necesidad de ordenar físicamente los libros familiares, los cuales corresponden a diversas temáticas. Luego, por iniciativa de nuestra hija, aparece la idea de poder compartir la Biblioteca con el resto de la familia, amigos cercanos.</p> 
+                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Para esto optamos por una modalidad de préstamo que se hace del libro. La palabra préstamo denota que tal acción no tiene costo asociado, es decir, se hace sin fines de lucro, tan solo con el compromiso por parte de quien lo recibe de conservarlo en óptimas condiciones sin rayarlo, mojarlo, etc. El libro se retira del punto de encuentro acordado en hora y fecha consensuada y se devuelve en el mismo lugar bajos los mismos términos.</p>
                     </div>
-                    <div class="col-lg-4 col-md-8 col-sm-12 d-flex flex-row justify-content-center">
-                        <div class="carrousel main__separo">
+                    <div class="col-lg-4 col-md-12 col-sm-12 d-flex flex-row justify-content-center">
+                   <div class="carrousel">
                             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
-                                    <div class="carousel-item carrousel__alto active" data-bs-interval="3000">
-                                        <img src="./assets/img/Rafaela.jpg" class="d-block w-100" alt="...">
+                                    <div class="carousel-item active" data-bs-interval="2500">
+                                        <img src="./assets/img/Rafaela.jpg" class="d-block w-100 h-auto" alt="Libro Rafaela de la autora Mariana Furiasse">
                                     </div>
-                                    <div class="carousel-item carrousel__alto" data-bs-interval="3000">
-                                        <img src="./assets/img/Narnia.webp" class="d-block w-100" alt="...">
+                                    <div class="carousel-item" data-bs-interval="2500">
+                                        <img src="./assets/img/Narnia.webp" class="d-block w-100 h-auto" alt="Libro Narnia de C. S. Lewis">
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="2500">
+                                        <img src="./assets/img/Vampiricas vacaciones.jpg" class="d-block w-100 h-auto" alt="Libro Vampíricas Vacaciones de Fabián Sevilla">
+                                    </div>
                                 </div>
-                                <div class="carousel-item carrousel__alto" data-bs-interval="3000">
-                                    <img src="./assets/img/Vampiricas vacaciones.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
                             <button class="carousel-control-prev" type="button"     
                             data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -102,7 +102,7 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
-                    </div>
+                        </div>
                 </div> 
             </div>   
         </main>
@@ -119,14 +119,8 @@
                 <a href="https://www.twitter.com" target="_blank">
                     <i class="fa-heart fab fa-fade fa-twitter"></i>
                 </a>
-                <a href="https://www.facebook.com" target="_blank">
-                    <i class="fa-heart fab fa-bounce fa-facebook"></i>
-                </a>
                 <a href="https://www.snapchat.com" target="_blank">
                     <i class="fa-heart fa-flip fa-brands fa-square-snapchat"></i>
-                </a>
-                <a href="https://www.youtube.com" target="_blank">
-                    <i class="fa-heart fa-shake fa-brands fa-youtube"></i>
                 </a>
                 <a href="https://mendotran.mendoza.gov.ar/site/troncal" target="_blank">
                     <i class="fa-heart fa-spin fa-fade fa-solid fa-bus"></i>

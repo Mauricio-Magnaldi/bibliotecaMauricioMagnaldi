@@ -3,10 +3,16 @@
     {
         margin: $margin-o-padding-0px;
         padding: $margin-o-padding-0px;
-        font-family: $font-family-Mohave;
+        font-family: $font-family-Merriweather;
         /* 
         indico que todos los elementos respeten su tamaño indistintamente si agrego  
         borde o padding a los elementos de las cajas 
         */
         box-sizing: border-box;
+    }
+
+@font-face 
+    {
+        font-family:$font-family-Merriweather;
+        src: url("../assets/fonts/Merriweather-Regular.ttf");
     }

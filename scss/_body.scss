@@ -6,3 +6,147 @@ Especifico que ocupe el 100% del ancho y del alto del contenedor body
         width: $cien-x-ciento;    
         height: $height-100vh;  
     }
+/* 
+Cargo una imagen de fondo en el contenedor body de la página index.html
+En la primer pre entrega tal página estaba cargada en el main 
+*/
+.index__body__img__fondo
+    {
+        background-image: linear-gradient(to bottom,rgba(82, 85, 64, 0.452),rgba(73, 61, 69, 0.447)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos.jpg);
+        background-repeat: no-repeat;
+        background-size: $cover;
+        background-position:map-get($texto-alineacion,centrado);
+        background-attachment: $fixed;   /* Esto indica que la imagen de fondo estará fija en 
+                                        la pantalla y no se moverá con el contenedor.*/ 
+    }                                
+
+/* 
+Utilizo el extend para en la clase catalogo reusar las mismas propiedades/valor que utilizo en la
+clase imagen, con la salvedad de que la imagen de fondo cargado en el body de catalogo será distinta
+de aquella cargada en el body de index.
+*/
+.catalogo__body__img__fondo
+    {
+        @extend .index__body__img__fondo;
+        background-image: url(../assets/img/Biblioteca\ Tianjin\ Binhai\,\ República\ Popular\ China.jpg);         
+    }
+
+.registro__body__img__fondo
+    {
+        @extend .index__body__img__fondo;
+        background-image: url(../assets/img/Biblioteca\ Nacional\ de\ Austria\,\ Republica\ de\ Austria_900.jpg);
+    }
+
+.pido__body__img__fondo
+    {
+        @extend .index__body__img__fondo;
+        background-image: url(../assets/img/Biblioteca\ Estatal\ de\ Nueva\ Gales\ del\ Sur\,\ Australia.jpg) ;
+    }
+
+.contacto__body__img__fondo
+    {
+        @extend .index__body__img__fondo;
+        background-image: linear-gradient(to right,rgba(79, 29, 14, 0.63),rgba(22, 68, 22, 0.63)), url("../assets/img/Biblioteca\ del\ Palacio\ de\ Mafra\,\ Portugal.jpg");
+    }
+
+/* 
+Utilizo dos mapas, del primero de ellos tomo el tamaño de la fuente mientras que del segundo utilizo
+el tipo de alineacion del texto
+*/
+.h__uno
+    {
+        font-size: map-get($fuente-medida, h1);
+        text-align: map-get($texto-alineacion, centrado);
+    }
+
+@media screen and (max-width: 768px)
+    {
+        .body__sin__img
+            {
+                background-image: linear-gradient(to top, #7186a4, #6690a0, #6d9795, #809a8b, #969c88);
+            }
+    
+        .nombre__biblioteca__ocultar
+            {
+                visibility: hidden; 
+            }
+            
+        .h__uno
+            {
+                font-size: 1.6rem;
+            }
+    
+        .h__dos
+            {
+                font-size: 1.4rem;
+            }   
+   
+        .h__tres
+            {
+                font-size: 1rem;
+            }
+
+        .h__cuatro
+            {
+                font-size:0.6rem;
+            }
+    
+        .fuente__tamaño
+        {
+            font-size: 0.8rem;
+        }
+    .centrado
+        {
+            text-align: center;
+        }
+    }
+
+/* 
+Al colocar display flex desordena la tabla.
+Con display block permite ordenarla aunque corre hacia la izquierda los nombres
+de columna
+*/
+/*
+thead, tbody 
+    {
+        display: block;
+    }
+
+tbody 
+    {
+        height: 30vh;
+        overflow-y: auto;
+    }
+*/
+
+/* 
+Esta clase la defino para que si hay más registros - renglones, libros - en el cátalago
+y disponibles para pedir, cuya capacidad exceda la tabla respectiva, aparezca sobre la vertical
+lado izquierdo la barra de desplazamiento respectiva.
+He intentado colocar la barra en otra parte que abarque solo al tbody aunque no tuve éxito,
+por ello el div que contiene esta clase abarca toda la tabla
+*/
+.tabla
+    { 
+        border-collapse: collapse;
+        height: 30vh;
+        overflow-y: $auto;
+    }
+
+
+/* Media query para cuando el medio sea una pantalla - celular -
+y el ancho máximo sea de 768px */
+
+@media screen and (max-width: 768px)
+    {
+           
+        /* 
+        Modifico el tamaño de los títulos de columna y contenido de celdas de las tablas de catálogo
+        y de pedí
+        */
+        th, td
+            {
+                font-size: 0.5rem;
+            }
+    }
+     

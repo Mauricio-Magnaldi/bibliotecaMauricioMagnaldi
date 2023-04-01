@@ -1,10 +1,5 @@
-/* Creación de variables*/
-$font-family-Mohave: 'Mohave', sans-serif;
+$font-family-Merriweather: 'Merriweather', serif;
 $margin-o-padding-0px: 0px;
-$flex: flex;
-$column: column;
-$center: center;
-$row: row;
 $un-rem: 1rem;
 /* 
 En el .scss creación de variables
@@ -22,3 +17,43 @@ $auto: auto;
 $cover: cover;
 $justify: justify;
 $color-blanco: white; 
+
+/* 
+Mapas o Map 
+Aquí van los mapas, es decir, junto a las variables
+*/
+    
+$fuente-medida:
+    (
+        h1: 3.2rem,
+        h2: 2.6rem,
+        h3: 2rem,
+        parrafo: 1.4rem,
+        fuente-footer: 0.7rem
+    );
+
+$texto-alineacion:
+    (
+        centrado: center,
+        izquierda: left,
+        derecha: right,
+        justificado: justify,
+        comienzo: start,
+        fin: end
+    );
+
+$flexible:
+    (
+        display-flexible: flex,
+        direccion-fila: row,
+        direccion-columna: column,
+        direccion-fila-reversa: row-reverse,
+        direccion-columna-reversa: column-reverse,
+        wrap: wrap,
+        nowrap: nowrap,
+        contenido-justificado-comienzo: flex-start,
+        contenido-justificado-final: flex-end,
+        contenido-justificado-espacio-entremedio: space-between,
+        contenido-justificado-espacio-simetrico: space-around,
+        contenido-justificado-espacio-igual: space-evenly
+    );
