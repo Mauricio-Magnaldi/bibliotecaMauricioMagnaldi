@@ -4,10 +4,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Esta página web muestra el Catálogo del que se compone Biblioteca, 
-        como también así cuenta con las posibilidad de conocer que libro está disponible en cada momento, a quien
-        le pertenece y con todos esos datos puedes pedirlo prestado.">
-        <meta name="keywords" content="HTML, CSS, SCSS, IMG, MAIN, META, BODY, FOOTER, REDES, LIBRO">
+        <meta name="description" content="Esta página web muestra el Catálogo del que se compone la Biblioteca, 
+        como también así cuenta con las posibilidad de conocer qué libro está disponible en cada momento, a quien
+        le pertenece y con todos esos datos poder pedirlo prestado. Se realiza un préstamo del libro que se encuentre disponible en el catálogo, no implica alquiler ni compra.">
+        <meta name="keywords" content="Catálogo, listado, pedido, prestar, libro, diccionario, autor, editorial, descripción">
         <title>Catálogo y Pido - Biblioteca</title>
         <!-- CSS de Bootstrap -->
         <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -16,7 +16,7 @@
         <!-- link a la hoja de estilos-->
         <link rel="stylesheet" href="../scss/estilos.css">
     </head>
-    <body class="catalogo__body__img__fondo body__sin__img body">
+    <body class="catalogo__body__img__fondo body">
         <header class="header">
             <nav class="navbar navbar-expand-md navbar-light">
                 <div class="container-fluid div__header__flexible">
@@ -38,19 +38,19 @@
                         <div class="navbar-nav w-100">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0  justify-content-between w-100 ubicar__link__navegacion__celular">
                                 <li class="nav-item">
-                                    <a class="nav-link active header__nav__ul__li__a texto__blanco"  href="../index.html">Inicio</a>
+                                    <a class="nav-link active header__a texto__blanco"  href="../index.html">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="#">Catálogo</a>
+                                    <a class="nav-link active header__a texto__blanco" href="#">Catálogo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./registro.html">Registro</a>
+                                    <a class="nav-link active header__a texto__blanco" href="./registro.html">Registro</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./pido.html">Pido</a>
+                                    <a class="nav-link active header__a texto__blanco" href="./galeria.html">Galería</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./contacto.html">Inicio</a>
+                                    <a class="nav-link active header__a texto__blanco" href="./contacto.html">Contacto</a>
                                 </li>
                             </ul>
                         </div>
@@ -60,172 +60,236 @@
         </header>
         <main> <!-- etiqueta semántica de estructura     -->
             <!-- Utilizo span para poder darle color de fondo exclusivamente al texto -->
-            <h4 class="parrafo nombre__biblioteca__ocultar texto__negro fuente__tamaño">Biblioteca Tianjin Binhai, República Popular China</h4>
-            <h1 class="h__uno">Observa nuestro Catálogo</h1>
-            <br><br>
+            <h4 class="texto__blanco parrafo__biblioteca">Biblioteca Tianjin Binhai, República Popular China</h4>
+            <h1 class="h__uno texto__blanco">Observa nuestro Catálogo</h1>
+            <br>
+            <div class="container">
+            <div class="row justify-content-between">
+            <p class="parrafo__sangria texto__blanco parrafo__fuente">Cubriendo muy variadas temáticas tales como cuentos infantiles, biografías, programación, inglés, diccionarios, colecciones, adiestramiento canino, etc.</p>
             <!--
             <div class="container">
             -->        
-                    <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
-                  <!--<div class="col-md-12 col-sm-12">-->
-                <div class="table-responsive-sm table-responsive-md">
+            <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
+            <!--<div class="col-md-12 col-sm-12">-->
+            <div class="table-responsive-sm table-responsive-md">
+                <div class="desbordamiento__tabla">
+                    <table class="table table-success table-striped tabla" border="5">
+                        <colgroup span="12"></colgroup>
+                        <thead>
+                            <tr>
+                                <th>Nombres Autor</th>
+                                <th>Apellidos Autor</th>
+                                <th>Título</th>
+                                <th>Edición</th>
+                                <th>Editorial</th>
+                                <th>Fecha de Impresión</th>
+                                <th>Páginas</th>
+                                <th>Ancho (cm)</th>
+                                <th>Alto (cm)</th>
+                                <th>ISBN</th>
+                                <th>Descripción</th>
+                                <th>Ubicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Daniel</td>
+                                <td>Balmaceda</td>
+                                <td>Historias insólitas de la historia Argentina</td>
+                                <td>1</td>
+                                <td>Sudamericana</td>
+                                <td>2021</td>    
+                                <td>376</td>
+                                <td>14</td>
+                                <td>22</td>
+                                <td>9789500765213</td>
+                                <td>Investigación histórica</td>
+                                <td>mesa de luz</td>
+                            </tr>
+                            <tr>
+                                <td>Beatriz</td>
+                                <td>Bragoni</td>
+                                <td>San Martín</td>
+                                <td>1</td>
+                                <td>Edhasa</td>
+                                <td>2019</td>
+                                <td>335</td>
+                                <td>15,5</td>
+                                <td>22,5</td>
+                                <td>9789876284967</td>
+                                <td>Historia Argentina</td>
+                                <td>estatería superior</td>
+                            </tr>
+                            <tr>
+                                <td>Alonso</td>
+                                <td>Álvarez García</td>
+                                <td>HTML 5</td>
+                                <td>1</td>
+                                <td>Anaya Multimedia</td>
+                                <td>2010</td>
+                                <td>303</td>
+                                <td></td>
+                                <td></td>
+                                <td>9788441527461</td>
+                                <td>Programación</td>
+                                <td>estantería superior</td>
+                            </tr>
+                            <tr>
+                                <td>Sergio</td>
+                                <td>Rubín</td>
+                                <td>Secreto de Confesión</td>
+                                <td>1</td>
+                                <td>Ediciones B</td>
+                                <td>2022</td>
+                                <td>208</td>
+                                <td>15</td>
+                                <td>23</td>
+                                <td>9789877803488</tdlass=>
+                                <td>Historia Argentina</td=>
+                                <td>estantería superior</tds=>
+                            </tr>
+                            <tr>
+                                <td>Dan</td>
+                                <td>Brown</td>
+                                <td>Ángeles y Demonios</td>
+                                <td>1</td>
+                                <td>Umbriel</td>
+                                <td>2005</td>
+                                <td>508</td>
+                                <td></td>
+                                <td></td>
+                                <td>9788495618771</td>
+                                <td></td>
+                                <td>estantería superior izquierda</td>
+                            </tr>
+                            <tr>
+                                <td>Fabián</td>
+                                <td>Sevilla</td>
+                                <td>Vampíricas vacaciones y otros cuentos de risa</td>
+                                <td>3</td>
+                                <td>Quipu</td>
+                                <td>2012</td>
+                                <td>96</td>                                        
+                                <td>14</td>
+                                <td>21</td>
+                                <td>9789875040366</td>
+                                <td>Literatura infantil y juvenil Argentina</td>
+                                <td>estantería inferior izquierda</td>
+                            </tr>
+                            <tr>
+                                <td>Millán</td>
+                                <td>César</td>
+                                <td>Guía para un perro feliz: 98 consejos y técnicas esenciales</td>
+                                <td>1</td>                                    
+                                <td>Aguilar</td>
+                                <td>2013</td>
+                                <td>232</td>
+                                <td>13</td>
+                                <td>21</td>
+                                <td>9789870431824</td>
+                                <td>Mascotas</td>
+                                <td>estantería inferior izquierda</td>
+                            </tr>
+                            <tr>
+                                <td>Sergio</td>
+                                <td>Rubín</td>
+                                <td>El Jesuita</td>
+                                <td>1</td>
+                                <td>Vergara</td>
+                                <td>2010</td>
+                                <td>192</td>
+                                <td>15</td>
+                                <td>23</td>
+                                <td>9789501524505</td>
+                                <td>Bergoglio, Jorge Mario</td>
+                                <td>estantería superior derecha</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br>
+            <section>
+                <h1 class="h__uno texto__blanco">Busca tu libro</h1>
+                <br>
+                <p class="parrafo__sangria texto__blanco parrafo__fuente">En el listado adjunto puedes obsevar solamente los libros que están disponibles ya. No te desanimes si en este momento otro libro no aparece. Hay una buena rotación por lo que en un par de semanas estará a tu alcance.</p>
+                <p class="parrafo__sangria texto__blanco parrafo__fuente">Selecciona un solo libro, luego escribí tu email con el cual ya te registraste, haz click en Enviar, recibirás un email con las instrucciones para el retiro del libro, y a leer.</p>
+                <div class="table-responsive-sm table-responsive-md">    
                     <div class="desbordamiento__tabla">
-                        <table class="table table-success table-striped tabla" border="5">
-                            <colgroup span="12"></colgroup>
+                        <table class="table table-success table-striped tabla" border="5">    
+                            <colgroup><col span="5"></colgroup>
                             <thead>
-                                <tr>
-                                    <th>Nombres Autor</th>
-                                    <th>Apellidos Autor</th>
-                                    <th>Título</th>
-                                    <th>Edición</th>
-                                    <th>Editorial</th>
-                                    <th>Fecha de Impresión</th>
-                                    <th>Páginas</th>
-                                    <th>Ancho (cm)</th>
-                                    <th>Alto (cm)</th>
-                                    <th>ISBN</th>
-                                    <th>Descripción</th>
-                                    <th>Ubicación</th>
+                                <tr class="table-light">
+                                    <th scope="col">Nombres Autor</th>
+                                    <th scope="col">Apellidos Autor</th>
+                                    <th scope="col">Título</th>
+                                    <th scope="col">Propietario</th>
+                                    <th scope="col">Pedir</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr class="table-light">
                                     <td>Daniel</td>
                                     <td>Balmaceda</td>
                                     <td>Historias insólitas de la historia Argentina</td>
-                                    <td>1</td>
-                                    <td>Sudamericana</td>
-                                    <td>2021</td>    
-                                    <td>376</td>
-                                    <td>14</td>
-                                    <td>22</td>
-                                    <td>9789500765213</td>
-                                    <td>Investigación histórica</td>
-                                    <td>mesa de luz</td>
+                                    <td>Ana</td>
+                                    <td align="center"><input type="radio" name="isbn" id="9789500765213"></td>
                                 </tr>
-                                <tr>
+                                <tr class="table-light">
                                     <td>Beatriz</td>
                                     <td>Bragoni</td>
                                     <td>San Martín</td>
-                                    <td>1</td>
-                                    <td>Edhasa</td>
-                                    <td>2019</td>
-                                    <td>335</td>
-                                    <td>15,5</td>
-                                    <td>22,5</td>
-                                    <td>9789876284967</td>
-                                    <td>Historia Argentina</td>
-                                    <td>estatería superior</td>
+                                    <td>Mauricio</td>
+                                    <td align="center"><input type="radio" name="isbn" id="9789876284967"></td>
                                 </tr>
-                                <tr>
+                                <tr class="table-light">
                                     <td>Alonso</td>
                                     <td>Álvarez García</td>
                                     <td>HTML 5</td>
-                                    <td>1</td>
-                                    <td>Anaya Multimedia</td>
-                                    <td>2010</td>
-                                    <td>303</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>9788441527461</td>
-                                    <td>Programación</td>
-                                    <td>estantería superior</td>
+                                    <td>Mauricio</td>
+                                    <td align="center"><input type="radio" name="isbn" id="9788441527461"</td>
                                 </tr>
-                                <tr>
-                                    <td>Sergio</td>
-                                    <td>Rubín</td>
-                                    <td>Secreto de Confesión</td>
-                                    <td>1</td>
-                                    <td>Ediciones B</td>
-                                    <td>2022</td>
-                                    <td>208</td>
-                                    <td>15</td>
-                                    <td>23</td>
-                                    <td>9789877803488</tdlass=>
-                                    <td>Historia Argentina</td=>
-                                    <td>estantería superior</tds=>
-                                </tr>
-                                <tr>
+                                <tr class="table-light">
                                     <td>Dan</td>
                                     <td>Brown</td>
                                     <td>Ángeles y Demonios</td>
-                                    <td>1</td>
-                                    <td>Umbriel</td>
-                                    <td>2005</td>
-                                    <td>508</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>9788495618771</td>
-                                    <td></td>
-                                    <td>estantería superior izquierda</td>
+                                    <td>Ana</td>
+                                    <td align="center"><input type="radio" name="isbn" id="9788495618771"</td>
                                 </tr>
-                                <tr>
+                                <tr class="table-light">
                                     <td>Fabián</td>
                                     <td>Sevilla</td>
                                     <td>Vampíricas vacaciones y otros cuentos de risa</td>
-                                    <td>3</td>
-                                    <td>Quipu</td>
-                                    <td>2012</td>
-                                    <td>96</td>                                        <td>14</td>
-                                    <td>21</td>
-                                    <td>9789875040366</td>
-                                    <td>Literatura infantil y juvenil Argentina</td>
-                                    <td>estantería inferior izquierda</td>
+                                    <td>Niña</td>
+                                    <td align="center"><input type="radio" name="isbn" id="9789875040366"</td>
                                 </tr>
-                                <tr>
-                                    <td>Millán</td>
-                                    <td>César</td>
-                                    <td>Guía para un perro feliz: 98 consejos y técnicas esenciales</td>
-                                    <td>1</td>                                    <td>Aguilar</td>
-                                    <td>2013</td>
-                                    <td>232</td>
-                                    <td>13</td>
-                                    <td>21</td>
-                                    <td>9789870431824</td>
-                                    <td>Mascotas</td>
-                                    <td>estantería inferior izquierda</td>
-                                </tr>
-                                <tr>
-                                    <td>Sergio</td>
-                                    <td>Rubín</td>
-                                    <td>El Jesuita</td>
-                                    <td>1</td>
-                                    <td>Vergara</td>
-                                    <td>2010</td>
-                                    <td>192</td>
-                                    <td>15</td>
-                                    <td>23</td>
-                                    <td>9789501524505</td>
-                                    <td>Bergoglio, Jorge Mario</td>
-                                    <td>estantería superior derecha</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="contenedor__titulo__catalogo"></div>
-                        <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
-                        <h2 class="h__dos espaciado">Algunos de nuestros títulos</h2>
-                        <h3 class="centrar__texto">Los títulos que se observan aquí son aquellos que han registrado más movimiento durante los últimos meses, son tendencia de acuerdo al ranking propio.</h3>        
-                        <div class="container">
-                            <!--
-                            Utilizo la clase container vía columna y final para utilizar la clase catalogo que yo
-                            mismo declaro    
-                            -->
-                            <div class="col">
-                                <div class="row">         
-                                    <div class="catalogo main__separo">
-                                        <div><img class="img__1 catalogo__img catalogo__zoom" src="../assets/img/titulo/Inferno.jpg" alt="Libro Inferno de Dan Brown"></div>
-                                        <div><img class="catalogo__img catalogo__zoom" src="../assets/img/titulo/Sinceramente.jpg" alt="Libro Sinceramente de Cristina Fernandez"></div>
-                                        <div><img class="catalogo__img catalogo__zoom" src="../assets/img/titulo/Mejor muertos.jpg" alt="Libro Mejor Muertos de Gisela Marzziota"></div>
-                                        <div><img class="catalogo__img catalogo__zoom" src="../assets/img/titulo/Primer tiempo.jpg" alt="Libro Primer Tiempo de Mauricio Macri"></div>
-                                        <div><img class="catalogo__img catalogo__zoom" src="../assets/img/titulo/Secreto de confesion.webp" alt="Libro Secreto de Confesión"></div>
-                                    </div>
+                    <br>
+                    <div class="container main__separo">
+                        <div class="row justify-content-between">
+                            <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
+                            <div class="col-md-12 col-sm-12 d-flex flex-column justify-content-center centrar">
+                                <div class="col">
+                                    <form class="row" autocomplete="off" action="./404.html">
+                                        <div class="mb-2 col-12">
+                                            <label for="email" class="form-label texto__blanco">Email</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        <div>
+                                            <input type="submit" class="btn boton col-3"></input>
+                                            <input type="reset" class="btn boton col-3"></input>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                    </div>    
-                </div>
+                    </div>
+            </section>
+            </div>
+            </div>
+            <br><br>
         </main>
         <footer class="footer"> <!-- etiqueta semántica de estructura -->
    

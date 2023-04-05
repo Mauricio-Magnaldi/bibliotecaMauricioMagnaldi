@@ -1,0 +1,45 @@
+/*
+Esta clase contiene las 5 imágenes del Galeria, en la misma defino el alto y ancho del espacio para cada una
+de las 5 imágenes, además declaro al display de tipo flexible lo que me permitirá darles a las imágenes
+la disposición space around sobre el eje vertical, ya que la dirección del componente flex es horizontal.
+*/
+
+.galeria    
+    {
+        width: 30%;
+        height: 60vh;
+        display:map-get($flexible,display-flexible);
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto auto;
+        justify-content: space-around;
+        align-items:map-get($texto-alineacion,centrado);
+        /*
+        Declaro el espacio que utiliza cada imágen en la galeria, definiéndole ancho y alto.
+        */
+        .galeria__img  /* imagenes */
+            {
+                width: 120px;
+                height: 170px;
+                object-fit: $cover;
+                border: 5px solid rgb(131, 125, 93);
+                margin-bottom: 20px;
+            }
+        .galeria__zoom:hover    
+            {
+                transform:scale(2);    
+            }
+        
+        
+    }
+
+@media screen and (max-width: 768px)
+    {
+        .galeria    
+            {
+                .galeria__img  /* imagenes */
+                    {
+                        margin-bottom: 40px;
+                    }
+            }
+    }

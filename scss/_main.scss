@@ -2,6 +2,7 @@
 /*
 Mediante esta clase declaro las características quiero que tome la sección main de la página index
 */ 
+/*
 .index__main__flexible
         {
             display:map-get($flexible,display-flexible);
@@ -9,6 +10,32 @@ Mediante esta clase declaro las características quiero que tome la sección mai
             justify-content:map-get($texto-alineacion,centrado);
             align-items:map-get($texto-alineacion,centrado);
         }
+*/
+.error__main
+    {   
+        width: 100vw;
+        display:map-get($flexible,display-flexible);
+        flex-direction:map-get($flexible,direccion-fila);           
+        justify-content:map-get($texto-alineacion,fin);
+        .error__main__div2
+        {
+            width: 50vw;
+            margin-top: 210px;
+        }
+    }
+
+@media screen and (max-width: 768px)
+    {      
+        .error__main
+            {             
+                justify-content:map-get($texto-alineacion,centrado);
+                .error__main__div2
+                    {
+                        width: 60vw;
+                        margin-top: 10px;
+                    }
+            }
+    }
 
 .carrousel
     {                   
@@ -45,21 +72,20 @@ object-fit: cover El objeto se adecuará al espacio asignado
         .carrousel
             {                   
                 width: 30vw;
-                height: 50vh;
-                margin-bottom: 100px;
+                height: 60vh;
+                display: flex;
+         /*       margin-bottom: 10px;
+           */ }
+
+        .carousel-item
+            {
+                height: 90%;
             }
     }
 
 /*
 Clase definida en bootstrap utilizada para el estilado de un
-formulario, modifico la propiedad width donde le disminuyo el 
-ancho
-*/
-.form-control
-        {
-            width: 30vh;
-        }
-    
+formulario, modifico la propiedad width donde le disminuyo el tml */
 
 /*
 Se declara que la altura de las tablas Catalogo y Pedi será de 30 vh

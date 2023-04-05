@@ -4,6 +4,7 @@ Estilo el header de las cinco páginas
 Mediante position sticky le dijo al header, compuesto por logo y menú, que a pesar de que el scroll
 vertical se active, el menú quede fijo en la parte superior de la página.
 */
+
 .header                           
     {
         background-color: #32385e5f;
@@ -28,17 +29,38 @@ vertical se active, el menú quede fijo en la parte superior de la página.
         text-decoration: none; quita el subrayado de cada una de las opciones del menù de navegaciòn 
         display: inline-block;         /* de esta forma le indico que siga siendo un elemento en línea y además que también sea un elemento en bloque respecto al resto de las propiedas que ahora si puedo definirle tales 
         como margin top y bottom, padding top y bottom */
-        .header__nav__ul__li__a
+        .header__a
             { 
                 color: white;
                 text-decoration: none;        
                 font-size: map-get($fuente-medida,parrafo);
-                display: inline-block; 
+                display: inline-block; /* presente-agregado */ 
+                position: relative; /* agregado */
                 margin-top: 5px;
                 margin-bottom: 5px;
                 padding-right: 0px;
                 padding-left: 0px;
                 background-color: rgba(96, 66, 66, 0.363);
+                &::after
+                    {
+                        content:'';
+                        width: 100%;
+                        /* grosor del subrayado */
+                        height:5px;
+                        background-color: white;
+                        border-radius:4px;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        transform:scaleX(0);
+                        transform-origin:initial;
+                        transition: transform .25s ease;
+                    }
+                &:hover::after
+                    {
+                        transform:scaleX(1);
+                    }
+
                 /* 
                 Sitúo las opciones del menú desplegable hacia la derecha de la pantalla 
                 */
@@ -46,9 +68,27 @@ vertical se active, el menú quede fijo en la parte superior de la página.
                     {   
                         align-items:map-get($texto-alineacion,contenido-justificado-final);
                     }
-            }   
+                }
+            }
+            
+@media screen and (max-width: 768px)
+            {
+                .header                           
+                {
+                    .header__a
+                        { 
+                            font-size: 1rem;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+
+            }
+       
         /* la propiedad order permite alterar la ubicación de los elementos dentro de un flex, en este caso dentro del ul se altero el orden de los lista item inicio y contacto, situación que se ordena a partir de la propiedad 
-        en cuestión */
+        en cuestión
         .li__ancla__contacto
             {
                 order: 4;
@@ -56,8 +96,8 @@ vertical se active, el menú quede fijo en la parte superior de la página.
         .li__ancla__inicio
             {   
                 order: -1;
-            }
-    }
+            }*/
+    
 
         /*
 Clase que se ocupa de estilar el logo y las anclas del header de cada una de las 5 páginas

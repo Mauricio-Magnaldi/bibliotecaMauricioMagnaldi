@@ -2,7 +2,6 @@
 /*
 Particiono el código
 Vinculo las distintas páginas .scss con estilos.scss
-
 */
 /* Acá declaro el mapa $fuente-medida, $texto-alineacion, las variables */
 /* 
@@ -86,10 +85,6 @@ Separo main del footer para que en la vista desktop, se vea bien el componente m
   margin-bottom: 60px;
 }
 
-.fuente__tamaño {
-  font-size: 1.2rem;
-}
-
 /*
 Input enviar y restablecer de los formularios
 */
@@ -114,8 +109,8 @@ Especifico que ocupe el 100% del ancho y del alto del contenedor body
 Cargo una imagen de fondo en el contenedor body de la página index.html
 En la primer pre entrega tal página estaba cargada en el main 
 */
-.index__body__img__fondo, .contacto__body__img__fondo, .pido__body__img__fondo, .registro__body__img__fondo, .catalogo__body__img__fondo {
-  background-image: linear-gradient(to bottom, rgba(82, 85, 64, 0.452), rgba(73, 61, 69, 0.447)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos.jpg);
+.index__body__img__fondo, .error__body__img__fondo, .contacto__body__img__fondo, .galeria__body__img__fondo, .registro__body__img__fondo, .catalogo__body__img__fondo {
+  background-image: linear-gradient(to bottom, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -129,19 +124,23 @@ clase imagen, con la salvedad de que la imagen de fondo cargado en el body de ca
 de aquella cargada en el body de index.
 */
 .catalogo__body__img__fondo {
-  background-image: url(../assets/img/Biblioteca\ Tianjin\ Binhai\,\ República\ Popular\ China.jpg);
+  background-image: linear-gradient(to right, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Tianjin\ Binhai\,\ República\ Popular\ China.jpg);
 }
 
 .registro__body__img__fondo {
-  background-image: url(../assets/img/Biblioteca\ Nacional\ de\ Austria\,\ Republica\ de\ Austria_900.jpg);
+  background-image: linear-gradient(to left, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Nacional\ de\ Austria\,\ Republica\ de\ Austria.jpg);
 }
 
-.pido__body__img__fondo {
-  background-image: url(../assets/img/Biblioteca\ Estatal\ de\ Nueva\ Gales\ del\ Sur\,\ Australia.jpg);
+.galeria__body__img__fondo {
+  background-image: linear-gradient(to top, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Estatal\ de\ Nueva\ Gales\ del\ Sur\,\ Australia.jpg);
 }
 
 .contacto__body__img__fondo {
-  background-image: linear-gradient(to right, rgba(79, 29, 14, 0.63), rgba(22, 68, 22, 0.63)), url("../assets/img/Biblioteca del Palacio de Mafra, Portugal.jpg");
+  background-image: linear-gradient(to top, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ del\ Palacio\ de\ Mafra\,\ Portugal.jpg);
+}
+
+.error__body__img__fondo {
+  background-image: url(../assets/img/libro\ roto.jpg);
 }
 
 /* 
@@ -153,12 +152,36 @@ el tipo de alineacion del texto
   text-align: center;
 }
 
+.h__dos {
+  font-size: 2.6rem;
+}
+
+.parrafo__fuente {
+  font-size: 1.8rem;
+}
+
+.parrafo__biblioteca {
+  font-size: 1rem;
+}
+
 @media screen and (max-width: 768px) {
-  .body__sin__img {
-    background-image: linear-gradient(to top, #7186a4, #6690a0, #6d9795, #809a8b, #969c88);
+  .index__body__img__fondo, .catalogo__body__img__fondo, .registro__body__img__fondo, .galeria__body__img__fondo, .contacto__body__img__fondo, .error__body__img__fondo {
+    background-image: linear-gradient(to bottom, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos_768.jpg);
+  }
+  .catalogo__body__img__fondo {
+    background-image: linear-gradient(to right, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Tianjin\ Binhai\,\ República\ Popular\ China_768.jpg);
+  }
+  .registro__body__img__fondo {
+    background-image: linear-gradient(to left, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Nacional\ de\ Austria\,\ Republica\ de\ Austria_768.jpg);
+  }
+  .galeria__body__img__fondo {
+    background-image: linear-gradient(to top, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Estatal\ de\ Nueva\ Gales\ del\ Sur\,\ Australia_768.jpg);
+  }
+  .contacto__body__img__fondo {
+    background: linear-gradient(to top, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url("../assets/img/Portugal768.jpg");
   }
   .nombre__biblioteca__ocultar {
-    visibility: hidden;
+    display: none;
   }
   .h__uno {
     font-size: 1.6rem;
@@ -166,17 +189,45 @@ el tipo de alineacion del texto
   .h__dos {
     font-size: 1.4rem;
   }
-  .h__tres {
+  .parrafo__fuente {
     font-size: 1rem;
   }
-  .h__cuatro {
-    font-size: 0.6rem;
-  }
-  .fuente__tamaño {
-    font-size: 0.8rem;
+  .parrafo__biblioteca {
+    padding-top: 5px;
+    font-size: 0.7rem;
   }
   .centrado {
     text-align: center;
+  }
+  /* 
+  Modifico el tamaño de los títulos de columna y contenido de celdas de las tablas de catálogo
+  y de pedí
+  */
+  th, td {
+    font-size: 0.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .index__body__img__fondo, .catalogo__body__img__fondo, .registro__body__img__fondo, .galeria__body__img__fondo, .contacto__body__img__fondo, .error__body__img__fondo {
+    background-image: linear-gradient(to bottom, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos_576.jpg);
+  }
+  .catalogo__body__img__fondo {
+    background-image: linear-gradient(to right, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Tianjin\ Binhai\,\ República\ Popular\ China_576.jpg);
+  }
+  .registro__body__img__fondo {
+    background-image: linear-gradient(to left, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Nacional\ de\ Austria\,\ Republica\ de\ Austria_576.jpg);
+  }
+  .galeria__body__img__fondo {
+    background-image: linear-gradient(to top, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Estatal\ de\ Nueva\ Gales\ del\ Sur\,\ Australia_576.jpg);
+  }
+  /*
+  No se carga esta imagen, a partir del breakpoint 576px se carga la imagen del index
+  */
+  .contacto__body__img__fondo {
+    background: linear-gradient(to center, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url("../assets/img/Portugal576.jpg");
+  }
+  .error__body__img__fondo {
+    background-image: url(../assets/img/libro\ roto.jpg);
   }
 }
 /* 
@@ -209,17 +260,6 @@ por ello el div que contiene esta clase abarca toda la tabla
   overflow-y: auto;
 }
 
-/* Media query para cuando el medio sea una pantalla - celular -
-y el ancho máximo sea de 768px */
-@media screen and (max-width: 768px) {
-  /* 
-  Modifico el tamaño de los títulos de columna y contenido de celdas de las tablas de catálogo
-  y de pedí
-  */
-  th, td {
-    font-size: 0.5rem;
-  }
-}
 /* header */
 /*
 Estilo el header de las cinco páginas
@@ -239,8 +279,6 @@ vertical se active, el menú quede fijo en la parte superior de la página.
   text-decoration: none; quita el subrayado de cada una de las opciones del menù de navegaciòn 
   display: inline-block;         /* de esta forma le indico que siga siendo un elemento en línea y además que también sea un elemento en bloque respecto al resto de las propiedas que ahora si puedo definirle tales 
   como margin top y bottom, padding top y bottom */
-  /* la propiedad order permite alterar la ubicación de los elementos dentro de un flex, en este caso dentro del ul se altero el orden de los lista item inicio y contacto, situación que se ordena a partir de la propiedad 
-  en cuestión */
 }
 .header .header__div__img {
   width: 30px;
@@ -249,11 +287,12 @@ vertical se active, el menú quede fijo en la parte superior de la página.
   margin-left: 1px;
   margin-right: 10px;
 }
-.header .header__nav__ul__li__a {
+.header .header__a {
   color: white;
   text-decoration: none;
-  font-size: 1.4rem;
-  display: inline-block;
+  font-size: 1.8rem;
+  display: inline-block; /* presente-agregado */
+  position: relative; /* agregado */
   margin-top: 5px;
   margin-bottom: 5px;
   padding-right: 0px;
@@ -263,13 +302,42 @@ vertical se active, el menú quede fijo en la parte superior de la página.
   Sitúo las opciones del menú desplegable hacia la derecha de la pantalla 
   */
 }
-.header .li__ancla__contacto {
-  order: 4;
+.header .header__a::after {
+  content: "";
+  width: 100%;
+  /* grosor del subrayado */
+  height: 5px;
+  background-color: white;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: initial;
+  transition: transform 0.25s ease;
 }
-.header .li__ancla__inicio {
-  order: -1;
+.header .header__a:hover::after {
+  transform: scaleX(1);
 }
-
+@media screen and (max-width: 768px) {
+  .header .header__a {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* la propiedad order permite alterar la ubicación de los elementos dentro de un flex, en este caso dentro del ul se altero el orden de los lista item inicio y contacto, situación que se ordena a partir de la propiedad 
+en cuestión
+.li__ancla__contacto
+    {
+        order: 4;
+    }
+.li__ancla__inicio
+    {   
+        order: -1;
+    }*/
 /*
 Clase que se ocupa de estilar el logo y las anclas del header de cada una de las 5 páginas
 Le especifico el ancho y lo defino como display flex
@@ -284,13 +352,35 @@ Le especifico el ancho y lo defino como display flex
 /*
 Mediante esta clase declaro las características quiero que tome la sección main de la página index
 */
-.index__main__flexible {
+/*
+.index__main__flexible
+        {
+            display:map-get($flexible,display-flexible);
+            flex-direction:map-get($flexible,direccion-columna);
+            justify-content:map-get($texto-alineacion,centrado);
+            align-items:map-get($texto-alineacion,centrado);
+        }
+*/
+.error__main {
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: end;
+}
+.error__main .error__main__div2 {
+  width: 50vw;
+  margin-top: 210px;
 }
 
+@media screen and (max-width: 768px) {
+  .error__main {
+    justify-content: center;
+  }
+  .error__main .error__main__div2 {
+    width: 60vw;
+    margin-top: 10px;
+  }
+}
 .carrousel {
   width: 20vw;
 }
@@ -321,19 +411,18 @@ object-fit: cover El objeto se adecuará al espacio asignado
 @media screen and (max-width: 768px) {
   .carrousel {
     width: 30vw;
-    height: 50vh;
-    margin-bottom: 100px;
+    height: 60vh;
+    display: flex;
+    /*       margin-bottom: 10px;
+      */
+  }
+  .carousel-item {
+    height: 90%;
   }
 }
 /*
 Clase definida en bootstrap utilizada para el estilado de un
-formulario, modifico la propiedad width donde le disminuyo el 
-ancho
-*/
-.form-control {
-  width: 30vh;
-}
-
+formulario, modifico la propiedad width donde le disminuyo el tml */
 /*
 Se declara que la altura de las tablas Catalogo y Pedi será de 30 vh
 Cuando las mismas (tablas) se desbordan por la cantidad de filas que poseen, debe activarse
@@ -345,33 +434,40 @@ el scroll vertical
 }
 
 /*
-Esta clase contiene las 5 imágenes del Catálogo, en la misma defino el alto y ancho del espacio para cada una
+Esta clase contiene las 5 imágenes del Galeria, en la misma defino el alto y ancho del espacio para cada una
 de las 5 imágenes, además declaro al display de tipo flexible lo que me permitirá darles a las imágenes
 la disposición space around sobre el eje vertical, ya que la dirección del componente flex es horizontal.
 */
-.catalogo {
+.galeria {
   width: 30%;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: auto auto;
   justify-content: space-around;
   align-items: center;
   /*
-  Declaro el espacio que utiliza cada imágen en el cátalogo, definiéndole ancho y alto.
+  Declaro el espacio que utiliza cada imágen en la galeria, definiéndole ancho y alto.
   */
 }
-.catalogo .catalogo__img {
+.galeria .galeria__img {
   width: 120px;
   height: 170px;
   -o-object-fit: cover;
      object-fit: cover;
+  border: 5px solid rgb(131, 125, 93);
+  margin-bottom: 20px;
 }
-.catalogo .catalogo__zoom:hover {
+.galeria .galeria__zoom:hover {
   transform: scale(2);
 }
 
+@media screen and (max-width: 768px) {
+  .galeria .galeria__img {
+    margin-bottom: 40px;
+  }
+}
 .footer {
   width: 100vw;
   height: 50px;

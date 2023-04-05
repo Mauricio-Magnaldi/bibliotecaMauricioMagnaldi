@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Aquí podes registrarte para obtener el alta de usuario en Biblioteca. Además si tienes algún libro que puedas prestar podrás brindar tales datos para que sea agregado al Catálogo, finalmente te dejos unas recomendaciones sobre cómo cuidar un libro.">
-        <meta name="keywords" content="HTML, CSS, SCSS, IMG, MAIN, META, BODY, FOOTER, REDES, LIBRO">
+        <meta name="description" content="Aquí podes registrarte para obtener el alta de usuario en Biblioteca. Además si tienes algún libro que puedas prestar podrás brindar tales datos para que sea agregado al Catálogo, finalmente te dejo unas recomendaciones sobre cómo cuidar un libro.">
+        <meta name="keywords" content="nombre, apellido, email, ficha bibliográfica, conocimiento">
         <title>Registro, Presto y más - Biblioteca</title>
         <!-- CSS de Bootstrap -->
         <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -29,19 +29,19 @@
                         <div class="navbar-nav w-100">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-between w-100 ubicar__link__navegacion__celular">
                                 <li class="nav-item">
-                                    <a class="nav-link active header__nav__ul__li__a texto__blanco"  href="../index.html">Inicio</a>
+                                    <a class="nav-link active header__a texto__blanco"  href="../index.html">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./catalogo.html">Catálogo</a>
+                                    <a class="nav-link active header__a texto__blanco" href="./catalogo.html">Catálogo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="#">Registro</a>
+                                    <a class="nav-link active header__a texto__blanco" href="#">Registro</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./pido.html">Pido</a>
+                                    <a class="nav-link active header__a texto__blanco" href="./galeria.html">Galería</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./contacto.html">Contacto</a>
+                                    <a class="nav-link active header__a texto__blanco" href="./contacto.html">Contacto</a>
                                 </li>
                             </ul>
                         </div>
@@ -51,78 +51,79 @@
         </header>
         <main>
             <!-- Utilizo span para poder darle color de fondo exclusivamente al texto -->
-            <h4 class="h__cuatro nombre__biblioteca__ocultar texto__blanco fuente__tamaño">Biblioteca Nacional de Austria, República de Austria</h4>
+            <h4 class="texto__blanco parrafo__biblioteca">Biblioteca Nacional de Austria, República de Austria</h4>
             <br>
             <p><h1 class="h__uno texto__blanco">Regístrate en la Biblioteca</h1></p>
-            <div>
-                <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño centrar">Para acceder a un libro en primer lugar debes registrarte con pocos datos. Por otra
-                parte si tienes algún libro que quieras prestar, avísame ingresando tu email de registro y
-                la Ficha Bibliográfica del libro en cuestión.</p>
-                <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño centrar">Finalmente te dejo algunos tips muy útiles para cuidar de la mejor forma un libro.</p>
-                <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño centrar">En el transcurso de las próximas 24 hs. hábiles de recibida la ficha, se cargará el libro al Catálogo y así quedará disponible para quien desee pedirlo.</p>
-            </div>
             <div class="container">
                 <div class="row justify-content-between">
+                <p class="parrafo__sangria texto__blanco parrafo__fuente">Para acceder a un libro en primer lugar debes registrarte con los datos que posteriormente utilizaras para poder pedir un libro.</p>
+                <p class="parrafo__sangria texto__blanco parrafo__fuente">Una vez registrado puedes optar por prestar algún libro, en tal caso avísame ingresando tu email de registro y la Ficha Bibliográfica del libro en cuestión. En el transcurso de las próximas 24 hs. hábiles de recibida la Ficha, se cargará el libro en el Catálogo y así quedará disponible para quien desee pedirlo. Para tu tranquilidad el libro se presta exclusivamente a aquella persona que está debidamente registrada.</p>
+                <p class="parrafo__sangria texto__blanco parrafo__fuente">Finalmente te dejo algunos tips muy útiles para cuidar de la mejor forma un libro.</p>
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
                     <!-- Alineamiento horizontal mediante bootstrap de los div principales, en un está el texto mientras que en el otro está el carrousel. El div del texto utiliza más columnas que el div del carrousel -->
-                    <div class="col-md-4 col-sm-12 d-flex flex-column justify-content-center align-items-center centrar">
+                    <div class="col-sm-12 col-md-12 col-lg-8 d-flex flex-column justify-content-center align-items-center centrar">
                         <!-- Convierto al formulario en columna-->
                         <div class="col">
                             <!-- Convierto al formulario en fila -->
-                            <form class="row" autocomplete="off">
+                            <form class="row" autocomplete="off" action="./404.html">
                                 <!-- Indico que el contenido del div utilice 8 filas, especificamente aplica al input-->
-                                <h2 class="h__dos texto__blanco">Registro</h2>
-                                <div class="mb-3 col-12">
+                                <h2 class="h__dos texto__blanco d-flex justify-content-center">Registro</h2>
+                                <div class="mb-3 col-sm-10 col-md-4 col-lg-6">
                                     <label for="nombre" class="form-label texto__blanco">Nombre</label>
                                     <input type="text" class="form-control" id="nombre" placeholder="Tal cual aparece en tu DNI" required>
                                 </div>
-                                <div class="mb-3 col-12">
+                                <div class="mb-3 col-sm-10 col-md-4 col-lg-6">
                                     <label for="apellido" class="form-label texto__blanco">Apellido</label>
                                     <input type="text" class="form-control" id="apellido" placeholder="Tal cual aparece en tu DNI" required>
                                 </div>
-                                <div class="mb-3 col-12">
+                                <div class="mb-3 col-sm-10 col-md-4 col-lg-6">
                                     <label for="email" class="form-label texto__blanco">Email</label>
                                     <input type="email" class="form-control" id="email" required>
                                 </div>
-                                <div class="mb-3 col-12">
+                                <div class="mb-3 col-sm-10 col-md-4 col-lg-6">
                                     <label for="telefono" class="form-label texto__blanco">Teléfono</label>
                                     <input type="tel" class="form-control" minlength="10" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" name="telefono" placeholder="Sin el 0 ni el 15" required>
                                 </div>
                                 <div>
-                                    <input type="submit" class="btn boton col-5"></input>
-                                    <input type="reset" class="btn boton col-5"></input>
+                                    <input type="submit" class="btn boton col-3"></input>
+                                    <input type="reset" class="btn boton col-3"></input>
                                 </div>
                             </form>
                         </div>
                     </div>        
-                    <div class="col-md-4 col-sm-12 d-flex flex-column justify-content-center align-items-center centrar">
+                    <div class="col-sm-12 col-md-12 col-lg-8 d-flex flex-column justify-content-center align-items-center centrar">
                             <!-- Convierto al formulario en columna-->
                             <div class="col">
                                 <!-- Convierto al formulario en fila -->
-                                <form class="row" autocomplete="off">
-                                    <h2 class="h__dos texto__blanco">Presto</h2>
-                                    <div class="mb-2 col-12">
+                                <form class="row" autocomplete="off" action="./404.html">
+                                    <h2 class="h__dos texto__blanco d-flex justify-content-center">Presto</h2>
+                                    <div class="mb-2 col-sm-10 col-md-4 col-lg-6">
                                         <label for="email" class="form-label texto__blanco">Email</label>
                                         <input type="email" class="form-control" id="email" required>
                                     </div>
-                                    <div class="mb-3 col-12">
-                                        <label for="formFileSm" class="form-label texto__blanco">Subí la foto de la ficha</label>
-                                        <input class="form-control form-control-md" id="formFileSm" type="file">
+                                    <div class="mb-3 col-sm-10 col-md-4 col-lg-6">
+                                        <label for="formFileSm" class="form-label texto__blanco">Subí la foto de la Ficha</label>
+                                        <input class="form-control form-control-md" id="formFileSm" type="file" required>
                                     </div>
                                     <div>
-                                        <input type="submit" class="btn boton col-5"></input>
+                                        <input type="submit" class="btn boton col-3"></input>
+                                        <input type="reset" class="btn boton col-3"></input>
                                     </div>
                                 </form>
                             </div>
                     </div>
-                    <div class="col-md-4 col-sm-12 d-flex flex-column justify-content-center align-items-center centrar">
+                    <div class="col-sm-12 col-md-12 col-lg-8 d-flex flex-column justify-content-center align-items-center centrar">
                         <section class="iframe"></section>
                             <div> 
-                                <h2 class="h__dos texto__blanco">Cómo cuidar un libro</h2>
+                                <h2 class="h__dos texto__blanco d-flex justify-content-center">Cómo cuidar un libro</h2>
                                 <iframe width="400" height="200" src="https://www.youtube.com/embed/Cq6saLsNzug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         </section> 
                     </div>
                 </div>  
+            </div>
             </div>
                 <br><br>
         </main>

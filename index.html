@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Este sitio web me permitirá administrar los libros físicos de la biblioteca familiar. Tal biblioteca esta abierta a familiares y amigos, donde podamos compartir libros de las más variadas temáticas.">
-        <meta name="keywords" content="HTML, CSS, SCSS, IMG, MAIN, META, BODY, FOOTER, REDES, LIBRO">
+        <meta name="description" content="Este sitio web me permitirá administrar los libros físicos de la biblioteca familiar. Tal biblioteca esta abierta a familiares y amigos, donde podamos prestar nuestros libros.">
+        <meta name="keywords" content="Libro, foto, autor, editorial, fecha, edición, ISBN, familia, lectura, educación, ocio">
         <title>Biblioteca</title>
         <!--favicon, se Guarda imágen desde la web con extensión .png y se debe renombrar como favicon con extensión
         .ico 
@@ -19,7 +19,7 @@
         <!-- link a la hoja de estilos-->
         <link rel="stylesheet" href="./scss/estilos.css">
     </head>
-    <body class="index__body__img__fondo body__sin__img body">
+    <body class="index__body__img__fondo body">
         <header class="header">
             <nav class="navbar navbar-expand-md navbar-light">
                 <div class="container-fluid">
@@ -34,19 +34,19 @@
                         <div class="navbar-nav w-100">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-between w-100 ubicar__link__navegacion__celular">
                                 <li class="nav-item">
-                                    <a class="nav-link active header__nav__ul__li__a texto__blanco"  href="#">Inicio</a>
+                                    <a class="nav-link active header__a link texto__blanco"  href="#">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./pages/catalogo.html">Catálogo</a>
+                                    <a class="nav-link active header__a link texto__blanco" href="./pages/catalogo.html">Catálogo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./pages/registro.html">Registro</a>
+                                    <a class="nav-link active header__a link texto__blanco" href="./pages/registro.html">Registro</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./pages/pido.html">Pido</a>
+                                    <a class="nav-link active header__a link texto__blanco" href="./pages/galeria.html">Galería</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active header__nav__ul__li__a texto__blanco" href="./pages/contacto.html">Contacto</a>
+                                    <a class="nav-link active header__a link texto__blanco" href="./pages/contacto.html">Contacto</a>
                                 </li>
                             </ul>
                         </div>
@@ -59,7 +59,7 @@
         <!-- TENER PRESENTE QUE EL TAMAÑO DE LA MÌNIMA FUENTE SERÀN 16 PX ya que es la fuente definida por el usuario-->
         <main>  <!-- etiqueta semántica de estructura-->
             <!-- Utilizo span para poder darle color de fondo exclusivamente al texto -->
-            <h4 class="parrafo nombre__biblioteca__ocultar texto__blanco fuente__tamaño">Biblioteca George Peabody, Estados Unidos</h4>
+            <h4 class="texto__blanco parrafo__biblioteca">Biblioteca George Peabody, Estados Unidos</h4>
             <div>
                 <h1 class="h__uno texto__blanco">Bienvenido al maravilloso mundo de una Biblioteca</h1>
                 <br>
@@ -76,34 +76,37 @@
                     cuando la pantalla es mayor o igual a 576 px -->
                     <div class="col-lg-8 col-md-12 col-sm-12 d-flex flex-column justify-content-center centrar__texto">
                         <!-- Clases propias como parrafo__sangria texto__blanco fuente__negrita y fuente__tamaño -->
-                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">La Biblioteca surge a partir de la necesidad de ordenar físicamente los libros familiares, los cuales corresponden a diversas temáticas. Luego, por iniciativa de nuestra hija, aparece la idea de poder compartir la Biblioteca con el resto de la familia, amigos cercanos.</p> 
-                        <p class="parrafo__sangria texto__blanco fuente__negrita fuente__tamaño">Para esto optamos por una modalidad de préstamo que se hace del libro. La palabra préstamo denota que tal acción no tiene costo asociado, es decir, se hace sin fines de lucro, tan solo con el compromiso por parte de quien lo recibe de conservarlo en óptimas condiciones sin rayarlo, mojarlo, etc. El libro se retira del punto de encuentro acordado en hora y fecha consensuada y se devuelve en el mismo lugar bajos los mismos términos.</p>
+                        <p class="parrafo__sangria texto__blanco parrafo__fuente">La Biblioteca surge a partir de la necesidad de ordenar físicamente los libros familiares, los cuales corresponden a diversas temáticas. Luego, por iniciativa de nuestra hija, aparece la idea de poder compartir la Biblioteca con el resto de la familia, amigos cercanos.</p> 
+                        <p class="parrafo__sangria texto__blanco parrafo__fuente">Para esto optamos por la modalidad del préstamo, es decir, se hace sin fines de lucro, tan solo con el compromiso por parte de quien lo recibe de conservarlo en óptimas condiciones sin rayarlo, mojarlo, etc.</p>
+                        <p class="parrafo__sangria texto__blanco parrafo__fuente">El libro se retira del punto de encuentro acordado en hora y fecha consensuada y se devuelve en el mismo lugar bajos los mismos términos.</p>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 d-flex flex-row justify-content-center">
-                   <div class="carrousel">
+                        <div class="carrousel">
                             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
-                                    <div class="carousel-item active" data-bs-interval="2500">
+                                    <div class="carousel-item active" data-bs-interval="2000">
                                         <img src="./assets/img/Rafaela.jpg" class="d-block w-100 h-auto" alt="Libro Rafaela de la autora Mariana Furiasse">
                                     </div>
-                                    <div class="carousel-item" data-bs-interval="2500">
+                                    <div class="carousel-item" data-bs-interval="2000">
                                         <img src="./assets/img/Narnia.webp" class="d-block w-100 h-auto" alt="Libro Narnia de C. S. Lewis">
                                     </div>
-                                    <div class="carousel-item" data-bs-interval="2500">
+                                    <div class="carousel-item" data-bs-interval="2000">
                                         <img src="./assets/img/Vampiricas vacaciones.jpg" class="d-block w-100 h-auto" alt="Libro Vampíricas Vacaciones de Fabián Sevilla">
                                     </div>
                                 </div>
-                            <button class="carousel-control-prev" type="button"     
-                            data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+                                <button class="carousel-control-prev" type="button"     
+                                data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
                         </div>
-                </div> 
+                    </div> 
+                </div>
             </div>   
         </main>
         <footer class="footer"> <!-- etiqueta semántica de estructura -->

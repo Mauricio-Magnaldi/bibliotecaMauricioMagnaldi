@@ -12,7 +12,7 @@ En la primer pre entrega tal página estaba cargada en el main
 */
 .index__body__img__fondo
     {
-        background-image: linear-gradient(to bottom,rgba(82, 85, 64, 0.452),rgba(73, 61, 69, 0.447)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos.jpg);
+        background-image: linear-gradient(to bottom,rgba(87, 73, 69, 0.63),rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos.jpg);
         background-repeat: no-repeat;
         background-size: $cover;
         background-position:map-get($texto-alineacion,centrado);
@@ -28,28 +28,35 @@ de aquella cargada en el body de index.
 .catalogo__body__img__fondo
     {
         @extend .index__body__img__fondo;
-        background-image: url(../assets/img/Biblioteca\ Tianjin\ Binhai\,\ República\ Popular\ China.jpg);         
+        background-image: linear-gradient(to right,rgba(87, 73, 69, 0.63),rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Tianjin\ Binhai\,\ República\ Popular\ China.jpg);         
     }
 
 .registro__body__img__fondo
     {
         @extend .index__body__img__fondo;
-        background-image: url(../assets/img/Biblioteca\ Nacional\ de\ Austria\,\ Republica\ de\ Austria_900.jpg);
+        background-image: linear-gradient(to left,rgba(87, 73, 69, 0.63),rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Nacional\ de\ Austria\,\ Republica\ de\ Austria.jpg);
     }
 
-.pido__body__img__fondo
+.galeria__body__img__fondo
     {
         @extend .index__body__img__fondo;
-        background-image: url(../assets/img/Biblioteca\ Estatal\ de\ Nueva\ Gales\ del\ Sur\,\ Australia.jpg) ;
+        background-image: linear-gradient(to top,rgba(87, 73, 69, 0.63),rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Estatal\ de\ Nueva\ Gales\ del\ Sur\,\ Australia.jpg);
     }
 
 .contacto__body__img__fondo
     {
         @extend .index__body__img__fondo;
-        background-image: linear-gradient(to right,rgba(79, 29, 14, 0.63),rgba(22, 68, 22, 0.63)), url("../assets/img/Biblioteca\ del\ Palacio\ de\ Mafra\,\ Portugal.jpg");
+        background-image: linear-gradient(to top,rgba(87, 73, 69, 0.63),rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ del\ Palacio\ de\ Mafra\,\ Portugal.jpg);
     }
 
-/* 
+.error__body__img__fondo
+    {
+        @extend .index__body__img__fondo;
+        background-image: url(../assets/img/libro\ roto.jpg);
+    }
+
+
+    /* 
 Utilizo dos mapas, del primero de ellos tomo el tamaño de la fuente mientras que del segundo utilizo
 el tipo de alineacion del texto
 */
@@ -59,16 +66,51 @@ el tipo de alineacion del texto
         text-align: map-get($texto-alineacion, centrado);
     }
 
+.h__dos 
+    {
+        font-size: map-get($fuente-medida,h2);
+    }
+
+.parrafo__fuente
+    {
+        font-size: map-get($fuente-medida,parrafo);
+    }
+
+.parrafo__biblioteca
+    {
+        font-size: map-get($fuente-medida,fuente-footer)+0.3;
+    }
+
 @media screen and (max-width: 768px)
     {
-        .body__sin__img
+        .index__body__img__fondo
             {
-                background-image: linear-gradient(to top, #7186a4, #6690a0, #6d9795, #809a8b, #969c88);
+                background-image: linear-gradient(to bottom,rgba(87, 73, 69, 0.63),rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos_768.jpg);
             }
-    
+
+        .catalogo__body__img__fondo
+            {
+                background-image: linear-gradient(to right,rgba(87, 73, 69, 0.63),rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Tianjin\ Binhai\,\ República\ Popular\ China_768.jpg);         
+            }
+        
+        .registro__body__img__fondo
+            {
+                background-image: linear-gradient(to left,rgba(87, 73, 69, 0.63),rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Nacional\ de\ Austria\,\ Republica\ de\ Austria_768.jpg);
+            }
+     
+        .galeria__body__img__fondo
+            {
+                background-image: linear-gradient(to top,rgba(87, 73, 69, 0.63),rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Estatal\ de\ Nueva\ Gales\ del\ Sur\,\ Australia_768.jpg);
+            }
+     
+        .contacto__body__img__fondo
+            {
+                background: linear-gradient(to top,rgba(87, 73, 69, 0.63),rgba(74, 96, 74, 0.63)), url("../assets/img/Portugal768.jpg");            
+            }
+
         .nombre__biblioteca__ocultar
             {
-                visibility: hidden; 
+                display: none;
             }
             
         .h__uno
@@ -81,25 +123,69 @@ el tipo de alineacion del texto
                 font-size: 1.4rem;
             }   
    
-        .h__tres
+        .parrafo__fuente
             {
                 font-size: 1rem;
             }
 
-        .h__cuatro
+        .parrafo__biblioteca
             {
-                font-size:0.6rem;
+                padding-top: 5px;
+                font-size: 0.7rem;
             }
-    
-        .fuente__tamaño
-        {
-            font-size: 0.8rem;
-        }
-    .centrado
-        {
-            text-align: center;
-        }
+
+        .centrado
+            {
+                text-align: center;
+            }
+        /* 
+        Modifico el tamaño de los títulos de columna y contenido de celdas de las tablas de catálogo
+        y de pedí
+        */
+        th, td
+            {
+                font-size: 0.5rem;
+            }
+        
     }
+
+@media screen and (max-width: 576px)
+    {
+        .index__body__img__fondo
+            {
+                background-image: linear-gradient(to bottom,rgba(87, 73, 69, 0.63),rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos_576.jpg);
+            }
+        .catalogo__body__img__fondo
+            {
+                background-image: linear-gradient(to right,rgba(87, 73, 69, 0.63),rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Tianjin\ Binhai\,\ República\ Popular\ China_576.jpg);         
+            }
+        
+        .registro__body__img__fondo
+            {
+                background-image: linear-gradient(to left,rgba(87, 73, 69, 0.63),rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Nacional\ de\ Austria\,\ Republica\ de\ Austria_576.jpg);
+            }
+        
+        .galeria__body__img__fondo
+            {
+                background-image: linear-gradient(to top,rgba(87, 73, 69, 0.63),rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Estatal\ de\ Nueva\ Gales\ del\ Sur\,\ Australia_576.jpg) ;
+            }
+        
+/*
+No se carga esta imagen, a partir del breakpoint 576px se carga la imagen del index
+*/
+        .contacto__body__img__fondo
+            {
+                background: linear-gradient(to center,rgba(87, 73, 69, 0.63),rgba(74, 96, 74, 0.63)),  
+                url("../assets/img/Portugal576.jpg");
+            }
+      
+        .error__body__img__fondo
+            {
+                @extend .index__body__img__fondo;
+                background-image: url(../assets/img/libro\ roto.jpg);
+            }
+    }
+
 
 /* 
 Al colocar display flex desordena la tabla.
@@ -133,20 +219,3 @@ por ello el div que contiene esta clase abarca toda la tabla
         overflow-y: $auto;
     }
 
-
-/* Media query para cuando el medio sea una pantalla - celular -
-y el ancho máximo sea de 768px */
-
-@media screen and (max-width: 768px)
-    {
-           
-        /* 
-        Modifico el tamaño de los títulos de columna y contenido de celdas de las tablas de catálogo
-        y de pedí
-        */
-        th, td
-            {
-                font-size: 0.5rem;
-            }
-    }
-     

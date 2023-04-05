@@ -1,9 +1,7 @@
 /*
 Particiono el código
 Vinculo las distintas páginas .scss con estilos.scss
-
 */
-
 /* Acá declaro el mapa $fuente-medida, $texto-alineacion, las variables */
 @import "variables.scss";
 /*
@@ -18,6 +16,5 @@ Declaro margin, padding, font-family
 @import "body.scss";
 @import "header.scss";
 @import "main.scss";
-@import "catalogo.scss";
+@import "galeria.scss";
 @import "footer.scss";
-
