@@ -110,7 +110,7 @@ Cargo una imagen de fondo en el contenedor body de la página index.html
 En la primer pre entrega tal página estaba cargada en el main 
 */
 .index__body__img__fondo, .error__body__img__fondo, .contacto__body__img__fondo, .galeria__body__img__fondo, .registro__body__img__fondo, .catalogo__body__img__fondo {
-  background-image: linear-gradient(to bottom, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos.jpg);
+  background: linear-gradient(to bottom, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -166,16 +166,16 @@ el tipo de alineacion del texto
 
 @media screen and (max-width: 768px) {
   .index__body__img__fondo, .catalogo__body__img__fondo, .registro__body__img__fondo, .galeria__body__img__fondo, .contacto__body__img__fondo, .error__body__img__fondo {
-    background-image: linear-gradient(to bottom, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos_768.jpg);
+    background: linear-gradient(to bottom, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos_768.jpg);
   }
   .catalogo__body__img__fondo {
-    background-image: linear-gradient(to right, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Tianjin\ Binhai\,\ República\ Popular\ China_768.jpg);
+    background: linear-gradient(to right, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Tianjin\ Binhai\,\ República\ Popular\ China_768.jpg);
   }
   .registro__body__img__fondo {
-    background-image: linear-gradient(to left, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Nacional\ de\ Austria\,\ Republica\ de\ Austria_768.jpg);
+    background: linear-gradient(to left, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Nacional\ de\ Austria\,\ Republica\ de\ Austria_768.jpg);
   }
   .galeria__body__img__fondo {
-    background-image: linear-gradient(to top, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Estatal\ de\ Nueva\ Gales\ del\ Sur\,\ Australia_768.jpg);
+    background: linear-gradient(to top, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Estatal\ de\ Nueva\ Gales\ del\ Sur\,\ Australia_768.jpg);
   }
   .contacto__body__img__fondo {
     background: linear-gradient(to top, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url("../assets/img/Portugal768.jpg");
@@ -209,16 +209,16 @@ el tipo de alineacion del texto
 }
 @media screen and (max-width: 576px) {
   .index__body__img__fondo, .catalogo__body__img__fondo, .registro__body__img__fondo, .galeria__body__img__fondo, .contacto__body__img__fondo, .error__body__img__fondo {
-    background-image: linear-gradient(to bottom, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos_576.jpg);
+    background: linear-gradient(to bottom, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ George\ Peabody\,\ Estados\ Unidos_576.jpg);
   }
   .catalogo__body__img__fondo {
-    background-image: linear-gradient(to right, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Tianjin\ Binhai\,\ República\ Popular\ China_576.jpg);
+    background: linear-gradient(to right, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Tianjin\ Binhai\,\ República\ Popular\ China_576.jpg);
   }
   .registro__body__img__fondo {
-    background-image: linear-gradient(to left, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Nacional\ de\ Austria\,\ Republica\ de\ Austria_576.jpg);
+    background: linear-gradient(to left, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Nacional\ de\ Austria\,\ Republica\ de\ Austria_576.jpg);
   }
   .galeria__body__img__fondo {
-    background-image: linear-gradient(to top, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Estatal\ de\ Nueva\ Gales\ del\ Sur\,\ Australia_576.jpg);
+    background: linear-gradient(to top, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url(../assets/img/Biblioteca\ Estatal\ de\ Nueva\ Gales\ del\ Sur\,\ Australia_576.jpg);
   }
   /*
   No se carga esta imagen, a partir del breakpoint 576px se carga la imagen del index
@@ -227,7 +227,7 @@ el tipo de alineacion del texto
     background: linear-gradient(to center, rgba(87, 73, 69, 0.63), rgba(74, 96, 74, 0.63)), url("../assets/img/Portugal576.jpg");
   }
   .error__body__img__fondo {
-    background-image: url(../assets/img/libro\ roto.jpg);
+    background: url(../assets/img/libro\ roto.jpg);
   }
 }
 /* 
@@ -306,7 +306,7 @@ vertical se active, el menú quede fijo en la parte superior de la página.
   content: "";
   width: 100%;
   /* grosor del subrayado */
-  height: 5px;
+  height: 2px;
   background-color: white;
   border-radius: 4px;
   position: absolute;
@@ -314,11 +314,18 @@ vertical se active, el menú quede fijo en la parte superior de la página.
   bottom: 0;
   transform: scaleX(0);
   transform-origin: initial;
-  transition: transform 0.25s ease;
+  transition: transform 0.3s ease-in-out;
 }
 .header .header__a:hover::after {
   transform: scaleX(1);
 }
+/*
+Le doy color al icon del menú hamburguesa tomanda la clase definida en bootstrap
+*/
+.navbar-toggler-icon {
+  background-color: #7a450c;
+}
+
 @media screen and (max-width: 768px) {
   .header .header__a {
     font-size: 1rem;
@@ -416,7 +423,7 @@ object-fit: cover El objeto se adecuará al espacio asignado
     /*       margin-bottom: 10px;
       */
   }
-  .carousel-item {
+  .carousel-item img {
     height: 90%;
   }
 }

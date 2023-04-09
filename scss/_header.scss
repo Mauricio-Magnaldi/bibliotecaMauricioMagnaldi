@@ -46,7 +46,7 @@ vertical se active, el menú quede fijo en la parte superior de la página.
                         content:'';
                         width: 100%;
                         /* grosor del subrayado */
-                        height:5px;
+                        height:2px;
                         background-color: white;
                         border-radius:4px;
                         position: absolute;
@@ -54,7 +54,7 @@ vertical se active, el menú quede fijo en la parte superior de la página.
                         bottom: 0;
                         transform:scaleX(0);
                         transform-origin:initial;
-                        transition: transform .25s ease;
+                        transition: transform .30s ease-in-out;
                     }
                 &:hover::after
                     {
@@ -70,7 +70,16 @@ vertical se active, el menú quede fijo en la parte superior de la página.
                     }
                 }
             }
-            
+
+/*
+Le doy color al icon del menú hamburguesa tomanda la clase definida en bootstrap
+*/
+
+.navbar-toggler-icon 
+    {
+        background-color: #7a450c;
+    }
+
 @media screen and (max-width: 768px)
             {
                 .header                           
