@@ -16,6 +16,11 @@ Aplico color de fondo blanco al nombre de la biblioteca de la imagen del body
         font-weight: bold;
     }
 
+.fuente__cursiva
+    {
+        font-style: italic;
+    }
+
 /* main */
 
 .parrafo__sangria                    /* las clases se llaman con el punto */
@@ -44,7 +49,8 @@ Utilizo esta clase para justificar el texto
 
 .centrar
     {
-        align-items:map-get($texto-alineacion,centrado);
+        /*align-items:map-get($texto-alineacion,centrado);*/
+        text-align:map-get($texto-alineacion,centrado);
     }
 
 /* 

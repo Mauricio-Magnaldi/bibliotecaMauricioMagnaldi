@@ -73,13 +73,17 @@ object-fit: cover El objeto se adecuará al espacio asignado
             {                   
                 width: 30vw;
                 height: 60vh;
-                display: flex;
-         /*       margin-bottom: 10px;
-           */ }
+                .carousel-item
+                    {
+                        height: 50vh;
+                        object-fit: cover;
+                        .carousel-item img
+                            {
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                    }
 
-        .carousel-item img
-            {
-                height: 90%;
             }
     }
 
